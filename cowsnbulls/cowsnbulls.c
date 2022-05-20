@@ -31,20 +31,52 @@ int main(int argc, char *argv[]) {
     int guess;
 
     while(current_try < MAX_TRIES && !pass) {
-        printf("Try %d :", current_try); 
+        printf("\nTry %d :", current_try); 
         scanf("%4d", &guess);
         printf("you guessed %d\n", guess);
         pass = match(target, guess);
         current_try++;
     }
 
-    
+    if (pass) {
+        printf ("CORRECT !! in %d tries\n", --current_try);
+    }
+    else {
+        printf("FAIL !! Better luck next time\n");
+    }
+
+
     return 0;
 }
 
-bool match(int target, int guess) {
+bool match(int inp_target, int inp_guess) {
 
-    if (target == guess) return true;
+    if (inp_target == inp_guess) return true;
 
+    int cows = 0, bulls = 0;
+    char target[4], guess[4];
+
+    // create 2 arrays 
+    sprintf(target, "%d", inp_target);
+    sprintf(guess, "%d",  inp_guess);
+
+    /* printf("debug: %s and %s ", target, guess); */
+
+    /* you get 1 cow if the number is correct but in the wrong place
+     * you get 1 bull if the number is correct and in the correct place
+     */
+
+    /* take 1 from guess and run it by all in target */
+    for (int i=0; i<4; i++) {
+        for(int j=0; j<4; j++) {
+   
+            printf("DEBUG: comp %d and %d\n", guess[i], target[j]);
+            if(guess[i] == target[j]) {
+                if (i==j) bulls++; else cows++;
+            }
+        }
+    }
+    
+    printf("match: bulls %d cows %d", bulls, cows);
     return false;
 }
