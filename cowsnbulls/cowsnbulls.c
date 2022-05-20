@@ -11,6 +11,8 @@
 #define LOCAL_RAND_MAX 9999
 #define MAX_TRIES      10
 
+bool match(int target, int guess);
+
 int main(int argc, char *argv[]) {
 
     printf("We are playing cows and bulls, %d tries!\n", MAX_TRIES);
@@ -32,9 +34,17 @@ int main(int argc, char *argv[]) {
         printf("Try %d :", current_try); 
         scanf("%4d", &guess);
         printf("you guessed %d\n", guess);
+        pass = match(target, guess);
         current_try++;
     }
 
     
     return 0;
+}
+
+bool match(int target, int guess) {
+
+    if (target == guess) return true;
+
+    return false;
 }
