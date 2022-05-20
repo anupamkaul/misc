@@ -33,7 +33,7 @@ int main(int argc, char *argv[]) {
     while(current_try < MAX_TRIES && !pass) {
         printf("\nTry %d :", current_try); 
         scanf("%4d", &guess);
-        printf("you guessed %d\n", guess);
+        //printf("you guessed %d\n", guess);
         pass = match(target, guess);
         current_try++;
     }
@@ -66,17 +66,28 @@ bool match(int inp_target, int inp_guess) {
      * you get 1 bull if the number is correct and in the correct place
      */
 
-    /* take 1 from guess and run it by all in target */
-    for (int i=0; i<4; i++) {
-        for(int j=0; j<4; j++) {
+    /* take 1 from target and run it by all in guess - this is counter intuitive
+     * but target is more restrictive. Skip back to next in target upon a match
+     */
+
+    for (int i=0; i<4; i++) { // 1 of target to all of guest
+        for(int j=0; j<4; j++) { //guess
    
-            printf("DEBUG: comp %d and %d\n", guess[i], target[j]);
-            if(guess[i] == target[j]) {
-                if (i==j) bulls++; else cows++;
+            printf("DEBUG: comp %c and %c\n", target[i], guess[j]);
+            if(target[i] == guess[j]) {
+                if (i==j) 
+                { 
+                    bulls++;
+                } 
+                else 
+                {
+                    cows++;
+                }
+                break; // stop processing the target loop on a match
             }
         }
     }
     
-    printf("match: bulls %d cows %d", bulls, cows);
+    printf("match: bulls %d cows %d\n", bulls, cows);
     return false;
 }
