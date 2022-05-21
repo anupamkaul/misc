@@ -70,6 +70,15 @@ bool match(int inp_target, int inp_guess) {
      * but target is more restrictive. Skip back to next in target upon a match
      */
 
+    /* TODO: 
+     *
+     * 1. On detecting a cow, continue processing of unanalyzed digits in the same loop of guess.
+     * If a better Bull is found, change cow for bull and quit processing.
+     * (solution for 2016 (t) and 6666 (g) state should be 1b and not 1c
+     *
+     * 2. Should target be a unique (non repeating) set of numbers?
+     */
+
     for (int i=0; i<4; i++) { // 1 of target to all of guest
         for(int j=0; j<4; j++) { //guess
    
