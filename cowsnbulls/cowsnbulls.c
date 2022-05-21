@@ -55,6 +55,7 @@ bool match(int inp_target, int inp_guess) {
 
     int cows = 0, bulls = 0;
     char target[4], guess[4];
+    char visited_guess_bull[4] = {0,0,0,0}; // short for an actual DS with guess
 
     // create 2 arrays 
     sprintf(target, "%d", inp_target);
@@ -66,9 +67,11 @@ bool match(int inp_target, int inp_guess) {
      * you get 1 bull if the number is correct and in the correct place
      */
 
-    /* take 1 from target and run it by all in guess - this is counter intuitive
+    /* Insight - take 1 from target and run it by all in guess - this is counter intuitive
      * but target is more restrictive. Skip back to next in target upon a match
      */
+
+    // Algo-1: (bulls and cows are equal)
 
     /* TODO: 
      *
@@ -79,6 +82,7 @@ bool match(int inp_target, int inp_guess) {
      * 2. Should target be a unique (non repeating) set of numbers?
      */
 
+    /*
     for (int i=0; i<4; i++) { // 1 of target to all of guest
         for(int j=0; j<4; j++) { //guess
    
@@ -96,6 +100,39 @@ bool match(int inp_target, int inp_guess) {
             }
         }
     }
+    */
+
+    // Algo-2: (take the bull by its horns)
+
+    /* Assumption is that target is all unique/non-repeating chars.
+     * this avoids the redundant cow that may match a potential unseen bull problem
+     * (the real problem is we are not visual but sequentially blind in computing).
+     */
+
+    for (int i=0; i<4; i++) { // outerloop is target
+
+        printf("DEBUG: Bull first: comp %c and %c\n", target[i], guess[i]);
+        /* search for a B and iterate if found - make use of o(1) array lookup */
+        if ((target[i] == guess[i]) && (!visited_guess_bull[i])) {
+            bulls++;
+            visited_guess_bull[i] = 1;
+            continue; // skip to next target[i]
+        }
+
+        /* else search for a cow and iterate if found */
+        for(int j=0; j<4; j++) { //innerloop is guest
+   
+            if (visited_guess_bull[j]) continue; // skip a found bull
+            printf("DEBUG: comp %c and %c\n", target[i], guess[j]);
+
+            if(target[i] == guess[j]) {
+                cows++;
+                break; // stop processing and go back to next target (outerloop)
+            }
+        }
+    }
+    // In Algo-2 a visited-bull count=4 indicates success, however I have a faster method at the top
+   
     
     printf("match: bulls %d cows %d\n", bulls, cows);
     return false;
