@@ -24,7 +24,7 @@ int main(int argc, char *argv[]) {
         target = rand() % LOCAL_RAND_MAX; // starts from 0 to LRM
     }
 
-    printf("Target is %d (%d)\n", target, RAND_MAX);
+    // (debug) printf("Target is %d (%d)\n", target, RAND_MAX);
 
     int current_try = 0;
     bool pass = false;
@@ -111,7 +111,7 @@ bool match(int inp_target, int inp_guess) {
 
     for (int i=0; i<4; i++) { // outerloop is target
 
-        printf("DEBUG: Bull first: comp %c and %c\n", target[i], guess[i]);
+        //printf("DEBUG: Bull first: comp %c and %c\n", target[i], guess[i]);
         /* search for a B and iterate if found - make use of o(1) array lookup */
         if ((target[i] == guess[i]) && (!visited_guess_bull[i])) {
             bulls++;
@@ -123,7 +123,7 @@ bool match(int inp_target, int inp_guess) {
         for(int j=0; j<4; j++) { //innerloop is guest
    
             if (visited_guess_bull[j]) continue; // skip a found bull
-            printf("DEBUG: comp %c and %c\n", target[i], guess[j]);
+            //printf("DEBUG: comp %c and %c\n", target[i], guess[j]);
 
             if(target[i] == guess[j]) {
                 cows++;
@@ -133,7 +133,15 @@ bool match(int inp_target, int inp_guess) {
     }
     // In Algo-2 a visited-bull count=4 indicates success, however I have a faster method at the top
    
-    
-    printf("match: bulls %d cows %d\n", bulls, cows);
+    if (cows & !bulls) {
+        printf("%d cows\n", cows);
+    }
+    else if (bulls & !cows) {
+
+        printf("%d bulls\n", bulls);
+    }
+    else {
+        printf(" bulls %d cows %d\n", bulls, cows);
+    }
     return false;
 }
