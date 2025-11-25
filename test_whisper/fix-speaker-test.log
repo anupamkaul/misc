@@ -1,0 +1,132 @@
+speaker-test -c 2 
+
+speaker-test 1.2.9
+
+Playback device is default
+Stream parameters are 48000Hz, S16_LE, 2 channels
+Using 16 octaves of pink noise
+Rate set to 48000Hz (requested 48000Hz)
+Buffer size range from 96 to 1048576
+Period size range from 32 to 349526
+Using max buffer size 1048576
+Periods = 4
+was set period_size = 262144
+was set buffer_size = 1048576
+ 0 - Front Left
+ 1 - Front Right
+Time per period = 11.208461
+ 0 - Front Left
+ 1 - Front Right
+Time per period = 11.206847
+ 0 - Front Left
+^C
+ 1 - Front Right
+Time per period = 5.615578
+
+
+https://discourse.ubuntu.com/t/dummy-output-no-selections-available/52003
+
+hwinfo --sound
+18: PCI 1f.3: 0403 Audio device                                 
+  [Created at pci.386]
+  Unique ID: nS1_.BWGsbnGpa41
+  SysFS ID: /devices/pci0000:00/0000:00:1f.3
+  SysFS BusID: 0000:00:1f.3
+  Hardware Class: sound
+  Model: "Intel CM238 HD Audio Controller"
+  Vendor: pci 0x8086 "Intel Corporation"
+  Device: pci 0xa171 "CM238 HD Audio Controller"
+  SubVendor: pci 0x1028 "Dell"
+  SubDevice: pci 0x0798 
+  Revision: 0x31
+  Driver: "snd_soc_avs"
+  Driver Modules: "snd_soc_avs"
+  Memory Range: 0xd5228000-0xd522bfff (rw,non-prefetchable)
+  Memory Range: 0xd5200000-0xd520ffff (rw,non-prefetchable)
+  IRQ: 138 (268 events)
+  Module Alias: "pci:v00008086d0000A171sv00001028sd00000798bc04sc03i80"
+  Driver Info #0:
+    Driver Status: snd_hda_intel is active
+    Driver Activation Cmd: "modprobe snd_hda_intel"
+  Driver Info #1:
+    Driver Status: snd_soc_avs is active
+    Driver Activation Cmd: "modprobe snd_soc_avs"
+  Config Status: cfg=new, avail=yes, need=no, active=unknown
+
+21: PCI 100.1: 0403 Audio device
+  [Created at pci.386]
+  Unique ID: NXNs.9vms5sUlSXB
+  Parent ID: vSkL.AoGxmxoz7cA
+  SysFS ID: /devices/pci0000:00/0000:00:01.0/0000:01:00.1
+  SysFS BusID: 0000:01:00.1
+  Hardware Class: sound
+  Model: "nVidia GP107GL High Definition Audio Controller"
+  Vendor: pci 0x10de "nVidia Corporation"
+  Device: pci 0x0fb9 "GP107GL High Definition Audio Controller"
+  SubVendor: pci 0x1028 "Dell"
+  SubDevice: pci 0x0798 
+  Revision: 0xa1
+  Driver: "snd_hda_intel"
+  Driver Modules: "snd_hda_intel"
+  Memory Range: 0xd3080000-0xd3083fff (rw,non-prefetchable)
+  IRQ: 17 (875747 events)
+  Module Alias: "pci:v000010DEd00000FB9sv00001028sd00000798bc04sc03i00"
+  Driver Info #0:
+    Driver Status: snd_hda_intel is active
+    Driver Activation Cmd: "modprobe snd_hda_intel"
+  Config Status: cfg=new, avail=yes, need=no, active=unknown
+  Attached to: #13 (PCI bridge)
+apt policy pulseaudio qasmixer pavucontrol
+pulseaudio:
+  Installed: 1:16.1+dfsg1-2ubuntu10.1
+  Candidate: 1:16.1+dfsg1-2ubuntu10.1
+  Version table:
+ *** 1:16.1+dfsg1-2ubuntu10.1 500
+        500 http://us.archive.ubuntu.com/ubuntu noble-updates/universe amd64 Packages
+        100 /var/lib/dpkg/status
+     1:16.1+dfsg1-2ubuntu10 500
+        500 http://us.archive.ubuntu.com/ubuntu noble/universe amd64 Packages
+qasmixer:
+  Installed: (none)
+  Candidate: 1.4.0-1build3
+  Version table:
+     1.4.0-1build3 500
+        500 http://us.archive.ubuntu.com/ubuntu noble/universe amd64 Packages
+pavucontrol:
+  Installed: (none)
+  Candidate: 5.0-2build3
+  Version table:
+     5.0-2build3 500
+        500 http://us.archive.ubuntu.com/ubuntu noble/universe amd64 Packages
+
+
+vi /etc/modprobe.d/alsa-base.conf
+
+this:
+https://aaroalhainen.medium.com/how-i-fixed-my-ubuntu-20-04-no-audio-dummy-output-issue-eaa525838e0d
+
+lspci -nnk | grep -A3 Audio
+
+00:1f.3 Audio device [0403]: Intel Corporation CM238 HD Audio Controller [8086:a171] (rev 31)
+	Subsystem: Dell CM238 HD Audio Controller [1028:0798]
+	Kernel driver in use: snd_soc_avs
+	Kernel modules: snd_hda_intel, snd_soc_avs
+00:1f.4 SMBus [0c05]: Intel Corporation 100 Series/C230 Series Chipset Family SMBus [8086:a123] (rev 31)
+--
+01:00.1 Audio device [0403]: NVIDIA Corporation GP107GL High Definition Audio Controller [10de:0fb9] (rev a1)
+	Subsystem: Dell GP107GL High Definition Audio Controller [1028:0798]
+	Kernel driver in use: snd_hda_intel
+	Kernel modules: snd_hda_intel
+02:00.0 Ethernet controller [0200]: Realtek Semiconductor Co., Ltd. RTL8111/8168/8211/8411 PCI Express Gigabit Ethernet Controller [10ec:8168] (rev 15)
+
+https://www.alsa-project.org/wiki/Help_To_Debug_Intel_HDA
+
+FIX: ----------------------------------------------------------------------------------------------------------------
+Force a change to the audio driver: This is a common fix for Dell laptops, particularly for the "Dummy Output" issue.
+
+Create a new file: sudo nano /etc/modprobe.d/alsa-base.conf.
+Add the following line to the file: options snd-hda-intel dmic_detect=0.
+Save the file (Ctrl+X, Y, Enter) and reboot the computer.
+---------------------------------------------------------------------------------------------------------------------
+
+
