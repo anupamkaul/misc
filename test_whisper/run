@@ -1,3 +1,18 @@
+# notes : whisper models are stored locally in ~/.cache/whisper:
+#
+~/.cache/whisper$ pwd
+/home/anupam/.cache/whisper
+
+(anu-env) anupam@anupam-Inspiron-15-7000-Gaming:~/.cache/whisper$ du -sh .
+1.6G	.
+
+(anu-env) anupam@anupam-Inspiron-15-7000-Gaming:~/.cache/whisper$ ls
+large-v3-turbo.pt
+
+
+
+
+
 # play sound file as is (use aplay from pulseaudio)
 aplay ./ny-what-time.wav
 
