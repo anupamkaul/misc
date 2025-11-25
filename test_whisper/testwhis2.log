@@ -1,0 +1,59 @@
+python testwhis2.py 
+Detected language: en
+^CTraceback (most recent call last):
+  File "/home/anupam/akaul_git/misc/test_whisper/testwhis2.py", line 18, in <module>
+    result = whisper.decode(model, mel, options)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/anupam/anu-env/lib/python3.12/site-packages/torch/utils/_contextlib.py", line 120, in decorate_context
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/anupam/anu-env/lib/python3.12/site-packages/whisper/decoding.py", line 824, in decode
+    result = DecodingTask(model, options).run(mel)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/anupam/anu-env/lib/python3.12/site-packages/torch/utils/_contextlib.py", line 120, in decorate_context
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/anupam/anu-env/lib/python3.12/site-packages/whisper/decoding.py", line 718, in run
+    audio_features: Tensor = self._get_audio_features(mel)  # encoder forward pass
+                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/anupam/anu-env/lib/python3.12/site-packages/whisper/decoding.py", line 655, in _get_audio_features
+    audio_features = self.model.encoder(mel)
+                     ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/anupam/anu-env/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1775, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/anupam/anu-env/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1786, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/anupam/anu-env/lib/python3.12/site-packages/whisper/model.py", line 201, in forward
+    x = block(x)
+        ^^^^^^^^
+  File "/home/anupam/anu-env/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1775, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/anupam/anu-env/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1786, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/anupam/anu-env/lib/python3.12/site-packages/whisper/model.py", line 170, in forward
+    x = x + self.mlp(self.mlp_ln(x))
+            ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/anupam/anu-env/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1775, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/anupam/anu-env/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1786, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/anupam/anu-env/lib/python3.12/site-packages/torch/nn/modules/container.py", line 250, in forward
+    input = module(input)
+            ^^^^^^^^^^^^^
+  File "/home/anupam/anu-env/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1775, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/anupam/anu-env/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1786, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/anupam/anu-env/lib/python3.12/site-packages/whisper/model.py", line 46, in forward
+    return F.linear(
+           ^^^^^^^^^
+KeyboardInterrupt
+
