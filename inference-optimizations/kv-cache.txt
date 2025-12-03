@@ -1,0 +1,40 @@
+Key-Value (KV) caching in the context of Large Language Models (LLMs) refers to the technique of storing and reusing 
+the computed key and value vectors from previous tokens during autoregressive inference. This significantly accelerates 
+the decoding process by avoiding redundant recomputations of attention mechanisms for each new token.
+
+Mechanism:
+
+Attention Mechanism: In Transformer-based LLMs, the attention mechanism calculates how much each token in a sequence should 
+"attend" to other tokens. This involves computing Query (Q), Key (K), and Value (V) vectors.
+
+Autoregressive Decoding: During text generation, LLMs produce one token at a time, sequentially. For each new token, the attention 
+mechanism needs to consider its relationship with all previously generated tokens.
+
+KV Cache: Instead of recomputing the Key and Value vectors for all previous tokens every time a new token is generated, KV caching 
+stores these pre-computed vectors in memory (the "KV cache"). When a new token arrives, its Query vector is computed and then used 
+to attend to the cached Key and Value vectors of the preceding tokens, along with its own newly computed Key and Value vectors.
+
+Efficiency: This reuse of K and V vectors drastically reduces computational overhead, leading to faster inference and higher throughput, 
+especially for long sequences.
+
+Challenges and Solutions:
+
+While highly effective, KV caching is memory-intensive, especially for long contexts. This has led to research on various compression 
+and optimization techniques:
+
+Quantization: Reducing the precision of the cached Key and Value vectors (e.g., from FP16 to 8-bit or 4-bit integers) to reduce memory 
+footprint.
+
+Pruning/Sparsity: Identifying and removing less important or redundant Key-Value pairs from the cache.
+
+Offloading: Moving the KV cache, or parts of it, to less expensive memory (e.g., CPU RAM) to free up VRAM on the GPU, often with 
+speculative prefetching to mitigate latency.
+
+Sharing: Reusing KV cache entries across different users or turns in a conversation, particularly in multi-turn conversational AI.
+
+Adaptive Strategies: Dynamically adjusting compression levels or eviction policies based on the importance of different KV pairs 
+or the stage of inference (e.g., prefill vs. decoding).
+
+Architectural Modifications: Designing attention mechanisms (e.g., Cross-Layer Attention, Shared Attention) that inherently require 
+smaller KV caches or allow for more efficient sharing of attention weights.
+
