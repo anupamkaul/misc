@@ -1,0 +1,23 @@
+ython decorater_example.py 
+some preprocessing here..
+saying Hi ! 
+some post processing here..
+enter for next:
+Calling add_numbers with (100.3, 10.2) and {}
+Function add_numbers returned 110.5
+enter for next:
+Hello Anupam
+Hello Anupam
+Hello Anupam
+Hello Anupam
+Hello Anupam
+enter for next:
+Call 1 of simple_task
+Task complete.
+Call 2 of simple_task
+Task complete.
+Call 3 of simple_task
+Task complete.
+enter for next:
+Decorated Class
+
