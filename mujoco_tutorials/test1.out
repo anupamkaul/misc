@@ -1,0 +1,109 @@
+<mujoco._structs.MjModel object at 0x70496a57e8f0>
+number of geometries in the scene:  2
+Error:  "Invalid name ''. Valid names: ['green_sphere', 'red_box']"
+geometry of green sphere:  <_MjModelGeomViews
+  bodyid: array([0], dtype=int32)
+  conaffinity: array([1], dtype=int32)
+  condim: array([3], dtype=int32)
+  contype: array([1], dtype=int32)
+  dataid: array([-1], dtype=int32)
+  friction: array([1.   , 0.005, 0.   ])
+  gap: array([0.])
+  group: array([0], dtype=int32)
+  id: 1
+  margin: array([0.])
+  matid: array([-1], dtype=int32)
+  name: 'green_sphere'
+  pos: array([0.2, 0.2, 0.2])
+  priority: array([0], dtype=int32)
+  quat: array([1., 0., 0., 0.])
+  rbound: array([0.1])
+  rgba: array([0., 1., 0., 1.], dtype=float32)
+  sameframe: array([3], dtype=uint8)
+  size: array([0.1, 0. , 0. ])
+  solimp: array([0.9  , 0.95 , 0.001, 0.5  , 2.   ])
+  solmix: array([1.])
+  solref: array([0.02, 1.  ])
+  type: array([2], dtype=int32)
+  user: array([], dtype=float64)
+>
+geometry of red box:  <_MjModelGeomViews
+  bodyid: array([0], dtype=int32)
+  conaffinity: array([1], dtype=int32)
+  condim: array([3], dtype=int32)
+  contype: array([1], dtype=int32)
+  dataid: array([-1], dtype=int32)
+  friction: array([1.   , 0.005, 0.   ])
+  gap: array([0.])
+  group: array([0], dtype=int32)
+  id: 0
+  margin: array([0.])
+  matid: array([-1], dtype=int32)
+  name: 'red_box'
+  pos: array([0., 0., 0.])
+  priority: array([0], dtype=int32)
+  quat: array([1., 0., 0., 0.])
+  rbound: array([0.346])
+  rgba: array([1., 0., 0., 1.], dtype=float32)
+  sameframe: array([1], dtype=uint8)
+  size: array([0.2, 0.2, 0.2])
+  solimp: array([0.9  , 0.95 , 0.001, 0.5  , 2.   ])
+  solmix: array([1.])
+  solref: array([0.02, 1.  ])
+  type: array([6], dtype=int32)
+  user: array([], dtype=float64)
+>
+rgba of green_sphere:  [0. 1. 0. 1.]
+Number of DOF:  0
+Number of Bodies:  1
+Number of Geoms:  2
+Number of Joints:  0
+[0. 1. 0. 1.]
+id of "green sphere":  1
+name of geom 0:  red_box
+name of geom 1:  green_sphere
+name of body 0:  world
+<mujoco._structs.MjData object at 0x70496a57c6b0>
+number of connected contacts:  0
+simulation time:  0.0
+potential energy:  0.0
+kinetic energy:  0.0
+
+state: position:  []
+
+state: velocity:  []
+
+state: actuator activation:  []
+
+state: control:  []
+
+state: mocap position:  []
+
+state: mocap orientation:  []
+cartesian position of body frame:  [[0. 0. 0.]]
+cartesian orientation of body frame:  [[0. 0. 0. 0.]]
+cartesian orientation of body frame:  [[0. 0. 0. 0. 0. 0. 0. 0. 0.]]
+cartesian position of body com:  [[0. 0. 0.]]
+cartesian position of body inertia:  [[0. 0. 0. 0. 0. 0. 0. 0. 0.]]
+cartesian position of joint anchor:  []
+cartesian joint axis:  []
+cartesian geom_position:  [[0. 0. 0.]
+ [0. 0. 0.]]
+cartesian geom_orientation:  [[0. 0. 0. 0. 0. 0. 0. 0. 0.]
+ [0. 0. 0. 0. 0. 0. 0. 0. 0.]]
+cartesian site position:  []
+cartesian site orientation:  []
+cartesian camera position:  []
+cartesian camera orientation:  []
+cartesian light position  []
+cartesian light direction []
+
+ note: cartesian geom_position:  [[0. 0. 0.]
+ [0. 0. 0.]]
+
+raw access to geom post applying kinematics:  [[0.  0.  0. ]
+ [0.2 0.2 0.2]]
+
+named access:
+ [0.2 0.2 0.2]
+

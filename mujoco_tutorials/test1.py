@@ -145,7 +145,77 @@ print('name of body 0: ', model.body(0).name)
 # the next big struct is mjdata : this holds states, forces, motion, time etc (almost all of the dynamics)
 # https://github.com/google-deepmind/mujoco/blob/main/include/mujoco/mjdata.h
 
+# mjData contains the 'state' and quantities that depend on it. The state is made up of generalized
+# positions (qpos) and generalized velocities (qvel). (data.time, data.qpos, data.qvel). In order to make
+# a new mjData, all we need is our mjModel
 
+data = mujoco.MjData(model)
+print(data)
 
+print("number of connected contacts: ", data.ncon)
+print("simulation time: ", data.time)
+print("potential energy: ", data.energy[0])
+print("kinetic energy: ",   data.energy[1])
 
+print("\nstate: position: ", data.qpos)
+print("\nstate: velocity: ", data.qvel)
+print("\nstate: actuator activation: ", data.act)
+print("\nstate: control: ", data.ctrl)
+print("\nstate: mocap position: ", data.mocap_pos)
+print("\nstate: mocap orientation: ", data.mocap_quat)
 
+# now some values based on cartesian positions:
+# these are computed by mj_fwdPosition/mj_kinematics
+
+'''
+// computed by mj_fwdPosition/mj_kinematics
+  mjtNum* xpos;              // Cartesian position of body frame                 (nbody x 3)
+  mjtNum* xquat;             // Cartesian orientation of body frame              (nbody x 4)
+  mjtNum* xmat;              // Cartesian orientation of body frame              (nbody x 9)
+  mjtNum* xipos;             // Cartesian position of body com                   (nbody x 3)
+  mjtNum* ximat;             // Cartesian orientation of body inertia            (nbody x 9)
+  mjtNum* xanchor;           // Cartesian position of joint anchor               (njnt x 3)
+  mjtNum* xaxis;             // Cartesian joint axis                             (njnt x 3)
+  mjtNum* geom_xpos;         // Cartesian geom position                          (ngeom x 3)
+  mjtNum* geom_xmat;         // Cartesian geom orientation                       (ngeom x 9)
+  mjtNum* site_xpos;         // Cartesian site position                          (nsite x 3)
+  mjtNum* site_xmat;         // Cartesian site orientation                       (nsite x 9)
+  mjtNum* cam_xpos;          // Cartesian camera position                        (ncam x 3)
+  mjtNum* cam_xmat;          // Cartesian camera orientation                     (ncam x 9)
+  mjtNum* light_xpos;        // Cartesian light position                         (nlight x 3)
+  mjtNum* light_xdir;        // Cartesian light direction                        (nlight x 3)
+'''
+
+print("cartesian position of body frame: ", data.xpos)
+print("cartesian orientation of body frame: ", data.xquat)
+print("cartesian orientation of body frame: ", data.xmat)
+print("cartesian position of body com: ", data.xipos)
+print("cartesian position of body inertia: ", data.ximat)
+print("cartesian position of joint anchor: ", data.xanchor)
+print("cartesian joint axis: ", data.xaxis)
+print("cartesian geom_position: ", data.geom_xpos)
+print("cartesian geom_orientation: ", data.geom_xmat)
+print("cartesian site position: ", data.site_xpos)
+print("cartesian site orientation: ", data.site_xmat)
+print("cartesian camera position: ", data.cam_xpos)
+print("cartesian camera orientation: ", data.cam_xmat)
+print("cartesian light position ", data.light_xpos)
+print("cartesian light direction", data.light_xdir)
+
+print("\n note: cartesian geom_position: ", data.geom_xpos)
+'''
+Output:
+    note: cartesian geom_position:  [[0. 0. 0.]
+ [0. 0. 0.]]
+
+Why are both of our geoms at the origin? Didn't we offset the green sphere? The answer is that 
+derived quantities in mjData need to be explicitly propagated (see below). In our case, the minimal 
+required function is mj_kinematics, which computes global Cartesian poses for all objects 
+(excluding cameras and lights).
+'''
+
+mujoco.mj_kinematics(model, data)
+print('\nraw access to geom post applying kinematics: ', data.geom_xpos)
+
+# MjData also supports named access:
+print('\nnamed access:\n', data.geom('green_sphere').xpos)
