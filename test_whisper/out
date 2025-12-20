@@ -1,0 +1,1839 @@
+since pulseaudio is not starting, pulseaudio -vvv --daemonize=false 1>out 2>&1
+
+I: [pulseaudio] main.c: setrlimit(RLIMIT_NICE, (31, 31)) failed: Operation not permitted
+I: [pulseaudio] main.c: setrlimit(RLIMIT_RTPRIO, (9, 9)) failed: Operation not permitted
+D: [pulseaudio] core-rtclock.c: Timer slack is set to 50 us.
+D: [pulseaudio] core-util.c: RealtimeKit worked.
+I: [pulseaudio] core-util.c: Successfully gained nice level -11.
+I: [pulseaudio] main.c: This is PulseAudio 16.1
+D: [pulseaudio] main.c: Compilation CFLAGS: Not yet supported on meson
+D: [pulseaudio] main.c: Running on host: Linux x86_64 6.14.0-37-generic #37~24.04.1-Ubuntu SMP PREEMPT_DYNAMIC Thu Nov 20 10:25:38 UTC 2
+D: [pulseaudio] main.c: Found 8 CPUs.
+I: [pulseaudio] main.c: Page size is 4096 bytes
+D: [pulseaudio] main.c: Compiled with Valgrind support: no
+D: [pulseaudio] main.c: Running in valgrind mode: no
+D: [pulseaudio] main.c: Running in VM: no
+D: [pulseaudio] main.c: Running from build tree: no
+D: [pulseaudio] main.c: Optimized build: yes
+D: [pulseaudio] main.c: All asserts enabled.
+I: [pulseaudio] main.c: Machine ID is 683200c674e3454f84d1b568ea644cf6.
+I: [pulseaudio] main.c: Using runtime directory /run/user/1000/pulse.
+I: [pulseaudio] main.c: Using state directory /home/anupam/.config/pulse.
+I: [pulseaudio] main.c: Using modules directory /usr/lib/pulse-16.1+dfsg1/modules.
+I: [pulseaudio] main.c: Running in system mode: no
+I: [pulseaudio] main.c: System supports high resolution timers
+D: [pulseaudio] memblock.c: Using shared memfd memory pool with 1024 slots of size 64.0 KiB each, total size is 64.0 MiB, maximum usable slot size is 65472
+I: [pulseaudio] cpu-x86.c: CPU flags: CMOV MMX SSE SSE2 SSE3 SSSE3 SSE4_1 SSE4_2 
+I: [pulseaudio] svolume_mmx.c: Initialising MMX optimized volume functions.
+I: [pulseaudio] remap_mmx.c: Initialising MMX optimized remappers.
+I: [pulseaudio] svolume_sse.c: Initialising SSE2 optimized volume functions.
+I: [pulseaudio] remap_sse.c: Initialising SSE2 optimized remappers.
+I: [pulseaudio] sconv_sse.c: Initialising SSE2 optimized conversions.
+I: [pulseaudio] svolume_orc.c: Initialising ORC optimized volume functions.
+D: [pulseaudio] database-tdb.c: Opened TDB database '/home/anupam/.config/pulse/683200c674e3454f84d1b568ea644cf6-device-volumes.tdb'
+I: [pulseaudio] database.c: Successfully opened 'device-volumes' database file '/home/anupam/.config/pulse/683200c674e3454f84d1b568ea644cf6-device-volumes.tdb'.
+I: [pulseaudio] module.c: Loaded "module-device-restore" (index: #0; argument: "").
+D: [pulseaudio] database-tdb.c: Opened TDB database '/home/anupam/.config/pulse/683200c674e3454f84d1b568ea644cf6-stream-volumes.tdb'
+I: [pulseaudio] database.c: Successfully opened 'stream-volumes' database file '/home/anupam/.config/pulse/683200c674e3454f84d1b568ea644cf6-stream-volumes.tdb'.
+D: [pulseaudio] protocol-dbus.c: Interface org.PulseAudio.Ext.StreamRestore1 added for object /org/pulseaudio/stream_restore1
+D: [pulseaudio] protocol-dbus.c: Interface org.PulseAudio.Ext.StreamRestore1.RestoreEntry added for object /org/pulseaudio/stream_restore1/entry0
+D: [pulseaudio] protocol-dbus.c: Interface org.PulseAudio.Ext.StreamRestore1.RestoreEntry added for object /org/pulseaudio/stream_restore1/entry1
+D: [pulseaudio] protocol-dbus.c: Interface org.PulseAudio.Ext.StreamRestore1.RestoreEntry added for object /org/pulseaudio/stream_restore1/entry2
+I: [pulseaudio] module.c: Loaded "module-stream-restore" (index: #1; argument: "").
+D: [pulseaudio] database-tdb.c: Opened TDB database '/home/anupam/.config/pulse/683200c674e3454f84d1b568ea644cf6-card-database.tdb'
+I: [pulseaudio] database.c: Successfully opened 'card-database' database file '/home/anupam/.config/pulse/683200c674e3454f84d1b568ea644cf6-card-database.tdb'.
+I: [pulseaudio] module.c: Loaded "module-card-restore" (index: #2; argument: "").
+I: [pulseaudio] module.c: Loaded "module-augment-properties" (index: #3; argument: "").
+I: [pulseaudio] module.c: Loaded "module-switch-on-port-available" (index: #4; argument: "").
+D: [pulseaudio] module.c: Checking for existence of '/usr/lib/pulse-16.1+dfsg1/modules/module-switch-on-connect.so': success
+I: [pulseaudio] module.c: Loaded "module-switch-on-connect" (index: #5; argument: "").
+D: [pulseaudio] module.c: Checking for existence of '/usr/lib/pulse-16.1+dfsg1/modules/module-udev-detect.so': success
+D: [pulseaudio] module-udev-detect.c: /dev/snd/controlC0 is accessible: yes
+D: [pulseaudio] module-udev-detect.c: /devices/pci0000:00/0000:00:01.0/0000:01:00.1/sound/card0 is busy: no
+D: [pulseaudio] module-udev-detect.c: Loading module-alsa-card with arguments 'device_id="0" name="pci-0000_01_00.1" card_name="alsa_card.pci-0000_01_00.1" namereg_fail=false tsched=yes fixed_latency_range=no ignore_dB=no deferred_volume=yes use_ucm=yes avoid_resampling=no card_properties="module-udev-detect.discovered=1"'
+D: [pulseaudio] dbus-util.c: Successfully connected to D-Bus session bus f8b535be8c84649041a37fb269460c9e as :1.146
+D: [pulseaudio] reserve-wrap.c: Successfully acquired reservation lock on device 'Audio0'
+I: [pulseaudio] (alsa-lib)parser.c: UCM is not supported for this HDA model (HDA NVidia at 0xd3080000 irq 17)
+I: [pulseaudio] (alsa-lib)main.c: error: failed to import hw:0 use case configuration -6
+I: [pulseaudio] (alsa-lib)parser.c: UCM is not supported for this HDA model (HDA NVidia at 0xd3080000 irq 17)
+I: [pulseaudio] (alsa-lib)main.c: error: failed to import HDA NVidia use case configuration -6
+I: [pulseaudio] alsa-ucm.c: UCM not available for card HDA NVidia
+D: [pulseaudio] conf-parser.c: Parsing configuration file '/usr/share/pulseaudio/alsa-mixer/profile-sets/default.conf'
+D: [pulseaudio] alsa-mixer.c: Looking at profile input:analog-stereo
+D: [pulseaudio] alsa-mixer.c: Checking for recording on Analog Stereo (analog-stereo)
+D: [pulseaudio] alsa-util.c: Trying front:0 with SND_PCM_NO_AUTO_FORMAT ...
+I: [pulseaudio] (alsa-lib)pcm_hw.c: open '/dev/snd/pcmC0D0c' failed (-2)
+I: [pulseaudio] alsa-util.c: Error opening PCM device front:0: No such file or directory
+D: [pulseaudio] alsa-mixer.c: Caching failure to open input:analog-stereo
+D: [pulseaudio] alsa-mixer.c: Looking at profile input:iec958-stereo
+D: [pulseaudio] alsa-mixer.c: Checking for recording on Digital Stereo (IEC958) (iec958-stereo)
+D: [pulseaudio] alsa-util.c: Trying iec958:0 with SND_PCM_NO_AUTO_FORMAT ...
+I: [pulseaudio] (alsa-lib)pcm_hw.c: open '/dev/snd/pcmC0D1c' failed (-2)
+I: [pulseaudio] alsa-util.c: Error opening PCM device iec958:0: No such file or directory
+D: [pulseaudio] alsa-mixer.c: Caching failure to open input:iec958-stereo
+D: [pulseaudio] alsa-mixer.c: Looking at profile output:analog-stereo
+D: [pulseaudio] alsa-mixer.c: Checking for playback on Analog Stereo (analog-stereo)
+D: [pulseaudio] alsa-util.c: Trying front:0 with SND_PCM_NO_AUTO_FORMAT ...
+I: [pulseaudio] (alsa-lib)pcm_hw.c: open '/dev/snd/pcmC0D0p' failed (-2)
+I: [pulseaudio] alsa-util.c: Error opening PCM device front:0: No such file or directory
+D: [pulseaudio] alsa-mixer.c: Caching failure to open output:analog-stereo
+D: [pulseaudio] alsa-mixer.c: Skipping profile output:analog-stereo+input:analog-stereo - will not be able to open output:analog-stereo
+D: [pulseaudio] alsa-mixer.c: Skipping profile output:analog-stereo+input:iec958-stereo - will not be able to open output:analog-stereo
+D: [pulseaudio] alsa-mixer.c: Looking at profile output:analog-surround-21
+D: [pulseaudio] alsa-mixer.c: Checking for playback on Analog Surround 2.1 (analog-surround-21)
+D: [pulseaudio] alsa-util.c: Trying surround21:0 with SND_PCM_NO_AUTO_FORMAT ...
+I: [pulseaudio] (alsa-lib)pcm_hw.c: open '/dev/snd/pcmC0D0p' failed (-2)
+I: [pulseaudio] alsa-util.c: Error opening PCM device surround21:0: No such file or directory
+D: [pulseaudio] alsa-mixer.c: Caching failure to open output:analog-surround-21
+D: [pulseaudio] alsa-mixer.c: Skipping profile output:analog-surround-21+input:analog-stereo - will not be able to open output:analog-surround-21
+D: [pulseaudio] alsa-mixer.c: Skipping profile output:analog-surround-21+input:iec958-stereo - will not be able to open output:analog-surround-21
+D: [pulseaudio] alsa-mixer.c: Looking at profile output:analog-surround-40
+D: [pulseaudio] alsa-mixer.c: Checking for playback on Analog Surround 4.0 (analog-surround-40)
+D: [pulseaudio] alsa-util.c: Trying surround40:0 with SND_PCM_NO_AUTO_FORMAT ...
+I: [pulseaudio] (alsa-lib)pcm_hw.c: open '/dev/snd/pcmC0D0p' failed (-2)
+I: [pulseaudio] alsa-util.c: Error opening PCM device surround40:0: No such file or directory
+D: [pulseaudio] alsa-mixer.c: Caching failure to open output:analog-surround-40
+D: [pulseaudio] alsa-mixer.c: Skipping profile output:analog-surround-40+input:analog-stereo - will not be able to open output:analog-surround-40
+D: [pulseaudio] alsa-mixer.c: Skipping profile output:analog-surround-40+input:iec958-stereo - will not be able to open output:analog-surround-40
+D: [pulseaudio] alsa-mixer.c: Looking at profile output:analog-surround-41
+D: [pulseaudio] alsa-mixer.c: Checking for playback on Analog Surround 4.1 (analog-surround-41)
+D: [pulseaudio] alsa-util.c: Trying surround41:0 with SND_PCM_NO_AUTO_FORMAT ...
+I: [pulseaudio] (alsa-lib)pcm_hw.c: open '/dev/snd/pcmC0D0p' failed (-2)
+I: [pulseaudio] alsa-util.c: Error opening PCM device surround41:0: No such file or directory
+D: [pulseaudio] alsa-mixer.c: Caching failure to open output:analog-surround-41
+D: [pulseaudio] alsa-mixer.c: Skipping profile output:analog-surround-41+input:analog-stereo - will not be able to open output:analog-surround-41
+D: [pulseaudio] alsa-mixer.c: Skipping profile output:analog-surround-41+input:iec958-stereo - will not be able to open output:analog-surround-41
+D: [pulseaudio] alsa-mixer.c: Looking at profile output:analog-surround-50
+D: [pulseaudio] alsa-mixer.c: Checking for playback on Analog Surround 5.0 (analog-surround-50)
+D: [pulseaudio] alsa-util.c: Trying surround50:0 with SND_PCM_NO_AUTO_FORMAT ...
+I: [pulseaudio] (alsa-lib)pcm_hw.c: open '/dev/snd/pcmC0D0p' failed (-2)
+I: [pulseaudio] alsa-util.c: Error opening PCM device surround50:0: No such file or directory
+D: [pulseaudio] alsa-mixer.c: Caching failure to open output:analog-surround-50
+D: [pulseaudio] alsa-mixer.c: Skipping profile output:analog-surround-50+input:analog-stereo - will not be able to open output:analog-surround-50
+D: [pulseaudio] alsa-mixer.c: Skipping profile output:analog-surround-50+input:iec958-stereo - will not be able to open output:analog-surround-50
+D: [pulseaudio] alsa-mixer.c: Looking at profile output:analog-surround-51
+D: [pulseaudio] alsa-mixer.c: Checking for playback on Analog Surround 5.1 (analog-surround-51)
+D: [pulseaudio] alsa-util.c: Trying surround51:0 with SND_PCM_NO_AUTO_FORMAT ...
+I: [pulseaudio] (alsa-lib)pcm_hw.c: open '/dev/snd/pcmC0D0p' failed (-2)
+I: [pulseaudio] alsa-util.c: Error opening PCM device surround51:0: No such file or directory
+D: [pulseaudio] alsa-mixer.c: Caching failure to open output:analog-surround-51
+D: [pulseaudio] alsa-mixer.c: Skipping profile output:analog-surround-51+input:analog-stereo - will not be able to open output:analog-surround-51
+D: [pulseaudio] alsa-mixer.c: Skipping profile output:analog-surround-51+input:iec958-stereo - will not be able to open output:analog-surround-51
+D: [pulseaudio] alsa-mixer.c: Looking at profile output:analog-surround-71
+D: [pulseaudio] alsa-mixer.c: Checking for playback on Analog Surround 7.1 (analog-surround-71)
+D: [pulseaudio] alsa-util.c: Trying surround71:0 with SND_PCM_NO_AUTO_FORMAT ...
+I: [pulseaudio] (alsa-lib)pcm_hw.c: open '/dev/snd/pcmC0D0p' failed (-2)
+I: [pulseaudio] alsa-util.c: Error opening PCM device surround71:0: No such file or directory
+D: [pulseaudio] alsa-mixer.c: Caching failure to open output:analog-surround-71
+D: [pulseaudio] alsa-mixer.c: Skipping profile output:analog-surround-71+input:analog-stereo - will not be able to open output:analog-surround-71
+D: [pulseaudio] alsa-mixer.c: Skipping profile output:analog-surround-71+input:iec958-stereo - will not be able to open output:analog-surround-71
+D: [pulseaudio] alsa-mixer.c: Looking at profile output:iec958-stereo
+D: [pulseaudio] alsa-mixer.c: Checking for playback on Digital Stereo (IEC958) (iec958-stereo)
+D: [pulseaudio] alsa-util.c: Trying iec958:0 with SND_PCM_NO_AUTO_FORMAT ...
+I: [pulseaudio] (alsa-lib)pcm_hw.c: open '/dev/snd/pcmC0D1p' failed (-2)
+I: [pulseaudio] alsa-util.c: Error opening PCM device iec958:0: No such file or directory
+D: [pulseaudio] alsa-mixer.c: Caching failure to open output:iec958-stereo
+D: [pulseaudio] alsa-mixer.c: Skipping profile output:iec958-stereo+input:analog-stereo - will not be able to open output:iec958-stereo
+D: [pulseaudio] alsa-mixer.c: Skipping profile output:iec958-stereo+input:iec958-stereo - will not be able to open output:iec958-stereo
+D: [pulseaudio] alsa-mixer.c: Looking at profile output:iec958-ac3-surround-40
+D: [pulseaudio] alsa-mixer.c: Checking for playback on Digital Surround 4.0 (IEC958/AC3) (iec958-ac3-surround-40)
+D: [pulseaudio] alsa-util.c: Trying a52:0 with SND_PCM_NO_AUTO_FORMAT ...
+I: [pulseaudio] (alsa-lib)pcm_hw.c: open '/dev/snd/pcmC0D1p' failed (-2)
+I: [pulseaudio] alsa-util.c: Error opening PCM device a52:0: No such file or directory
+D: [pulseaudio] alsa-mixer.c: Caching failure to open output:iec958-ac3-surround-40
+D: [pulseaudio] alsa-mixer.c: Skipping profile output:iec958-ac3-surround-40+input:analog-stereo - will not be able to open output:iec958-ac3-surround-40
+D: [pulseaudio] alsa-mixer.c: Skipping profile output:iec958-ac3-surround-40+input:iec958-stereo - will not be able to open output:iec958-ac3-surround-40
+D: [pulseaudio] alsa-mixer.c: Looking at profile output:iec958-ac3-surround-51
+D: [pulseaudio] alsa-mixer.c: Checking for playback on Digital Surround 5.1 (IEC958/AC3) (iec958-ac3-surround-51)
+D: [pulseaudio] alsa-util.c: Trying a52:0 with SND_PCM_NO_AUTO_FORMAT ...
+I: [pulseaudio] (alsa-lib)pcm_hw.c: open '/dev/snd/pcmC0D1p' failed (-2)
+I: [pulseaudio] alsa-util.c: Error opening PCM device a52:0: No such file or directory
+D: [pulseaudio] alsa-mixer.c: Caching failure to open output:iec958-ac3-surround-51
+D: [pulseaudio] alsa-mixer.c: Skipping profile output:iec958-ac3-surround-51+input:analog-stereo - will not be able to open output:iec958-ac3-surround-51
+D: [pulseaudio] alsa-mixer.c: Skipping profile output:iec958-ac3-surround-51+input:iec958-stereo - will not be able to open output:iec958-ac3-surround-51
+D: [pulseaudio] alsa-mixer.c: Looking at profile output:iec958-dts-surround-51
+D: [pulseaudio] alsa-mixer.c: Checking for playback on Digital Surround 5.1 (IEC958/DTS) (iec958-dts-surround-51)
+D: [pulseaudio] alsa-util.c: Trying dca:0 with SND_PCM_NO_AUTO_FORMAT ...
+I: [pulseaudio] (alsa-lib)pcm.c: Unknown PCM dca:0
+I: [pulseaudio] alsa-util.c: Error opening PCM device dca:0: No such file or directory
+D: [pulseaudio] alsa-mixer.c: Caching failure to open output:iec958-dts-surround-51
+D: [pulseaudio] alsa-mixer.c: Skipping profile output:iec958-dts-surround-51+input:analog-stereo - will not be able to open output:iec958-dts-surround-51
+D: [pulseaudio] alsa-mixer.c: Skipping profile output:iec958-dts-surround-51+input:iec958-stereo - will not be able to open output:iec958-dts-surround-51
+D: [pulseaudio] alsa-mixer.c: Looking at profile output:hdmi-stereo
+D: [pulseaudio] alsa-mixer.c: Checking for playback on Digital Stereo (HDMI) (hdmi-stereo)
+D: [pulseaudio] alsa-util.c: Trying hdmi:0 with SND_PCM_NO_AUTO_FORMAT ...
+D: [pulseaudio] alsa-util.c: Managed to open hdmi:0
+D: [pulseaudio] alsa-util.c: Maximum hw buffer size is 23777 ms
+D: [pulseaudio] alsa-util.c: Set buffer size first (to 4408 samples), period size second (to 1102 samples).
+D: [pulseaudio] alsa-mixer.c: Profile output:hdmi-stereo supported.
+I: [pulseaudio] alsa-mixer.c: Loading path config: /usr/share//pulseaudio/alsa-mixer/paths/hdmi-output-0.conf
+D: [pulseaudio] conf-parser.c: Parsing configuration file '/usr/share//pulseaudio/alsa-mixer/paths/hdmi-output-0.conf'
+I: [pulseaudio] alsa-util.c: Successfully attached to mixer 'hw:0'
+D: [pulseaudio] alsa-util.c: ALSA alias mixers: hw:0 = hw:NVidia
+D: [pulseaudio] alsa-mixer.c: Probing path 'hdmi-output-0'
+D: [pulseaudio] alsa-mixer.c: Probe of jack 'HDMI/DP Jack' succeeded (found!)
+D: [pulseaudio] alsa-mixer.c: Available mixer paths (after tidying):
+D: [pulseaudio] alsa-mixer.c: Path Set 0x557bd97c7370, direction=1
+D: [pulseaudio] alsa-mixer.c: Path hdmi-output-0 (HDMI / DisplayPort), direction=1, priority=59, probed=yes, supported=yes, has_mute=no, has_volume=no, has_dB=no, min_volume=0, max_volume=0, min_dB=-inf, max_dB=0
+D: [pulseaudio] alsa-mixer.c: Jack HDMI/DP, alsa_name='HDMI/DP,pcm=3 Jack', index='0', detection possible
+D: [pulseaudio] alsa-mixer.c: Skipping profile output:hdmi-stereo+input:analog-stereo - will not be able to open input:analog-stereo
+D: [pulseaudio] alsa-mixer.c: Skipping profile output:hdmi-stereo+input:iec958-stereo - will not be able to open input:iec958-stereo
+D: [pulseaudio] alsa-mixer.c: Looking at profile output:hdmi-surround
+D: [pulseaudio] alsa-mixer.c: Checking for playback on Digital Surround 5.1 (HDMI) (hdmi-surround)
+D: [pulseaudio] alsa-util.c: Trying hdmi:0 with SND_PCM_NO_AUTO_FORMAT ...
+D: [pulseaudio] alsa-util.c: Managed to open hdmi:0
+D: [pulseaudio] alsa-util.c: Maximum hw buffer size is 7925 ms
+D: [pulseaudio] alsa-util.c: Set buffer size first (to 4408 samples), period size second (to 1102 samples).
+D: [pulseaudio] alsa-mixer.c: Profile output:hdmi-surround supported.
+D: [pulseaudio] alsa-mixer.c: Available mixer paths (after tidying):
+D: [pulseaudio] alsa-mixer.c: Path Set 0x557bd983de60, direction=1
+D: [pulseaudio] alsa-mixer.c: Path hdmi-output-0 (HDMI / DisplayPort), direction=1, priority=59, probed=yes, supported=yes, has_mute=no, has_volume=no, has_dB=no, min_volume=0, max_volume=0, min_dB=-inf, max_dB=0
+D: [pulseaudio] alsa-mixer.c: Jack HDMI/DP, alsa_name='HDMI/DP,pcm=3 Jack', index='0', detection possible
+D: [pulseaudio] alsa-mixer.c: Skipping profile output:hdmi-surround+input:analog-stereo - will not be able to open input:analog-stereo
+D: [pulseaudio] alsa-mixer.c: Skipping profile output:hdmi-surround+input:iec958-stereo - will not be able to open input:iec958-stereo
+D: [pulseaudio] alsa-mixer.c: Looking at profile output:hdmi-surround71
+D: [pulseaudio] alsa-mixer.c: Checking for playback on Digital Surround 7.1 (HDMI) (hdmi-surround71)
+D: [pulseaudio] alsa-util.c: Trying hdmi:0 with SND_PCM_NO_AUTO_FORMAT ...
+D: [pulseaudio] alsa-util.c: Managed to open hdmi:0
+D: [pulseaudio] alsa-util.c: Maximum hw buffer size is 5944 ms
+D: [pulseaudio] alsa-util.c: Set buffer size first (to 4408 samples), period size second (to 1102 samples).
+D: [pulseaudio] alsa-mixer.c: Profile output:hdmi-surround71 supported.
+D: [pulseaudio] alsa-mixer.c: Available mixer paths (after tidying):
+D: [pulseaudio] alsa-mixer.c: Path Set 0x557bd98406f0, direction=1
+D: [pulseaudio] alsa-mixer.c: Path hdmi-output-0 (HDMI / DisplayPort), direction=1, priority=59, probed=yes, supported=yes, has_mute=no, has_volume=no, has_dB=no, min_volume=0, max_volume=0, min_dB=-inf, max_dB=0
+D: [pulseaudio] alsa-mixer.c: Jack HDMI/DP, alsa_name='HDMI/DP,pcm=3 Jack', index='0', detection possible
+D: [pulseaudio] alsa-mixer.c: Skipping profile output:hdmi-surround71+input:analog-stereo - will not be able to open input:analog-stereo
+D: [pulseaudio] alsa-mixer.c: Skipping profile output:hdmi-surround71+input:iec958-stereo - will not be able to open input:iec958-stereo
+D: [pulseaudio] alsa-mixer.c: Looking at profile output:hdmi-dts-surround
+D: [pulseaudio] alsa-mixer.c: Checking for playback on Digital Surround 5.1 (HDMI/DTS) (hdmi-dts-surround)
+D: [pulseaudio] alsa-util.c: Trying dcahdmi:0 with SND_PCM_NO_AUTO_FORMAT ...
+I: [pulseaudio] (alsa-lib)pcm.c: Unknown PCM dcahdmi:0
+I: [pulseaudio] alsa-util.c: Error opening PCM device dcahdmi:0: No such file or directory
+D: [pulseaudio] alsa-mixer.c: Caching failure to open output:hdmi-dts-surround
+D: [pulseaudio] alsa-mixer.c: Skipping profile output:hdmi-dts-surround+input:analog-stereo - will not be able to open output:hdmi-dts-surround
+D: [pulseaudio] alsa-mixer.c: Skipping profile output:hdmi-dts-surround+input:iec958-stereo - will not be able to open output:hdmi-dts-surround
+D: [pulseaudio] alsa-mixer.c: Looking at profile output:hdmi-stereo-extra1
+D: [pulseaudio] alsa-mixer.c: Checking for playback on Digital Stereo (HDMI 2) (hdmi-stereo-extra1)
+D: [pulseaudio] alsa-util.c: Trying hdmi:0,1 with SND_PCM_NO_AUTO_FORMAT ...
+D: [pulseaudio] alsa-util.c: Managed to open hdmi:0,1
+D: [pulseaudio] alsa-util.c: Maximum hw buffer size is 23777 ms
+D: [pulseaudio] alsa-util.c: Set buffer size first (to 4408 samples), period size second (to 1102 samples).
+D: [pulseaudio] alsa-mixer.c: Profile output:hdmi-stereo-extra1 supported.
+I: [pulseaudio] alsa-mixer.c: Loading path config: /usr/share//pulseaudio/alsa-mixer/paths/hdmi-output-1.conf
+D: [pulseaudio] conf-parser.c: Parsing configuration file '/usr/share//pulseaudio/alsa-mixer/paths/hdmi-output-1.conf'
+D: [pulseaudio] alsa-mixer.c: Probing path 'hdmi-output-1'
+D: [pulseaudio] alsa-mixer.c: Probe of jack 'HDMI/DP Jack' succeeded (found!)
+D: [pulseaudio] alsa-mixer.c: Available mixer paths (after tidying):
+D: [pulseaudio] alsa-mixer.c: Path Set 0x557bd983dd00, direction=1
+D: [pulseaudio] alsa-mixer.c: Path hdmi-output-1 (HDMI / DisplayPort 2), direction=1, priority=58, probed=yes, supported=yes, has_mute=no, has_volume=no, has_dB=no, min_volume=0, max_volume=0, min_dB=-inf, max_dB=0
+D: [pulseaudio] alsa-mixer.c: Jack HDMI/DP, alsa_name='HDMI/DP,pcm=7 Jack', index='0', detection possible
+D: [pulseaudio] alsa-mixer.c: Skipping profile output:hdmi-stereo-extra1+input:analog-stereo - will not be able to open input:analog-stereo
+D: [pulseaudio] alsa-mixer.c: Skipping profile output:hdmi-stereo-extra1+input:iec958-stereo - will not be able to open input:iec958-stereo
+D: [pulseaudio] alsa-mixer.c: Looking at profile output:hdmi-surround-extra1
+D: [pulseaudio] alsa-mixer.c: Checking for playback on Digital Surround 5.1 (HDMI 2) (hdmi-surround-extra1)
+D: [pulseaudio] alsa-util.c: Trying hdmi:0,1 with SND_PCM_NO_AUTO_FORMAT ...
+D: [pulseaudio] alsa-util.c: Managed to open hdmi:0,1
+D: [pulseaudio] alsa-util.c: Maximum hw buffer size is 7925 ms
+D: [pulseaudio] alsa-util.c: Set buffer size first (to 4408 samples), period size second (to 1102 samples).
+D: [pulseaudio] alsa-mixer.c: Profile output:hdmi-surround-extra1 supported.
+D: [pulseaudio] alsa-mixer.c: Available mixer paths (after tidying):
+D: [pulseaudio] alsa-mixer.c: Path Set 0x557bd9847820, direction=1
+D: [pulseaudio] alsa-mixer.c: Path hdmi-output-1 (HDMI / DisplayPort 2), direction=1, priority=58, probed=yes, supported=yes, has_mute=no, has_volume=no, has_dB=no, min_volume=0, max_volume=0, min_dB=-inf, max_dB=0
+D: [pulseaudio] alsa-mixer.c: Jack HDMI/DP, alsa_name='HDMI/DP,pcm=7 Jack', index='0', detection possible
+D: [pulseaudio] alsa-mixer.c: Skipping profile output:hdmi-surround-extra1+input:analog-stereo - will not be able to open input:analog-stereo
+D: [pulseaudio] alsa-mixer.c: Skipping profile output:hdmi-surround-extra1+input:iec958-stereo - will not be able to open input:iec958-stereo
+D: [pulseaudio] alsa-mixer.c: Looking at profile output:hdmi-surround71-extra1
+D: [pulseaudio] alsa-mixer.c: Checking for playback on Digital Surround 7.1 (HDMI 2) (hdmi-surround71-extra1)
+D: [pulseaudio] alsa-util.c: Trying hdmi:0,1 with SND_PCM_NO_AUTO_FORMAT ...
+D: [pulseaudio] alsa-util.c: Managed to open hdmi:0,1
+D: [pulseaudio] alsa-util.c: Maximum hw buffer size is 5944 ms
+D: [pulseaudio] alsa-util.c: Set buffer size first (to 4408 samples), period size second (to 1102 samples).
+D: [pulseaudio] alsa-mixer.c: Profile output:hdmi-surround71-extra1 supported.
+D: [pulseaudio] alsa-mixer.c: Available mixer paths (after tidying):
+D: [pulseaudio] alsa-mixer.c: Path Set 0x557bd983d5e0, direction=1
+D: [pulseaudio] alsa-mixer.c: Path hdmi-output-1 (HDMI / DisplayPort 2), direction=1, priority=58, probed=yes, supported=yes, has_mute=no, has_volume=no, has_dB=no, min_volume=0, max_volume=0, min_dB=-inf, max_dB=0
+D: [pulseaudio] alsa-mixer.c: Jack HDMI/DP, alsa_name='HDMI/DP,pcm=7 Jack', index='0', detection possible
+D: [pulseaudio] alsa-mixer.c: Skipping profile output:hdmi-surround71-extra1+input:analog-stereo - will not be able to open input:analog-stereo
+D: [pulseaudio] alsa-mixer.c: Skipping profile output:hdmi-surround71-extra1+input:iec958-stereo - will not be able to open input:iec958-stereo
+D: [pulseaudio] alsa-mixer.c: Looking at profile output:hdmi-dts-surround-extra1
+D: [pulseaudio] alsa-mixer.c: Checking for playback on Digital Surround 5.1 (HDMI 2/DTS) (hdmi-dts-surround-extra1)
+D: [pulseaudio] alsa-util.c: Trying dcahdmi:0,1 with SND_PCM_NO_AUTO_FORMAT ...
+I: [pulseaudio] (alsa-lib)pcm.c: Unknown PCM dcahdmi:0,1
+I: [pulseaudio] alsa-util.c: Error opening PCM device dcahdmi:0,1: No such file or directory
+D: [pulseaudio] alsa-mixer.c: Caching failure to open output:hdmi-dts-surround-extra1
+D: [pulseaudio] alsa-mixer.c: Skipping profile output:hdmi-dts-surround-extra1+input:analog-stereo - will not be able to open output:hdmi-dts-surround-extra1
+D: [pulseaudio] alsa-mixer.c: Skipping profile output:hdmi-dts-surround-extra1+input:iec958-stereo - will not be able to open output:hdmi-dts-surround-extra1
+D: [pulseaudio] alsa-mixer.c: Looking at profile output:hdmi-stereo-extra2
+D: [pulseaudio] alsa-mixer.c: Checking for playback on Digital Stereo (HDMI 3) (hdmi-stereo-extra2)
+D: [pulseaudio] alsa-util.c: Trying hdmi:0,2 with SND_PCM_NO_AUTO_FORMAT ...
+D: [pulseaudio] alsa-util.c: Managed to open hdmi:0,2
+D: [pulseaudio] alsa-util.c: Maximum hw buffer size is 23777 ms
+D: [pulseaudio] alsa-util.c: Set buffer size first (to 4408 samples), period size second (to 1102 samples).
+D: [pulseaudio] alsa-mixer.c: Profile output:hdmi-stereo-extra2 supported.
+I: [pulseaudio] alsa-mixer.c: Loading path config: /usr/share//pulseaudio/alsa-mixer/paths/hdmi-output-2.conf
+D: [pulseaudio] conf-parser.c: Parsing configuration file '/usr/share//pulseaudio/alsa-mixer/paths/hdmi-output-2.conf'
+D: [pulseaudio] alsa-mixer.c: Probing path 'hdmi-output-2'
+D: [pulseaudio] alsa-mixer.c: Probe of jack 'HDMI/DP Jack' succeeded (found!)
+D: [pulseaudio] alsa-mixer.c: Available mixer paths (after tidying):
+D: [pulseaudio] alsa-mixer.c: Path Set 0x557bd9848570, direction=1
+D: [pulseaudio] alsa-mixer.c: Path hdmi-output-2 (HDMI / DisplayPort 3), direction=1, priority=57, probed=yes, supported=yes, has_mute=no, has_volume=no, has_dB=no, min_volume=0, max_volume=0, min_dB=-inf, max_dB=0
+D: [pulseaudio] alsa-mixer.c: Jack HDMI/DP, alsa_name='HDMI/DP,pcm=8 Jack', index='0', detection possible
+D: [pulseaudio] alsa-mixer.c: Skipping profile output:hdmi-stereo-extra2+input:analog-stereo - will not be able to open input:analog-stereo
+D: [pulseaudio] alsa-mixer.c: Skipping profile output:hdmi-stereo-extra2+input:iec958-stereo - will not be able to open input:iec958-stereo
+D: [pulseaudio] alsa-mixer.c: Looking at profile output:hdmi-surround-extra2
+D: [pulseaudio] alsa-mixer.c: Checking for playback on Digital Surround 5.1 (HDMI 3) (hdmi-surround-extra2)
+D: [pulseaudio] alsa-util.c: Trying hdmi:0,2 with SND_PCM_NO_AUTO_FORMAT ...
+D: [pulseaudio] alsa-util.c: Managed to open hdmi:0,2
+D: [pulseaudio] alsa-util.c: Maximum hw buffer size is 7925 ms
+D: [pulseaudio] alsa-util.c: Set buffer size first (to 4408 samples), period size second (to 1102 samples).
+D: [pulseaudio] alsa-mixer.c: Profile output:hdmi-surround-extra2 supported.
+D: [pulseaudio] alsa-mixer.c: Available mixer paths (after tidying):
+D: [pulseaudio] alsa-mixer.c: Path Set 0x557bd9848c90, direction=1
+D: [pulseaudio] alsa-mixer.c: Path hdmi-output-2 (HDMI / DisplayPort 3), direction=1, priority=57, probed=yes, supported=yes, has_mute=no, has_volume=no, has_dB=no, min_volume=0, max_volume=0, min_dB=-inf, max_dB=0
+D: [pulseaudio] alsa-mixer.c: Jack HDMI/DP, alsa_name='HDMI/DP,pcm=8 Jack', index='0', detection possible
+D: [pulseaudio] alsa-mixer.c: Skipping profile output:hdmi-surround-extra2+input:analog-stereo - will not be able to open input:analog-stereo
+D: [pulseaudio] alsa-mixer.c: Skipping profile output:hdmi-surround-extra2+input:iec958-stereo - will not be able to open input:iec958-stereo
+D: [pulseaudio] alsa-mixer.c: Looking at profile output:hdmi-surround71-extra2
+D: [pulseaudio] alsa-mixer.c: Checking for playback on Digital Surround 7.1 (HDMI 3) (hdmi-surround71-extra2)
+D: [pulseaudio] alsa-util.c: Trying hdmi:0,2 with SND_PCM_NO_AUTO_FORMAT ...
+D: [pulseaudio] alsa-util.c: Managed to open hdmi:0,2
+D: [pulseaudio] alsa-util.c: Maximum hw buffer size is 5944 ms
+D: [pulseaudio] alsa-util.c: Set buffer size first (to 4408 samples), period size second (to 1102 samples).
+D: [pulseaudio] alsa-mixer.c: Profile output:hdmi-surround71-extra2 supported.
+D: [pulseaudio] alsa-mixer.c: Available mixer paths (after tidying):
+D: [pulseaudio] alsa-mixer.c: Path Set 0x557bd9849400, direction=1
+D: [pulseaudio] alsa-mixer.c: Path hdmi-output-2 (HDMI / DisplayPort 3), direction=1, priority=57, probed=yes, supported=yes, has_mute=no, has_volume=no, has_dB=no, min_volume=0, max_volume=0, min_dB=-inf, max_dB=0
+D: [pulseaudio] alsa-mixer.c: Jack HDMI/DP, alsa_name='HDMI/DP,pcm=8 Jack', index='0', detection possible
+D: [pulseaudio] alsa-mixer.c: Skipping profile output:hdmi-surround71-extra2+input:analog-stereo - will not be able to open input:analog-stereo
+D: [pulseaudio] alsa-mixer.c: Skipping profile output:hdmi-surround71-extra2+input:iec958-stereo - will not be able to open input:iec958-stereo
+D: [pulseaudio] alsa-mixer.c: Looking at profile output:hdmi-dts-surround-extra2
+D: [pulseaudio] alsa-mixer.c: Checking for playback on Digital Surround 5.1 (HDMI 3/DTS) (hdmi-dts-surround-extra2)
+D: [pulseaudio] alsa-util.c: Trying dcahdmi:0,2 with SND_PCM_NO_AUTO_FORMAT ...
+I: [pulseaudio] (alsa-lib)pcm.c: Unknown PCM dcahdmi:0,2
+I: [pulseaudio] alsa-util.c: Error opening PCM device dcahdmi:0,2: No such file or directory
+D: [pulseaudio] alsa-mixer.c: Caching failure to open output:hdmi-dts-surround-extra2
+D: [pulseaudio] alsa-mixer.c: Skipping profile output:hdmi-dts-surround-extra2+input:analog-stereo - will not be able to open output:hdmi-dts-surround-extra2
+D: [pulseaudio] alsa-mixer.c: Skipping profile output:hdmi-dts-surround-extra2+input:iec958-stereo - will not be able to open output:hdmi-dts-surround-extra2
+D: [pulseaudio] alsa-mixer.c: Looking at profile output:hdmi-stereo-extra3
+D: [pulseaudio] alsa-mixer.c: Checking for playback on Digital Stereo (HDMI 4) (hdmi-stereo-extra3)
+D: [pulseaudio] alsa-util.c: Trying hdmi:0,3 with SND_PCM_NO_AUTO_FORMAT ...
+D: [pulseaudio] alsa-util.c: Managed to open hdmi:0,3
+D: [pulseaudio] alsa-util.c: Maximum hw buffer size is 23777 ms
+D: [pulseaudio] alsa-util.c: Set buffer size first (to 4408 samples), period size second (to 1102 samples).
+D: [pulseaudio] alsa-mixer.c: Profile output:hdmi-stereo-extra3 supported.
+I: [pulseaudio] alsa-mixer.c: Loading path config: /usr/share//pulseaudio/alsa-mixer/paths/hdmi-output-3.conf
+D: [pulseaudio] conf-parser.c: Parsing configuration file '/usr/share//pulseaudio/alsa-mixer/paths/hdmi-output-3.conf'
+D: [pulseaudio] alsa-mixer.c: Probing path 'hdmi-output-3'
+D: [pulseaudio] alsa-mixer.c: Probe of jack 'HDMI/DP Jack' succeeded (found!)
+D: [pulseaudio] alsa-mixer.c: Available mixer paths (after tidying):
+D: [pulseaudio] alsa-mixer.c: Path Set 0x557bd98491c0, direction=1
+D: [pulseaudio] alsa-mixer.c: Path hdmi-output-3 (HDMI / DisplayPort 4), direction=1, priority=56, probed=yes, supported=yes, has_mute=no, has_volume=no, has_dB=no, min_volume=0, max_volume=0, min_dB=-inf, max_dB=0
+D: [pulseaudio] alsa-mixer.c: Jack HDMI/DP, alsa_name='HDMI/DP,pcm=9 Jack', index='0', detection possible
+D: [pulseaudio] alsa-mixer.c: Skipping profile output:hdmi-stereo-extra3+input:analog-stereo - will not be able to open input:analog-stereo
+D: [pulseaudio] alsa-mixer.c: Skipping profile output:hdmi-stereo-extra3+input:iec958-stereo - will not be able to open input:iec958-stereo
+D: [pulseaudio] alsa-mixer.c: Looking at profile output:hdmi-surround-extra3
+D: [pulseaudio] alsa-mixer.c: Checking for playback on Digital Surround 5.1 (HDMI 4) (hdmi-surround-extra3)
+D: [pulseaudio] alsa-util.c: Trying hdmi:0,3 with SND_PCM_NO_AUTO_FORMAT ...
+D: [pulseaudio] alsa-util.c: Managed to open hdmi:0,3
+D: [pulseaudio] alsa-util.c: Maximum hw buffer size is 7925 ms
+D: [pulseaudio] alsa-util.c: Set buffer size first (to 4408 samples), period size second (to 1102 samples).
+D: [pulseaudio] alsa-mixer.c: Profile output:hdmi-surround-extra3 supported.
+D: [pulseaudio] alsa-mixer.c: Available mixer paths (after tidying):
+D: [pulseaudio] alsa-mixer.c: Path Set 0x557bd9849bb0, direction=1
+D: [pulseaudio] alsa-mixer.c: Path hdmi-output-3 (HDMI / DisplayPort 4), direction=1, priority=56, probed=yes, supported=yes, has_mute=no, has_volume=no, has_dB=no, min_volume=0, max_volume=0, min_dB=-inf, max_dB=0
+D: [pulseaudio] alsa-mixer.c: Jack HDMI/DP, alsa_name='HDMI/DP,pcm=9 Jack', index='0', detection possible
+D: [pulseaudio] alsa-mixer.c: Skipping profile output:hdmi-surround-extra3+input:analog-stereo - will not be able to open input:analog-stereo
+D: [pulseaudio] alsa-mixer.c: Skipping profile output:hdmi-surround-extra3+input:iec958-stereo - will not be able to open input:iec958-stereo
+D: [pulseaudio] alsa-mixer.c: Looking at profile output:hdmi-surround71-extra3
+D: [pulseaudio] alsa-mixer.c: Checking for playback on Digital Surround 7.1 (HDMI 4) (hdmi-surround71-extra3)
+D: [pulseaudio] alsa-util.c: Trying hdmi:0,3 with SND_PCM_NO_AUTO_FORMAT ...
+D: [pulseaudio] alsa-util.c: Managed to open hdmi:0,3
+D: [pulseaudio] alsa-util.c: Maximum hw buffer size is 5944 ms
+D: [pulseaudio] alsa-util.c: Set buffer size first (to 4408 samples), period size second (to 1102 samples).
+D: [pulseaudio] alsa-mixer.c: Profile output:hdmi-surround71-extra3 supported.
+D: [pulseaudio] alsa-mixer.c: Available mixer paths (after tidying):
+D: [pulseaudio] alsa-mixer.c: Path Set 0x557bd9845630, direction=1
+D: [pulseaudio] alsa-mixer.c: Path hdmi-output-3 (HDMI / DisplayPort 4), direction=1, priority=56, probed=yes, supported=yes, has_mute=no, has_volume=no, has_dB=no, min_volume=0, max_volume=0, min_dB=-inf, max_dB=0
+D: [pulseaudio] alsa-mixer.c: Jack HDMI/DP, alsa_name='HDMI/DP,pcm=9 Jack', index='0', detection possible
+D: [pulseaudio] alsa-mixer.c: Skipping profile output:hdmi-surround71-extra3+input:analog-stereo - will not be able to open input:analog-stereo
+D: [pulseaudio] alsa-mixer.c: Skipping profile output:hdmi-surround71-extra3+input:iec958-stereo - will not be able to open input:iec958-stereo
+D: [pulseaudio] alsa-mixer.c: Looking at profile output:hdmi-dts-surround-extra3
+D: [pulseaudio] alsa-mixer.c: Checking for playback on Digital Surround 5.1 (HDMI 4/DTS) (hdmi-dts-surround-extra3)
+D: [pulseaudio] alsa-util.c: Trying dcahdmi:0,3 with SND_PCM_NO_AUTO_FORMAT ...
+I: [pulseaudio] (alsa-lib)pcm.c: Unknown PCM dcahdmi:0,3
+I: [pulseaudio] alsa-util.c: Error opening PCM device dcahdmi:0,3: No such file or directory
+D: [pulseaudio] alsa-mixer.c: Caching failure to open output:hdmi-dts-surround-extra3
+D: [pulseaudio] alsa-mixer.c: Skipping profile output:hdmi-dts-surround-extra3+input:analog-stereo - will not be able to open output:hdmi-dts-surround-extra3
+D: [pulseaudio] alsa-mixer.c: Skipping profile output:hdmi-dts-surround-extra3+input:iec958-stereo - will not be able to open output:hdmi-dts-surround-extra3
+D: [pulseaudio] alsa-mixer.c: Looking at profile output:hdmi-stereo-extra4
+D: [pulseaudio] alsa-mixer.c: Checking for playback on Digital Stereo (HDMI 5) (hdmi-stereo-extra4)
+D: [pulseaudio] alsa-util.c: Trying hdmi:0,4 with SND_PCM_NO_AUTO_FORMAT ...
+I: [pulseaudio] (alsa-lib)pcm_hw.c: open '/dev/snd/pcmC0D10p' failed (-2)
+I: [pulseaudio] alsa-util.c: Error opening PCM device hdmi:0,4: No such file or directory
+D: [pulseaudio] alsa-mixer.c: Caching failure to open output:hdmi-stereo-extra4
+D: [pulseaudio] alsa-mixer.c: Skipping profile output:hdmi-stereo-extra4+input:analog-stereo - will not be able to open output:hdmi-stereo-extra4
+D: [pulseaudio] alsa-mixer.c: Skipping profile output:hdmi-stereo-extra4+input:iec958-stereo - will not be able to open output:hdmi-stereo-extra4
+D: [pulseaudio] alsa-mixer.c: Looking at profile output:hdmi-surround-extra4
+D: [pulseaudio] alsa-mixer.c: Checking for playback on Digital Surround 5.1 (HDMI 5) (hdmi-surround-extra4)
+D: [pulseaudio] alsa-util.c: Trying hdmi:0,4 with SND_PCM_NO_AUTO_FORMAT ...
+I: [pulseaudio] (alsa-lib)pcm_hw.c: open '/dev/snd/pcmC0D10p' failed (-2)
+I: [pulseaudio] alsa-util.c: Error opening PCM device hdmi:0,4: No such file or directory
+D: [pulseaudio] alsa-mixer.c: Caching failure to open output:hdmi-surround-extra4
+D: [pulseaudio] alsa-mixer.c: Skipping profile output:hdmi-surround-extra4+input:analog-stereo - will not be able to open output:hdmi-surround-extra4
+D: [pulseaudio] alsa-mixer.c: Skipping profile output:hdmi-surround-extra4+input:iec958-stereo - will not be able to open output:hdmi-surround-extra4
+D: [pulseaudio] alsa-mixer.c: Looking at profile output:hdmi-surround71-extra4
+D: [pulseaudio] alsa-mixer.c: Checking for playback on Digital Surround 7.1 (HDMI 5) (hdmi-surround71-extra4)
+D: [pulseaudio] alsa-util.c: Trying hdmi:0,4 with SND_PCM_NO_AUTO_FORMAT ...
+I: [pulseaudio] (alsa-lib)pcm_hw.c: open '/dev/snd/pcmC0D10p' failed (-2)
+I: [pulseaudio] alsa-util.c: Error opening PCM device hdmi:0,4: No such file or directory
+D: [pulseaudio] alsa-mixer.c: Caching failure to open output:hdmi-surround71-extra4
+D: [pulseaudio] alsa-mixer.c: Skipping profile output:hdmi-surround71-extra4+input:analog-stereo - will not be able to open output:hdmi-surround71-extra4
+D: [pulseaudio] alsa-mixer.c: Skipping profile output:hdmi-surround71-extra4+input:iec958-stereo - will not be able to open output:hdmi-surround71-extra4
+D: [pulseaudio] alsa-mixer.c: Looking at profile output:hdmi-dts-surround-extra4
+D: [pulseaudio] alsa-mixer.c: Checking for playback on Digital Surround 5.1 (HDMI 5/DTS) (hdmi-dts-surround-extra4)
+D: [pulseaudio] alsa-util.c: Trying dcahdmi:0,4 with SND_PCM_NO_AUTO_FORMAT ...
+I: [pulseaudio] (alsa-lib)pcm.c: Unknown PCM dcahdmi:0,4
+I: [pulseaudio] alsa-util.c: Error opening PCM device dcahdmi:0,4: No such file or directory
+D: [pulseaudio] alsa-mixer.c: Caching failure to open output:hdmi-dts-surround-extra4
+D: [pulseaudio] alsa-mixer.c: Skipping profile output:hdmi-dts-surround-extra4+input:analog-stereo - will not be able to open output:hdmi-dts-surround-extra4
+D: [pulseaudio] alsa-mixer.c: Skipping profile output:hdmi-dts-surround-extra4+input:iec958-stereo - will not be able to open output:hdmi-dts-surround-extra4
+D: [pulseaudio] alsa-mixer.c: Looking at profile output:hdmi-stereo-extra5
+D: [pulseaudio] alsa-mixer.c: Checking for playback on Digital Stereo (HDMI 6) (hdmi-stereo-extra5)
+D: [pulseaudio] alsa-util.c: Trying hdmi:0,5 with SND_PCM_NO_AUTO_FORMAT ...
+I: [pulseaudio] (alsa-lib)pcm_hw.c: open '/dev/snd/pcmC0D11p' failed (-2)
+I: [pulseaudio] alsa-util.c: Error opening PCM device hdmi:0,5: No such file or directory
+D: [pulseaudio] alsa-mixer.c: Caching failure to open output:hdmi-stereo-extra5
+D: [pulseaudio] alsa-mixer.c: Skipping profile output:hdmi-stereo-extra5+input:analog-stereo - will not be able to open output:hdmi-stereo-extra5
+D: [pulseaudio] alsa-mixer.c: Skipping profile output:hdmi-stereo-extra5+input:iec958-stereo - will not be able to open output:hdmi-stereo-extra5
+D: [pulseaudio] alsa-mixer.c: Looking at profile output:hdmi-surround-extra5
+D: [pulseaudio] alsa-mixer.c: Checking for playback on Digital Surround 5.1 (HDMI 6) (hdmi-surround-extra5)
+D: [pulseaudio] alsa-util.c: Trying hdmi:0,5 with SND_PCM_NO_AUTO_FORMAT ...
+I: [pulseaudio] (alsa-lib)pcm_hw.c: open '/dev/snd/pcmC0D11p' failed (-2)
+I: [pulseaudio] alsa-util.c: Error opening PCM device hdmi:0,5: No such file or directory
+D: [pulseaudio] alsa-mixer.c: Caching failure to open output:hdmi-surround-extra5
+D: [pulseaudio] alsa-mixer.c: Skipping profile output:hdmi-surround-extra5+input:analog-stereo - will not be able to open output:hdmi-surround-extra5
+D: [pulseaudio] alsa-mixer.c: Skipping profile output:hdmi-surround-extra5+input:iec958-stereo - will not be able to open output:hdmi-surround-extra5
+D: [pulseaudio] alsa-mixer.c: Looking at profile output:hdmi-surround71-extra5
+D: [pulseaudio] alsa-mixer.c: Checking for playback on Digital Surround 7.1 (HDMI 6) (hdmi-surround71-extra5)
+D: [pulseaudio] alsa-util.c: Trying hdmi:0,5 with SND_PCM_NO_AUTO_FORMAT ...
+I: [pulseaudio] (alsa-lib)pcm_hw.c: open '/dev/snd/pcmC0D11p' failed (-2)
+I: [pulseaudio] alsa-util.c: Error opening PCM device hdmi:0,5: No such file or directory
+D: [pulseaudio] alsa-mixer.c: Caching failure to open output:hdmi-surround71-extra5
+D: [pulseaudio] alsa-mixer.c: Skipping profile output:hdmi-surround71-extra5+input:analog-stereo - will not be able to open output:hdmi-surround71-extra5
+D: [pulseaudio] alsa-mixer.c: Skipping profile output:hdmi-surround71-extra5+input:iec958-stereo - will not be able to open output:hdmi-surround71-extra5
+D: [pulseaudio] alsa-mixer.c: Looking at profile output:hdmi-dts-surround-extra5
+D: [pulseaudio] alsa-mixer.c: Checking for playback on Digital Surround 5.1 (HDMI 6/DTS) (hdmi-dts-surround-extra5)
+D: [pulseaudio] alsa-util.c: Trying dcahdmi:0,5 with SND_PCM_NO_AUTO_FORMAT ...
+I: [pulseaudio] (alsa-lib)pcm.c: Unknown PCM dcahdmi:0,5
+I: [pulseaudio] alsa-util.c: Error opening PCM device dcahdmi:0,5: No such file or directory
+D: [pulseaudio] alsa-mixer.c: Caching failure to open output:hdmi-dts-surround-extra5
+D: [pulseaudio] alsa-mixer.c: Skipping profile output:hdmi-dts-surround-extra5+input:analog-stereo - will not be able to open output:hdmi-dts-surround-extra5
+D: [pulseaudio] alsa-mixer.c: Skipping profile output:hdmi-dts-surround-extra5+input:iec958-stereo - will not be able to open output:hdmi-dts-surround-extra5
+D: [pulseaudio] alsa-mixer.c: Looking at profile output:hdmi-stereo-extra6
+D: [pulseaudio] alsa-mixer.c: Checking for playback on Digital Stereo (HDMI 7) (hdmi-stereo-extra6)
+D: [pulseaudio] alsa-util.c: Trying hdmi:0,6 with SND_PCM_NO_AUTO_FORMAT ...
+I: [pulseaudio] (alsa-lib)pcm_hw.c: open '/dev/snd/pcmC0D12p' failed (-2)
+I: [pulseaudio] alsa-util.c: Error opening PCM device hdmi:0,6: No such file or directory
+D: [pulseaudio] alsa-mixer.c: Caching failure to open output:hdmi-stereo-extra6
+D: [pulseaudio] alsa-mixer.c: Skipping profile output:hdmi-stereo-extra6+input:analog-stereo - will not be able to open output:hdmi-stereo-extra6
+D: [pulseaudio] alsa-mixer.c: Skipping profile output:hdmi-stereo-extra6+input:iec958-stereo - will not be able to open output:hdmi-stereo-extra6
+D: [pulseaudio] alsa-mixer.c: Looking at profile output:hdmi-surround-extra6
+D: [pulseaudio] alsa-mixer.c: Checking for playback on Digital Surround 5.1 (HDMI 7) (hdmi-surround-extra6)
+D: [pulseaudio] alsa-util.c: Trying hdmi:0,6 with SND_PCM_NO_AUTO_FORMAT ...
+I: [pulseaudio] (alsa-lib)pcm_hw.c: open '/dev/snd/pcmC0D12p' failed (-2)
+I: [pulseaudio] alsa-util.c: Error opening PCM device hdmi:0,6: No such file or directory
+D: [pulseaudio] alsa-mixer.c: Caching failure to open output:hdmi-surround-extra6
+D: [pulseaudio] alsa-mixer.c: Skipping profile output:hdmi-surround-extra6+input:analog-stereo - will not be able to open output:hdmi-surround-extra6
+D: [pulseaudio] alsa-mixer.c: Skipping profile output:hdmi-surround-extra6+input:iec958-stereo - will not be able to open output:hdmi-surround-extra6
+D: [pulseaudio] alsa-mixer.c: Looking at profile output:hdmi-surround71-extra6
+D: [pulseaudio] alsa-mixer.c: Checking for playback on Digital Surround 7.1 (HDMI 7) (hdmi-surround71-extra6)
+D: [pulseaudio] alsa-util.c: Trying hdmi:0,6 with SND_PCM_NO_AUTO_FORMAT ...
+I: [pulseaudio] (alsa-lib)pcm_hw.c: open '/dev/snd/pcmC0D12p' failed (-2)
+I: [pulseaudio] alsa-util.c: Error opening PCM device hdmi:0,6: No such file or directory
+D: [pulseaudio] alsa-mixer.c: Caching failure to open output:hdmi-surround71-extra6
+D: [pulseaudio] alsa-mixer.c: Skipping profile output:hdmi-surround71-extra6+input:analog-stereo - will not be able to open output:hdmi-surround71-extra6
+D: [pulseaudio] alsa-mixer.c: Skipping profile output:hdmi-surround71-extra6+input:iec958-stereo - will not be able to open output:hdmi-surround71-extra6
+D: [pulseaudio] alsa-mixer.c: Looking at profile output:hdmi-dts-surround-extra6
+D: [pulseaudio] alsa-mixer.c: Checking for playback on Digital Surround 5.1 (HDMI 7/DTS) (hdmi-dts-surround-extra6)
+D: [pulseaudio] alsa-util.c: Trying dcahdmi:0,6 with SND_PCM_NO_AUTO_FORMAT ...
+I: [pulseaudio] (alsa-lib)pcm.c: Unknown PCM dcahdmi:0,6
+I: [pulseaudio] alsa-util.c: Error opening PCM device dcahdmi:0,6: No such file or directory
+D: [pulseaudio] alsa-mixer.c: Caching failure to open output:hdmi-dts-surround-extra6
+D: [pulseaudio] alsa-mixer.c: Skipping profile output:hdmi-dts-surround-extra6+input:analog-stereo - will not be able to open output:hdmi-dts-surround-extra6
+D: [pulseaudio] alsa-mixer.c: Skipping profile output:hdmi-dts-surround-extra6+input:iec958-stereo - will not be able to open output:hdmi-dts-surround-extra6
+D: [pulseaudio] alsa-mixer.c: Looking at profile output:hdmi-stereo-extra7
+D: [pulseaudio] alsa-mixer.c: Checking for playback on Digital Stereo (HDMI 8) (hdmi-stereo-extra7)
+D: [pulseaudio] alsa-util.c: Trying hdmi:0,7 with SND_PCM_NO_AUTO_FORMAT ...
+I: [pulseaudio] (alsa-lib)pcm_hw.c: open '/dev/snd/pcmC0D13p' failed (-2)
+I: [pulseaudio] alsa-util.c: Error opening PCM device hdmi:0,7: No such file or directory
+D: [pulseaudio] alsa-mixer.c: Caching failure to open output:hdmi-stereo-extra7
+D: [pulseaudio] alsa-mixer.c: Skipping profile output:hdmi-stereo-extra7+input:analog-stereo - will not be able to open output:hdmi-stereo-extra7
+D: [pulseaudio] alsa-mixer.c: Skipping profile output:hdmi-stereo-extra7+input:iec958-stereo - will not be able to open output:hdmi-stereo-extra7
+D: [pulseaudio] alsa-mixer.c: Looking at profile output:hdmi-surround-extra7
+D: [pulseaudio] alsa-mixer.c: Checking for playback on Digital Surround 5.1 (HDMI 8) (hdmi-surround-extra7)
+D: [pulseaudio] alsa-util.c: Trying hdmi:0,7 with SND_PCM_NO_AUTO_FORMAT ...
+I: [pulseaudio] (alsa-lib)pcm_hw.c: open '/dev/snd/pcmC0D13p' failed (-2)
+I: [pulseaudio] alsa-util.c: Error opening PCM device hdmi:0,7: No such file or directory
+D: [pulseaudio] alsa-mixer.c: Caching failure to open output:hdmi-surround-extra7
+D: [pulseaudio] alsa-mixer.c: Skipping profile output:hdmi-surround-extra7+input:analog-stereo - will not be able to open output:hdmi-surround-extra7
+D: [pulseaudio] alsa-mixer.c: Skipping profile output:hdmi-surround-extra7+input:iec958-stereo - will not be able to open output:hdmi-surround-extra7
+D: [pulseaudio] alsa-mixer.c: Looking at profile output:hdmi-surround71-extra7
+D: [pulseaudio] alsa-mixer.c: Checking for playback on Digital Surround 7.1 (HDMI 8) (hdmi-surround71-extra7)
+D: [pulseaudio] alsa-util.c: Trying hdmi:0,7 with SND_PCM_NO_AUTO_FORMAT ...
+I: [pulseaudio] (alsa-lib)pcm_hw.c: open '/dev/snd/pcmC0D13p' failed (-2)
+I: [pulseaudio] alsa-util.c: Error opening PCM device hdmi:0,7: No such file or directory
+D: [pulseaudio] alsa-mixer.c: Caching failure to open output:hdmi-surround71-extra7
+D: [pulseaudio] alsa-mixer.c: Skipping profile output:hdmi-surround71-extra7+input:analog-stereo - will not be able to open output:hdmi-surround71-extra7
+D: [pulseaudio] alsa-mixer.c: Skipping profile output:hdmi-surround71-extra7+input:iec958-stereo - will not be able to open output:hdmi-surround71-extra7
+D: [pulseaudio] alsa-mixer.c: Looking at profile output:hdmi-dts-surround-extra7
+D: [pulseaudio] alsa-mixer.c: Checking for playback on Digital Surround 5.1 (HDMI 8/DTS) (hdmi-dts-surround-extra7)
+D: [pulseaudio] alsa-util.c: Trying dcahdmi:0,7 with SND_PCM_NO_AUTO_FORMAT ...
+I: [pulseaudio] (alsa-lib)pcm.c: Unknown PCM dcahdmi:0,7
+I: [pulseaudio] alsa-util.c: Error opening PCM device dcahdmi:0,7: No such file or directory
+D: [pulseaudio] alsa-mixer.c: Caching failure to open output:hdmi-dts-surround-extra7
+D: [pulseaudio] alsa-mixer.c: Skipping profile output:hdmi-dts-surround-extra7+input:analog-stereo - will not be able to open output:hdmi-dts-surround-extra7
+D: [pulseaudio] alsa-mixer.c: Skipping profile output:hdmi-dts-surround-extra7+input:iec958-stereo - will not be able to open output:hdmi-dts-surround-extra7
+D: [pulseaudio] alsa-mixer.c: Looking at profile output:hdmi-stereo-extra8
+D: [pulseaudio] alsa-mixer.c: Checking for playback on Digital Stereo (HDMI 9) (hdmi-stereo-extra8)
+D: [pulseaudio] alsa-util.c: Trying hdmi:0,8 with SND_PCM_NO_AUTO_FORMAT ...
+I: [pulseaudio] (alsa-lib)pcm_hw.c: open '/dev/snd/pcmC0D14p' failed (-2)
+I: [pulseaudio] alsa-util.c: Error opening PCM device hdmi:0,8: No such file or directory
+D: [pulseaudio] alsa-mixer.c: Caching failure to open output:hdmi-stereo-extra8
+D: [pulseaudio] alsa-mixer.c: Skipping profile output:hdmi-stereo-extra8+input:analog-stereo - will not be able to open output:hdmi-stereo-extra8
+D: [pulseaudio] alsa-mixer.c: Skipping profile output:hdmi-stereo-extra8+input:iec958-stereo - will not be able to open output:hdmi-stereo-extra8
+D: [pulseaudio] alsa-mixer.c: Looking at profile output:hdmi-surround-extra8
+D: [pulseaudio] alsa-mixer.c: Checking for playback on Digital Surround 5.1 (HDMI 9) (hdmi-surround-extra8)
+D: [pulseaudio] alsa-util.c: Trying hdmi:0,8 with SND_PCM_NO_AUTO_FORMAT ...
+I: [pulseaudio] (alsa-lib)pcm_hw.c: open '/dev/snd/pcmC0D14p' failed (-2)
+I: [pulseaudio] alsa-util.c: Error opening PCM device hdmi:0,8: No such file or directory
+D: [pulseaudio] alsa-mixer.c: Caching failure to open output:hdmi-surround-extra8
+D: [pulseaudio] alsa-mixer.c: Skipping profile output:hdmi-surround-extra8+input:analog-stereo - will not be able to open output:hdmi-surround-extra8
+D: [pulseaudio] alsa-mixer.c: Skipping profile output:hdmi-surround-extra8+input:iec958-stereo - will not be able to open output:hdmi-surround-extra8
+D: [pulseaudio] alsa-mixer.c: Looking at profile output:hdmi-surround71-extra8
+D: [pulseaudio] alsa-mixer.c: Checking for playback on Digital Surround 7.1 (HDMI 9) (hdmi-surround71-extra8)
+D: [pulseaudio] alsa-util.c: Trying hdmi:0,8 with SND_PCM_NO_AUTO_FORMAT ...
+I: [pulseaudio] (alsa-lib)pcm_hw.c: open '/dev/snd/pcmC0D14p' failed (-2)
+I: [pulseaudio] alsa-util.c: Error opening PCM device hdmi:0,8: No such file or directory
+D: [pulseaudio] alsa-mixer.c: Caching failure to open output:hdmi-surround71-extra8
+D: [pulseaudio] alsa-mixer.c: Skipping profile output:hdmi-surround71-extra8+input:analog-stereo - will not be able to open output:hdmi-surround71-extra8
+D: [pulseaudio] alsa-mixer.c: Skipping profile output:hdmi-surround71-extra8+input:iec958-stereo - will not be able to open output:hdmi-surround71-extra8
+D: [pulseaudio] alsa-mixer.c: Looking at profile output:hdmi-dts-surround-extra8
+D: [pulseaudio] alsa-mixer.c: Checking for playback on Digital Surround 5.1 (HDMI 9/DTS) (hdmi-dts-surround-extra8)
+D: [pulseaudio] alsa-util.c: Trying dcahdmi:0,8 with SND_PCM_NO_AUTO_FORMAT ...
+I: [pulseaudio] (alsa-lib)pcm.c: Unknown PCM dcahdmi:0,8
+I: [pulseaudio] alsa-util.c: Error opening PCM device dcahdmi:0,8: No such file or directory
+D: [pulseaudio] alsa-mixer.c: Caching failure to open output:hdmi-dts-surround-extra8
+D: [pulseaudio] alsa-mixer.c: Skipping profile output:hdmi-dts-surround-extra8+input:analog-stereo - will not be able to open output:hdmi-dts-surround-extra8
+D: [pulseaudio] alsa-mixer.c: Skipping profile output:hdmi-dts-surround-extra8+input:iec958-stereo - will not be able to open output:hdmi-dts-surround-extra8
+D: [pulseaudio] alsa-mixer.c: Looking at profile output:hdmi-stereo-extra9
+D: [pulseaudio] alsa-mixer.c: Checking for playback on Digital Stereo (HDMI 10) (hdmi-stereo-extra9)
+D: [pulseaudio] alsa-util.c: Trying hdmi:0,9 with SND_PCM_NO_AUTO_FORMAT ...
+I: [pulseaudio] (alsa-lib)pcm_hw.c: open '/dev/snd/pcmC0D15p' failed (-2)
+I: [pulseaudio] alsa-util.c: Error opening PCM device hdmi:0,9: No such file or directory
+D: [pulseaudio] alsa-mixer.c: Caching failure to open output:hdmi-stereo-extra9
+D: [pulseaudio] alsa-mixer.c: Skipping profile output:hdmi-stereo-extra9+input:analog-stereo - will not be able to open output:hdmi-stereo-extra9
+D: [pulseaudio] alsa-mixer.c: Skipping profile output:hdmi-stereo-extra9+input:iec958-stereo - will not be able to open output:hdmi-stereo-extra9
+D: [pulseaudio] alsa-mixer.c: Looking at profile output:hdmi-surround-extra9
+D: [pulseaudio] alsa-mixer.c: Checking for playback on Digital Surround 5.1 (HDMI 10) (hdmi-surround-extra9)
+D: [pulseaudio] alsa-util.c: Trying hdmi:0,9 with SND_PCM_NO_AUTO_FORMAT ...
+I: [pulseaudio] (alsa-lib)pcm_hw.c: open '/dev/snd/pcmC0D15p' failed (-2)
+I: [pulseaudio] alsa-util.c: Error opening PCM device hdmi:0,9: No such file or directory
+D: [pulseaudio] alsa-mixer.c: Caching failure to open output:hdmi-surround-extra9
+D: [pulseaudio] alsa-mixer.c: Skipping profile output:hdmi-surround-extra9+input:analog-stereo - will not be able to open output:hdmi-surround-extra9
+D: [pulseaudio] alsa-mixer.c: Skipping profile output:hdmi-surround-extra9+input:iec958-stereo - will not be able to open output:hdmi-surround-extra9
+D: [pulseaudio] alsa-mixer.c: Looking at profile output:hdmi-surround71-extra9
+D: [pulseaudio] alsa-mixer.c: Checking for playback on Digital Surround 7.1 (HDMI 10) (hdmi-surround71-extra9)
+D: [pulseaudio] alsa-util.c: Trying hdmi:0,9 with SND_PCM_NO_AUTO_FORMAT ...
+I: [pulseaudio] (alsa-lib)pcm_hw.c: open '/dev/snd/pcmC0D15p' failed (-2)
+I: [pulseaudio] alsa-util.c: Error opening PCM device hdmi:0,9: No such file or directory
+D: [pulseaudio] alsa-mixer.c: Caching failure to open output:hdmi-surround71-extra9
+D: [pulseaudio] alsa-mixer.c: Skipping profile output:hdmi-surround71-extra9+input:analog-stereo - will not be able to open output:hdmi-surround71-extra9
+D: [pulseaudio] alsa-mixer.c: Skipping profile output:hdmi-surround71-extra9+input:iec958-stereo - will not be able to open output:hdmi-surround71-extra9
+D: [pulseaudio] alsa-mixer.c: Looking at profile output:hdmi-dts-surround-extra9
+D: [pulseaudio] alsa-mixer.c: Checking for playback on Digital Surround 5.1 (HDMI 10/DTS) (hdmi-dts-surround-extra9)
+D: [pulseaudio] alsa-util.c: Trying dcahdmi:0,9 with SND_PCM_NO_AUTO_FORMAT ...
+I: [pulseaudio] (alsa-lib)pcm.c: Unknown PCM dcahdmi:0,9
+I: [pulseaudio] alsa-util.c: Error opening PCM device dcahdmi:0,9: No such file or directory
+D: [pulseaudio] alsa-mixer.c: Caching failure to open output:hdmi-dts-surround-extra9
+D: [pulseaudio] alsa-mixer.c: Skipping profile output:hdmi-dts-surround-extra9+input:analog-stereo - will not be able to open output:hdmi-dts-surround-extra9
+D: [pulseaudio] alsa-mixer.c: Skipping profile output:hdmi-dts-surround-extra9+input:iec958-stereo - will not be able to open output:hdmi-dts-surround-extra9
+D: [pulseaudio] alsa-mixer.c: Looking at profile output:hdmi-stereo-extra10
+D: [pulseaudio] alsa-mixer.c: Checking for playback on Digital Stereo (HDMI 11) (hdmi-stereo-extra10)
+D: [pulseaudio] alsa-util.c: Trying hdmi:0,10 with SND_PCM_NO_AUTO_FORMAT ...
+I: [pulseaudio] (alsa-lib)pcm_hw.c: open '/dev/snd/pcmC0D16p' failed (-2)
+I: [pulseaudio] alsa-util.c: Error opening PCM device hdmi:0,10: No such file or directory
+D: [pulseaudio] alsa-mixer.c: Caching failure to open output:hdmi-stereo-extra10
+D: [pulseaudio] alsa-mixer.c: Skipping profile output:hdmi-stereo-extra10+input:analog-stereo - will not be able to open output:hdmi-stereo-extra10
+D: [pulseaudio] alsa-mixer.c: Skipping profile output:hdmi-stereo-extra10+input:iec958-stereo - will not be able to open output:hdmi-stereo-extra10
+D: [pulseaudio] alsa-mixer.c: Looking at profile output:hdmi-surround-extra10
+D: [pulseaudio] alsa-mixer.c: Checking for playback on Digital Surround 5.1 (HDMI 11) (hdmi-surround-extra10)
+D: [pulseaudio] alsa-util.c: Trying hdmi:0,10 with SND_PCM_NO_AUTO_FORMAT ...
+I: [pulseaudio] (alsa-lib)pcm_hw.c: open '/dev/snd/pcmC0D16p' failed (-2)
+I: [pulseaudio] alsa-util.c: Error opening PCM device hdmi:0,10: No such file or directory
+D: [pulseaudio] alsa-mixer.c: Caching failure to open output:hdmi-surround-extra10
+D: [pulseaudio] alsa-mixer.c: Skipping profile output:hdmi-surround-extra10+input:analog-stereo - will not be able to open output:hdmi-surround-extra10
+D: [pulseaudio] alsa-mixer.c: Skipping profile output:hdmi-surround-extra10+input:iec958-stereo - will not be able to open output:hdmi-surround-extra10
+D: [pulseaudio] alsa-mixer.c: Looking at profile output:hdmi-surround71-extra10
+D: [pulseaudio] alsa-mixer.c: Checking for playback on Digital Surround 7.1 (HDMI 11) (hdmi-surround71-extra10)
+D: [pulseaudio] alsa-util.c: Trying hdmi:0,10 with SND_PCM_NO_AUTO_FORMAT ...
+I: [pulseaudio] (alsa-lib)pcm_hw.c: open '/dev/snd/pcmC0D16p' failed (-2)
+I: [pulseaudio] alsa-util.c: Error opening PCM device hdmi:0,10: No such file or directory
+D: [pulseaudio] alsa-mixer.c: Caching failure to open output:hdmi-surround71-extra10
+D: [pulseaudio] alsa-mixer.c: Skipping profile output:hdmi-surround71-extra10+input:analog-stereo - will not be able to open output:hdmi-surround71-extra10
+D: [pulseaudio] alsa-mixer.c: Skipping profile output:hdmi-surround71-extra10+input:iec958-stereo - will not be able to open output:hdmi-surround71-extra10
+D: [pulseaudio] alsa-mixer.c: Looking at profile output:hdmi-dts-surround-extra10
+D: [pulseaudio] alsa-mixer.c: Checking for playback on Digital Surround 5.1 (HDMI 11/DTS) (hdmi-dts-surround-extra10)
+D: [pulseaudio] alsa-util.c: Trying dcahdmi:0,10 with SND_PCM_NO_AUTO_FORMAT ...
+I: [pulseaudio] (alsa-lib)pcm.c: Unknown PCM dcahdmi:0,10
+I: [pulseaudio] alsa-util.c: Error opening PCM device dcahdmi:0,10: No such file or directory
+D: [pulseaudio] alsa-mixer.c: Caching failure to open output:hdmi-dts-surround-extra10
+D: [pulseaudio] alsa-mixer.c: Skipping profile output:hdmi-dts-surround-extra10+input:analog-stereo - will not be able to open output:hdmi-dts-surround-extra10
+D: [pulseaudio] alsa-mixer.c: Skipping profile output:hdmi-dts-surround-extra10+input:iec958-stereo - will not be able to open output:hdmi-dts-surround-extra10
+D: [pulseaudio] alsa-mixer.c: Looking at profile input:stereo-fallback
+D: [pulseaudio] alsa-mixer.c: Checking for recording on Stereo (stereo-fallback)
+D: [pulseaudio] alsa-util.c: Trying hw:0 with SND_PCM_NO_AUTO_FORMAT ...
+I: [pulseaudio] (alsa-lib)pcm_hw.c: open '/dev/snd/pcmC0D0c' failed (-2)
+I: [pulseaudio] alsa-util.c: Error opening PCM device hw:0: No such file or directory
+D: [pulseaudio] alsa-mixer.c: Caching failure to open input:stereo-fallback
+D: [pulseaudio] alsa-mixer.c: Looking at profile input:mono-fallback
+D: [pulseaudio] alsa-mixer.c: Checking for recording on Mono (mono-fallback)
+D: [pulseaudio] alsa-util.c: Trying hw:0 with SND_PCM_NO_AUTO_FORMAT ...
+I: [pulseaudio] (alsa-lib)pcm_hw.c: open '/dev/snd/pcmC0D0c' failed (-2)
+I: [pulseaudio] alsa-util.c: Error opening PCM device hw:0: No such file or directory
+D: [pulseaudio] alsa-mixer.c: Caching failure to open input:mono-fallback
+D: [pulseaudio] alsa-mixer.c: Looking at profile input:multichannel-input
+D: [pulseaudio] alsa-mixer.c: Checking for recording on Multichannel (multichannel-input)
+D: [pulseaudio] alsa-util.c: Trying hw:0 with SND_PCM_NO_AUTO_FORMAT ...
+I: [pulseaudio] (alsa-lib)pcm_hw.c: open '/dev/snd/pcmC0D0c' failed (-2)
+I: [pulseaudio] alsa-util.c: Error opening PCM device hw:0: No such file or directory
+D: [pulseaudio] alsa-mixer.c: Caching failure to open input:multichannel-input
+D: [pulseaudio] alsa-mixer.c: Skipping profile output:analog-stereo+input:stereo-fallback - will not be able to open output:analog-stereo
+D: [pulseaudio] alsa-mixer.c: Skipping profile output:analog-stereo+input:mono-fallback - will not be able to open output:analog-stereo
+D: [pulseaudio] alsa-mixer.c: Skipping profile output:analog-stereo+input:multichannel-input - will not be able to open output:analog-stereo
+D: [pulseaudio] alsa-mixer.c: Skipping profile output:analog-surround-21+input:stereo-fallback - will not be able to open output:analog-surround-21
+D: [pulseaudio] alsa-mixer.c: Skipping profile output:analog-surround-21+input:mono-fallback - will not be able to open output:analog-surround-21
+D: [pulseaudio] alsa-mixer.c: Skipping profile output:analog-surround-21+input:multichannel-input - will not be able to open output:analog-surround-21
+D: [pulseaudio] alsa-mixer.c: Skipping profile output:analog-surround-40+input:stereo-fallback - will not be able to open output:analog-surround-40
+D: [pulseaudio] alsa-mixer.c: Skipping profile output:analog-surround-40+input:mono-fallback - will not be able to open output:analog-surround-40
+D: [pulseaudio] alsa-mixer.c: Skipping profile output:analog-surround-40+input:multichannel-input - will not be able to open output:analog-surround-40
+D: [pulseaudio] alsa-mixer.c: Skipping profile output:analog-surround-41+input:stereo-fallback - will not be able to open output:analog-surround-41
+D: [pulseaudio] alsa-mixer.c: Skipping profile output:analog-surround-41+input:mono-fallback - will not be able to open output:analog-surround-41
+D: [pulseaudio] alsa-mixer.c: Skipping profile output:analog-surround-41+input:multichannel-input - will not be able to open output:analog-surround-41
+D: [pulseaudio] alsa-mixer.c: Skipping profile output:analog-surround-50+input:stereo-fallback - will not be able to open output:analog-surround-50
+D: [pulseaudio] alsa-mixer.c: Skipping profile output:analog-surround-50+input:mono-fallback - will not be able to open output:analog-surround-50
+D: [pulseaudio] alsa-mixer.c: Skipping profile output:analog-surround-50+input:multichannel-input - will not be able to open output:analog-surround-50
+D: [pulseaudio] alsa-mixer.c: Skipping profile output:analog-surround-51+input:stereo-fallback - will not be able to open output:analog-surround-51
+D: [pulseaudio] alsa-mixer.c: Skipping profile output:analog-surround-51+input:mono-fallback - will not be able to open output:analog-surround-51
+D: [pulseaudio] alsa-mixer.c: Skipping profile output:analog-surround-51+input:multichannel-input - will not be able to open output:analog-surround-51
+D: [pulseaudio] alsa-mixer.c: Skipping profile output:analog-surround-71+input:stereo-fallback - will not be able to open output:analog-surround-71
+D: [pulseaudio] alsa-mixer.c: Skipping profile output:analog-surround-71+input:mono-fallback - will not be able to open output:analog-surround-71
+D: [pulseaudio] alsa-mixer.c: Skipping profile output:analog-surround-71+input:multichannel-input - will not be able to open output:analog-surround-71
+D: [pulseaudio] alsa-mixer.c: Skipping profile output:iec958-stereo+input:stereo-fallback - will not be able to open output:iec958-stereo
+D: [pulseaudio] alsa-mixer.c: Skipping profile output:iec958-stereo+input:mono-fallback - will not be able to open output:iec958-stereo
+D: [pulseaudio] alsa-mixer.c: Skipping profile output:iec958-stereo+input:multichannel-input - will not be able to open output:iec958-stereo
+D: [pulseaudio] alsa-mixer.c: Skipping profile output:iec958-ac3-surround-40+input:stereo-fallback - will not be able to open output:iec958-ac3-surround-40
+D: [pulseaudio] alsa-mixer.c: Skipping profile output:iec958-ac3-surround-40+input:mono-fallback - will not be able to open output:iec958-ac3-surround-40
+D: [pulseaudio] alsa-mixer.c: Skipping profile output:iec958-ac3-surround-40+input:multichannel-input - will not be able to open output:iec958-ac3-surround-40
+D: [pulseaudio] alsa-mixer.c: Skipping profile output:iec958-ac3-surround-51+input:stereo-fallback - will not be able to open output:iec958-ac3-surround-51
+D: [pulseaudio] alsa-mixer.c: Skipping profile output:iec958-ac3-surround-51+input:mono-fallback - will not be able to open output:iec958-ac3-surround-51
+D: [pulseaudio] alsa-mixer.c: Skipping profile output:iec958-ac3-surround-51+input:multichannel-input - will not be able to open output:iec958-ac3-surround-51
+D: [pulseaudio] alsa-mixer.c: Skipping profile output:iec958-dts-surround-51+input:stereo-fallback - will not be able to open output:iec958-dts-surround-51
+D: [pulseaudio] alsa-mixer.c: Skipping profile output:iec958-dts-surround-51+input:mono-fallback - will not be able to open output:iec958-dts-surround-51
+D: [pulseaudio] alsa-mixer.c: Skipping profile output:iec958-dts-surround-51+input:multichannel-input - will not be able to open output:iec958-dts-surround-51
+D: [pulseaudio] alsa-mixer.c: Skipping profile output:hdmi-stereo+input:stereo-fallback - will not be able to open input:stereo-fallback
+D: [pulseaudio] alsa-mixer.c: Skipping profile output:hdmi-stereo+input:mono-fallback - will not be able to open input:mono-fallback
+D: [pulseaudio] alsa-mixer.c: Skipping profile output:hdmi-stereo+input:multichannel-input - will not be able to open input:multichannel-input
+D: [pulseaudio] alsa-mixer.c: Skipping profile output:hdmi-surround+input:stereo-fallback - will not be able to open input:stereo-fallback
+D: [pulseaudio] alsa-mixer.c: Skipping profile output:hdmi-surround+input:mono-fallback - will not be able to open input:mono-fallback
+D: [pulseaudio] alsa-mixer.c: Skipping profile output:hdmi-surround+input:multichannel-input - will not be able to open input:multichannel-input
+D: [pulseaudio] alsa-mixer.c: Skipping profile output:hdmi-surround71+input:stereo-fallback - will not be able to open input:stereo-fallback
+D: [pulseaudio] alsa-mixer.c: Skipping profile output:hdmi-surround71+input:mono-fallback - will not be able to open input:mono-fallback
+D: [pulseaudio] alsa-mixer.c: Skipping profile output:hdmi-surround71+input:multichannel-input - will not be able to open input:multichannel-input
+D: [pulseaudio] alsa-mixer.c: Skipping profile output:hdmi-dts-surround+input:stereo-fallback - will not be able to open output:hdmi-dts-surround
+D: [pulseaudio] alsa-mixer.c: Skipping profile output:hdmi-dts-surround+input:mono-fallback - will not be able to open output:hdmi-dts-surround
+D: [pulseaudio] alsa-mixer.c: Skipping profile output:hdmi-dts-surround+input:multichannel-input - will not be able to open output:hdmi-dts-surround
+D: [pulseaudio] alsa-mixer.c: Skipping profile output:hdmi-stereo-extra1+input:stereo-fallback - will not be able to open input:stereo-fallback
+D: [pulseaudio] alsa-mixer.c: Skipping profile output:hdmi-stereo-extra1+input:mono-fallback - will not be able to open input:mono-fallback
+D: [pulseaudio] alsa-mixer.c: Skipping profile output:hdmi-stereo-extra1+input:multichannel-input - will not be able to open input:multichannel-input
+D: [pulseaudio] alsa-mixer.c: Skipping profile output:hdmi-surround-extra1+input:stereo-fallback - will not be able to open input:stereo-fallback
+D: [pulseaudio] alsa-mixer.c: Skipping profile output:hdmi-surround-extra1+input:mono-fallback - will not be able to open input:mono-fallback
+D: [pulseaudio] alsa-mixer.c: Skipping profile output:hdmi-surround-extra1+input:multichannel-input - will not be able to open input:multichannel-input
+D: [pulseaudio] alsa-mixer.c: Skipping profile output:hdmi-surround71-extra1+input:stereo-fallback - will not be able to open input:stereo-fallback
+D: [pulseaudio] alsa-mixer.c: Skipping profile output:hdmi-surround71-extra1+input:mono-fallback - will not be able to open input:mono-fallback
+D: [pulseaudio] alsa-mixer.c: Skipping profile output:hdmi-surround71-extra1+input:multichannel-input - will not be able to open input:multichannel-input
+D: [pulseaudio] alsa-mixer.c: Skipping profile output:hdmi-dts-surround-extra1+input:stereo-fallback - will not be able to open output:hdmi-dts-surround-extra1
+D: [pulseaudio] alsa-mixer.c: Skipping profile output:hdmi-dts-surround-extra1+input:mono-fallback - will not be able to open output:hdmi-dts-surround-extra1
+D: [pulseaudio] alsa-mixer.c: Skipping profile output:hdmi-dts-surround-extra1+input:multichannel-input - will not be able to open output:hdmi-dts-surround-extra1
+D: [pulseaudio] alsa-mixer.c: Skipping profile output:hdmi-stereo-extra2+input:stereo-fallback - will not be able to open input:stereo-fallback
+D: [pulseaudio] alsa-mixer.c: Skipping profile output:hdmi-stereo-extra2+input:mono-fallback - will not be able to open input:mono-fallback
+D: [pulseaudio] alsa-mixer.c: Skipping profile output:hdmi-stereo-extra2+input:multichannel-input - will not be able to open input:multichannel-input
+D: [pulseaudio] alsa-mixer.c: Skipping profile output:hdmi-surround-extra2+input:stereo-fallback - will not be able to open input:stereo-fallback
+D: [pulseaudio] alsa-mixer.c: Skipping profile output:hdmi-surround-extra2+input:mono-fallback - will not be able to open input:mono-fallback
+D: [pulseaudio] alsa-mixer.c: Skipping profile output:hdmi-surround-extra2+input:multichannel-input - will not be able to open input:multichannel-input
+D: [pulseaudio] alsa-mixer.c: Skipping profile output:hdmi-surround71-extra2+input:stereo-fallback - will not be able to open input:stereo-fallback
+D: [pulseaudio] alsa-mixer.c: Skipping profile output:hdmi-surround71-extra2+input:mono-fallback - will not be able to open input:mono-fallback
+D: [pulseaudio] alsa-mixer.c: Skipping profile output:hdmi-surround71-extra2+input:multichannel-input - will not be able to open input:multichannel-input
+D: [pulseaudio] alsa-mixer.c: Skipping profile output:hdmi-dts-surround-extra2+input:stereo-fallback - will not be able to open output:hdmi-dts-surround-extra2
+D: [pulseaudio] alsa-mixer.c: Skipping profile output:hdmi-dts-surround-extra2+input:mono-fallback - will not be able to open output:hdmi-dts-surround-extra2
+D: [pulseaudio] alsa-mixer.c: Skipping profile output:hdmi-dts-surround-extra2+input:multichannel-input - will not be able to open output:hdmi-dts-surround-extra2
+D: [pulseaudio] alsa-mixer.c: Skipping profile output:hdmi-stereo-extra3+input:stereo-fallback - will not be able to open input:stereo-fallback
+D: [pulseaudio] alsa-mixer.c: Skipping profile output:hdmi-stereo-extra3+input:mono-fallback - will not be able to open input:mono-fallback
+D: [pulseaudio] alsa-mixer.c: Skipping profile output:hdmi-stereo-extra3+input:multichannel-input - will not be able to open input:multichannel-input
+D: [pulseaudio] alsa-mixer.c: Skipping profile output:hdmi-surround-extra3+input:stereo-fallback - will not be able to open input:stereo-fallback
+D: [pulseaudio] alsa-mixer.c: Skipping profile output:hdmi-surround-extra3+input:mono-fallback - will not be able to open input:mono-fallback
+D: [pulseaudio] alsa-mixer.c: Skipping profile output:hdmi-surround-extra3+input:multichannel-input - will not be able to open input:multichannel-input
+D: [pulseaudio] alsa-mixer.c: Skipping profile output:hdmi-surround71-extra3+input:stereo-fallback - will not be able to open input:stereo-fallback
+D: [pulseaudio] alsa-mixer.c: Skipping profile output:hdmi-surround71-extra3+input:mono-fallback - will not be able to open input:mono-fallback
+D: [pulseaudio] alsa-mixer.c: Skipping profile output:hdmi-surround71-extra3+input:multichannel-input - will not be able to open input:multichannel-input
+D: [pulseaudio] alsa-mixer.c: Skipping profile output:hdmi-dts-surround-extra3+input:stereo-fallback - will not be able to open output:hdmi-dts-surround-extra3
+D: [pulseaudio] alsa-mixer.c: Skipping profile output:hdmi-dts-surround-extra3+input:mono-fallback - will not be able to open output:hdmi-dts-surround-extra3
+D: [pulseaudio] alsa-mixer.c: Skipping profile output:hdmi-dts-surround-extra3+input:multichannel-input - will not be able to open output:hdmi-dts-surround-extra3
+D: [pulseaudio] alsa-mixer.c: Skipping profile output:hdmi-stereo-extra4+input:stereo-fallback - will not be able to open output:hdmi-stereo-extra4
+D: [pulseaudio] alsa-mixer.c: Skipping profile output:hdmi-stereo-extra4+input:mono-fallback - will not be able to open output:hdmi-stereo-extra4
+D: [pulseaudio] alsa-mixer.c: Skipping profile output:hdmi-stereo-extra4+input:multichannel-input - will not be able to open output:hdmi-stereo-extra4
+D: [pulseaudio] alsa-mixer.c: Skipping profile output:hdmi-surround-extra4+input:stereo-fallback - will not be able to open output:hdmi-surround-extra4
+D: [pulseaudio] alsa-mixer.c: Skipping profile output:hdmi-surround-extra4+input:mono-fallback - will not be able to open output:hdmi-surround-extra4
+D: [pulseaudio] alsa-mixer.c: Skipping profile output:hdmi-surround-extra4+input:multichannel-input - will not be able to open output:hdmi-surround-extra4
+D: [pulseaudio] alsa-mixer.c: Skipping profile output:hdmi-surround71-extra4+input:stereo-fallback - will not be able to open output:hdmi-surround71-extra4
+D: [pulseaudio] alsa-mixer.c: Skipping profile output:hdmi-surround71-extra4+input:mono-fallback - will not be able to open output:hdmi-surround71-extra4
+D: [pulseaudio] alsa-mixer.c: Skipping profile output:hdmi-surround71-extra4+input:multichannel-input - will not be able to open output:hdmi-surround71-extra4
+D: [pulseaudio] alsa-mixer.c: Skipping profile output:hdmi-dts-surround-extra4+input:stereo-fallback - will not be able to open output:hdmi-dts-surround-extra4
+D: [pulseaudio] alsa-mixer.c: Skipping profile output:hdmi-dts-surround-extra4+input:mono-fallback - will not be able to open output:hdmi-dts-surround-extra4
+D: [pulseaudio] alsa-mixer.c: Skipping profile output:hdmi-dts-surround-extra4+input:multichannel-input - will not be able to open output:hdmi-dts-surround-extra4
+D: [pulseaudio] alsa-mixer.c: Skipping profile output:hdmi-stereo-extra5+input:stereo-fallback - will not be able to open output:hdmi-stereo-extra5
+D: [pulseaudio] alsa-mixer.c: Skipping profile output:hdmi-stereo-extra5+input:mono-fallback - will not be able to open output:hdmi-stereo-extra5
+D: [pulseaudio] alsa-mixer.c: Skipping profile output:hdmi-stereo-extra5+input:multichannel-input - will not be able to open output:hdmi-stereo-extra5
+D: [pulseaudio] alsa-mixer.c: Skipping profile output:hdmi-surround-extra5+input:stereo-fallback - will not be able to open output:hdmi-surround-extra5
+D: [pulseaudio] alsa-mixer.c: Skipping profile output:hdmi-surround-extra5+input:mono-fallback - will not be able to open output:hdmi-surround-extra5
+D: [pulseaudio] alsa-mixer.c: Skipping profile output:hdmi-surround-extra5+input:multichannel-input - will not be able to open output:hdmi-surround-extra5
+D: [pulseaudio] alsa-mixer.c: Skipping profile output:hdmi-surround71-extra5+input:stereo-fallback - will not be able to open output:hdmi-surround71-extra5
+D: [pulseaudio] alsa-mixer.c: Skipping profile output:hdmi-surround71-extra5+input:mono-fallback - will not be able to open output:hdmi-surround71-extra5
+D: [pulseaudio] alsa-mixer.c: Skipping profile output:hdmi-surround71-extra5+input:multichannel-input - will not be able to open output:hdmi-surround71-extra5
+D: [pulseaudio] alsa-mixer.c: Skipping profile output:hdmi-dts-surround-extra5+input:stereo-fallback - will not be able to open output:hdmi-dts-surround-extra5
+D: [pulseaudio] alsa-mixer.c: Skipping profile output:hdmi-dts-surround-extra5+input:mono-fallback - will not be able to open output:hdmi-dts-surround-extra5
+D: [pulseaudio] alsa-mixer.c: Skipping profile output:hdmi-dts-surround-extra5+input:multichannel-input - will not be able to open output:hdmi-dts-surround-extra5
+D: [pulseaudio] alsa-mixer.c: Skipping profile output:hdmi-stereo-extra6+input:stereo-fallback - will not be able to open output:hdmi-stereo-extra6
+D: [pulseaudio] alsa-mixer.c: Skipping profile output:hdmi-stereo-extra6+input:mono-fallback - will not be able to open output:hdmi-stereo-extra6
+D: [pulseaudio] alsa-mixer.c: Skipping profile output:hdmi-stereo-extra6+input:multichannel-input - will not be able to open output:hdmi-stereo-extra6
+D: [pulseaudio] alsa-mixer.c: Skipping profile output:hdmi-surround-extra6+input:stereo-fallback - will not be able to open output:hdmi-surround-extra6
+D: [pulseaudio] alsa-mixer.c: Skipping profile output:hdmi-surround-extra6+input:mono-fallback - will not be able to open output:hdmi-surround-extra6
+D: [pulseaudio] alsa-mixer.c: Skipping profile output:hdmi-surround-extra6+input:multichannel-input - will not be able to open output:hdmi-surround-extra6
+D: [pulseaudio] alsa-mixer.c: Skipping profile output:hdmi-surround71-extra6+input:stereo-fallback - will not be able to open output:hdmi-surround71-extra6
+D: [pulseaudio] alsa-mixer.c: Skipping profile output:hdmi-surround71-extra6+input:mono-fallback - will not be able to open output:hdmi-surround71-extra6
+D: [pulseaudio] alsa-mixer.c: Skipping profile output:hdmi-surround71-extra6+input:multichannel-input - will not be able to open output:hdmi-surround71-extra6
+D: [pulseaudio] alsa-mixer.c: Skipping profile output:hdmi-dts-surround-extra6+input:stereo-fallback - will not be able to open output:hdmi-dts-surround-extra6
+D: [pulseaudio] alsa-mixer.c: Skipping profile output:hdmi-dts-surround-extra6+input:mono-fallback - will not be able to open output:hdmi-dts-surround-extra6
+D: [pulseaudio] alsa-mixer.c: Skipping profile output:hdmi-dts-surround-extra6+input:multichannel-input - will not be able to open output:hdmi-dts-surround-extra6
+D: [pulseaudio] alsa-mixer.c: Skipping profile output:hdmi-stereo-extra7+input:stereo-fallback - will not be able to open output:hdmi-stereo-extra7
+D: [pulseaudio] alsa-mixer.c: Skipping profile output:hdmi-stereo-extra7+input:mono-fallback - will not be able to open output:hdmi-stereo-extra7
+D: [pulseaudio] alsa-mixer.c: Skipping profile output:hdmi-stereo-extra7+input:multichannel-input - will not be able to open output:hdmi-stereo-extra7
+D: [pulseaudio] alsa-mixer.c: Skipping profile output:hdmi-surround-extra7+input:stereo-fallback - will not be able to open output:hdmi-surround-extra7
+D: [pulseaudio] alsa-mixer.c: Skipping profile output:hdmi-surround-extra7+input:mono-fallback - will not be able to open output:hdmi-surround-extra7
+D: [pulseaudio] alsa-mixer.c: Skipping profile output:hdmi-surround-extra7+input:multichannel-input - will not be able to open output:hdmi-surround-extra7
+D: [pulseaudio] alsa-mixer.c: Skipping profile output:hdmi-surround71-extra7+input:stereo-fallback - will not be able to open output:hdmi-surround71-extra7
+D: [pulseaudio] alsa-mixer.c: Skipping profile output:hdmi-surround71-extra7+input:mono-fallback - will not be able to open output:hdmi-surround71-extra7
+D: [pulseaudio] alsa-mixer.c: Skipping profile output:hdmi-surround71-extra7+input:multichannel-input - will not be able to open output:hdmi-surround71-extra7
+D: [pulseaudio] alsa-mixer.c: Skipping profile output:hdmi-dts-surround-extra7+input:stereo-fallback - will not be able to open output:hdmi-dts-surround-extra7
+D: [pulseaudio] alsa-mixer.c: Skipping profile output:hdmi-dts-surround-extra7+input:mono-fallback - will not be able to open output:hdmi-dts-surround-extra7
+D: [pulseaudio] alsa-mixer.c: Skipping profile output:hdmi-dts-surround-extra7+input:multichannel-input - will not be able to open output:hdmi-dts-surround-extra7
+D: [pulseaudio] alsa-mixer.c: Skipping profile output:hdmi-stereo-extra8+input:stereo-fallback - will not be able to open output:hdmi-stereo-extra8
+D: [pulseaudio] alsa-mixer.c: Skipping profile output:hdmi-stereo-extra8+input:mono-fallback - will not be able to open output:hdmi-stereo-extra8
+D: [pulseaudio] alsa-mixer.c: Skipping profile output:hdmi-stereo-extra8+input:multichannel-input - will not be able to open output:hdmi-stereo-extra8
+D: [pulseaudio] alsa-mixer.c: Skipping profile output:hdmi-surround-extra8+input:stereo-fallback - will not be able to open output:hdmi-surround-extra8
+D: [pulseaudio] alsa-mixer.c: Skipping profile output:hdmi-surround-extra8+input:mono-fallback - will not be able to open output:hdmi-surround-extra8
+D: [pulseaudio] alsa-mixer.c: Skipping profile output:hdmi-surround-extra8+input:multichannel-input - will not be able to open output:hdmi-surround-extra8
+D: [pulseaudio] alsa-mixer.c: Skipping profile output:hdmi-surround71-extra8+input:stereo-fallback - will not be able to open output:hdmi-surround71-extra8
+D: [pulseaudio] alsa-mixer.c: Skipping profile output:hdmi-surround71-extra8+input:mono-fallback - will not be able to open output:hdmi-surround71-extra8
+D: [pulseaudio] alsa-mixer.c: Skipping profile output:hdmi-surround71-extra8+input:multichannel-input - will not be able to open output:hdmi-surround71-extra8
+D: [pulseaudio] alsa-mixer.c: Skipping profile output:hdmi-dts-surround-extra8+input:stereo-fallback - will not be able to open output:hdmi-dts-surround-extra8
+D: [pulseaudio] alsa-mixer.c: Skipping profile output:hdmi-dts-surround-extra8+input:mono-fallback - will not be able to open output:hdmi-dts-surround-extra8
+D: [pulseaudio] alsa-mixer.c: Skipping profile output:hdmi-dts-surround-extra8+input:multichannel-input - will not be able to open output:hdmi-dts-surround-extra8
+D: [pulseaudio] alsa-mixer.c: Skipping profile output:hdmi-stereo-extra9+input:stereo-fallback - will not be able to open output:hdmi-stereo-extra9
+D: [pulseaudio] alsa-mixer.c: Skipping profile output:hdmi-stereo-extra9+input:mono-fallback - will not be able to open output:hdmi-stereo-extra9
+D: [pulseaudio] alsa-mixer.c: Skipping profile output:hdmi-stereo-extra9+input:multichannel-input - will not be able to open output:hdmi-stereo-extra9
+D: [pulseaudio] alsa-mixer.c: Skipping profile output:hdmi-surround-extra9+input:stereo-fallback - will not be able to open output:hdmi-surround-extra9
+D: [pulseaudio] alsa-mixer.c: Skipping profile output:hdmi-surround-extra9+input:mono-fallback - will not be able to open output:hdmi-surround-extra9
+D: [pulseaudio] alsa-mixer.c: Skipping profile output:hdmi-surround-extra9+input:multichannel-input - will not be able to open output:hdmi-surround-extra9
+D: [pulseaudio] alsa-mixer.c: Skipping profile output:hdmi-surround71-extra9+input:stereo-fallback - will not be able to open output:hdmi-surround71-extra9
+D: [pulseaudio] alsa-mixer.c: Skipping profile output:hdmi-surround71-extra9+input:mono-fallback - will not be able to open output:hdmi-surround71-extra9
+D: [pulseaudio] alsa-mixer.c: Skipping profile output:hdmi-surround71-extra9+input:multichannel-input - will not be able to open output:hdmi-surround71-extra9
+D: [pulseaudio] alsa-mixer.c: Skipping profile output:hdmi-dts-surround-extra9+input:stereo-fallback - will not be able to open output:hdmi-dts-surround-extra9
+D: [pulseaudio] alsa-mixer.c: Skipping profile output:hdmi-dts-surround-extra9+input:mono-fallback - will not be able to open output:hdmi-dts-surround-extra9
+D: [pulseaudio] alsa-mixer.c: Skipping profile output:hdmi-dts-surround-extra9+input:multichannel-input - will not be able to open output:hdmi-dts-surround-extra9
+D: [pulseaudio] alsa-mixer.c: Skipping profile output:hdmi-stereo-extra10+input:stereo-fallback - will not be able to open output:hdmi-stereo-extra10
+D: [pulseaudio] alsa-mixer.c: Skipping profile output:hdmi-stereo-extra10+input:mono-fallback - will not be able to open output:hdmi-stereo-extra10
+D: [pulseaudio] alsa-mixer.c: Skipping profile output:hdmi-stereo-extra10+input:multichannel-input - will not be able to open output:hdmi-stereo-extra10
+D: [pulseaudio] alsa-mixer.c: Skipping profile output:hdmi-surround-extra10+input:stereo-fallback - will not be able to open output:hdmi-surround-extra10
+D: [pulseaudio] alsa-mixer.c: Skipping profile output:hdmi-surround-extra10+input:mono-fallback - will not be able to open output:hdmi-surround-extra10
+D: [pulseaudio] alsa-mixer.c: Skipping profile output:hdmi-surround-extra10+input:multichannel-input - will not be able to open output:hdmi-surround-extra10
+D: [pulseaudio] alsa-mixer.c: Skipping profile output:hdmi-surround71-extra10+input:stereo-fallback - will not be able to open output:hdmi-surround71-extra10
+D: [pulseaudio] alsa-mixer.c: Skipping profile output:hdmi-surround71-extra10+input:mono-fallback - will not be able to open output:hdmi-surround71-extra10
+D: [pulseaudio] alsa-mixer.c: Skipping profile output:hdmi-surround71-extra10+input:multichannel-input - will not be able to open output:hdmi-surround71-extra10
+D: [pulseaudio] alsa-mixer.c: Skipping profile output:hdmi-dts-surround-extra10+input:stereo-fallback - will not be able to open output:hdmi-dts-surround-extra10
+D: [pulseaudio] alsa-mixer.c: Skipping profile output:hdmi-dts-surround-extra10+input:mono-fallback - will not be able to open output:hdmi-dts-surround-extra10
+D: [pulseaudio] alsa-mixer.c: Skipping profile output:hdmi-dts-surround-extra10+input:multichannel-input - will not be able to open output:hdmi-dts-surround-extra10
+D: [pulseaudio] flist.c: ../src/pulsecore/idxset.c: entries flist is full (don't worry)
+D: [pulseaudio] flist.c: ../src/pulsecore/idxset.c: entries flist is full (don't worry)
+D: [pulseaudio] flist.c: ../src/pulsecore/idxset.c: entries flist is full (don't worry)
+D: [pulseaudio] flist.c: ../src/pulsecore/idxset.c: entries flist is full (don't worry)
+D: [pulseaudio] flist.c: ../src/pulsecore/idxset.c: entries flist is full (don't worry)
+D: [pulseaudio] flist.c: ../src/pulsecore/idxset.c: entries flist is full (don't worry)
+D: [pulseaudio] flist.c: ../src/pulsecore/idxset.c: entries flist is full (don't worry)
+D: [pulseaudio] flist.c: ../src/pulsecore/idxset.c: entries flist is full (don't worry)
+D: [pulseaudio] flist.c: ../src/pulsecore/idxset.c: entries flist is full (don't worry)
+D: [pulseaudio] flist.c: ../src/pulsecore/idxset.c: entries flist is full (don't worry)
+D: [pulseaudio] flist.c: ../src/pulsecore/idxset.c: entries flist is full (don't worry)
+D: [pulseaudio] alsa-mixer.c: Profile set 0x557bd9633b20, auto_profiles=yes, probed=yes, n_mappings=12, n_profiles=12, n_decibel_fixes=0
+D: [pulseaudio] alsa-mixer.c: Mapping hdmi-stereo (Digital Stereo (HDMI)), priority=59, channel_map=front-left,front-right, supported=yes, direction=1
+D: [pulseaudio] alsa-mixer.c: Mapping hdmi-surround (Digital Surround 5.1 (HDMI)), priority=8, channel_map=front-left,front-right,rear-left,rear-right,front-center,lfe, supported=yes, direction=1
+D: [pulseaudio] alsa-mixer.c: Mapping hdmi-surround71 (Digital Surround 7.1 (HDMI)), priority=8, channel_map=front-left,front-right,rear-left,rear-right,front-center,lfe,side-left,side-right, supported=yes, direction=1
+D: [pulseaudio] alsa-mixer.c: Mapping hdmi-stereo-extra1 (Digital Stereo (HDMI 2)), priority=57, channel_map=front-left,front-right, supported=yes, direction=1
+D: [pulseaudio] alsa-mixer.c: Mapping hdmi-surround-extra1 (Digital Surround 5.1 (HDMI 2)), priority=6, channel_map=front-left,front-right,rear-left,rear-right,front-center,lfe, supported=yes, direction=1
+D: [pulseaudio] alsa-mixer.c: Mapping hdmi-surround71-extra1 (Digital Surround 7.1 (HDMI 2)), priority=6, channel_map=front-left,front-right,rear-left,rear-right,front-center,lfe,side-left,side-right, supported=yes, direction=1
+D: [pulseaudio] alsa-mixer.c: Mapping hdmi-stereo-extra2 (Digital Stereo (HDMI 3)), priority=57, channel_map=front-left,front-right, supported=yes, direction=1
+D: [pulseaudio] alsa-mixer.c: Mapping hdmi-surround-extra2 (Digital Surround 5.1 (HDMI 3)), priority=6, channel_map=front-left,front-right,rear-left,rear-right,front-center,lfe, supported=yes, direction=1
+D: [pulseaudio] alsa-mixer.c: Mapping hdmi-surround71-extra2 (Digital Surround 7.1 (HDMI 3)), priority=6, channel_map=front-left,front-right,rear-left,rear-right,front-center,lfe,side-left,side-right, supported=yes, direction=1
+D: [pulseaudio] alsa-mixer.c: Mapping hdmi-stereo-extra3 (Digital Stereo (HDMI 4)), priority=57, channel_map=front-left,front-right, supported=yes, direction=1
+D: [pulseaudio] alsa-mixer.c: Mapping hdmi-surround-extra3 (Digital Surround 5.1 (HDMI 4)), priority=6, channel_map=front-left,front-right,rear-left,rear-right,front-center,lfe, supported=yes, direction=1
+D: [pulseaudio] alsa-mixer.c: Mapping hdmi-surround71-extra3 (Digital Surround 7.1 (HDMI 4)), priority=6, channel_map=front-left,front-right,rear-left,rear-right,front-center,lfe,side-left,side-right, supported=yes, direction=1
+D: [pulseaudio] alsa-mixer.c: Profile output:hdmi-stereo (Digital Stereo (HDMI) Output), input=(null), output=hdmi-stereo priority=5900, supported=yes n_input_mappings=0, n_output_mappings=1
+D: [pulseaudio] alsa-mixer.c: Output hdmi-stereo
+D: [pulseaudio] alsa-mixer.c: Profile output:hdmi-surround (Digital Surround 5.1 (HDMI) Output), input=(null), output=hdmi-surround priority=800, supported=yes n_input_mappings=0, n_output_mappings=1
+D: [pulseaudio] alsa-mixer.c: Output hdmi-surround
+D: [pulseaudio] alsa-mixer.c: Profile output:hdmi-surround71 (Digital Surround 7.1 (HDMI) Output), input=(null), output=hdmi-surround71 priority=800, supported=yes n_input_mappings=0, n_output_mappings=1
+D: [pulseaudio] alsa-mixer.c: Output hdmi-surround71
+D: [pulseaudio] alsa-mixer.c: Profile output:hdmi-stereo-extra1 (Digital Stereo (HDMI 2) Output), input=(null), output=hdmi-stereo-extra1 priority=5700, supported=yes n_input_mappings=0, n_output_mappings=1
+D: [pulseaudio] alsa-mixer.c: Output hdmi-stereo-extra1
+D: [pulseaudio] alsa-mixer.c: Profile output:hdmi-surround-extra1 (Digital Surround 5.1 (HDMI 2) Output), input=(null), output=hdmi-surround-extra1 priority=600, supported=yes n_input_mappings=0, n_output_mappings=1
+D: [pulseaudio] alsa-mixer.c: Output hdmi-surround-extra1
+D: [pulseaudio] alsa-mixer.c: Profile output:hdmi-surround71-extra1 (Digital Surround 7.1 (HDMI 2) Output), input=(null), output=hdmi-surround71-extra1 priority=600, supported=yes n_input_mappings=0, n_output_mappings=1
+D: [pulseaudio] alsa-mixer.c: Output hdmi-surround71-extra1
+D: [pulseaudio] alsa-mixer.c: Profile output:hdmi-stereo-extra2 (Digital Stereo (HDMI 3) Output), input=(null), output=hdmi-stereo-extra2 priority=5700, supported=yes n_input_mappings=0, n_output_mappings=1
+D: [pulseaudio] alsa-mixer.c: Output hdmi-stereo-extra2
+D: [pulseaudio] alsa-mixer.c: Profile output:hdmi-surround-extra2 (Digital Surround 5.1 (HDMI 3) Output), input=(null), output=hdmi-surround-extra2 priority=600, supported=yes n_input_mappings=0, n_output_mappings=1
+D: [pulseaudio] alsa-mixer.c: Output hdmi-surround-extra2
+D: [pulseaudio] alsa-mixer.c: Profile output:hdmi-surround71-extra2 (Digital Surround 7.1 (HDMI 3) Output), input=(null), output=hdmi-surround71-extra2 priority=600, supported=yes n_input_mappings=0, n_output_mappings=1
+D: [pulseaudio] alsa-mixer.c: Output hdmi-surround71-extra2
+D: [pulseaudio] alsa-mixer.c: Profile output:hdmi-stereo-extra3 (Digital Stereo (HDMI 4) Output), input=(null), output=hdmi-stereo-extra3 priority=5700, supported=yes n_input_mappings=0, n_output_mappings=1
+D: [pulseaudio] alsa-mixer.c: Output hdmi-stereo-extra3
+D: [pulseaudio] alsa-mixer.c: Profile output:hdmi-surround-extra3 (Digital Surround 5.1 (HDMI 4) Output), input=(null), output=hdmi-surround-extra3 priority=600, supported=yes n_input_mappings=0, n_output_mappings=1
+D: [pulseaudio] alsa-mixer.c: Output hdmi-surround-extra3
+D: [pulseaudio] alsa-mixer.c: Profile output:hdmi-surround71-extra3 (Digital Surround 7.1 (HDMI 4) Output), input=(null), output=hdmi-surround71-extra3 priority=600, supported=yes n_input_mappings=0, n_output_mappings=1
+D: [pulseaudio] alsa-mixer.c: Output hdmi-surround71-extra3
+D: [pulseaudio] module-alsa-card.c: Pruned singleton availability group Legacy 1 from port hdmi-output-0
+D: [pulseaudio] module-alsa-card.c: Pruned singleton availability group Legacy 2 from port hdmi-output-1
+D: [pulseaudio] module-alsa-card.c: Pruned singleton availability group Legacy 3 from port hdmi-output-2
+D: [pulseaudio] module-alsa-card.c: Pruned singleton availability group Legacy 4 from port hdmi-output-3
+I: [pulseaudio] module-card-restore.c: Restoring port latency offsets for card alsa_card.pci-0000_01_00.1.
+D: [pulseaudio] module-alsa-card.c: Found 4 jacks.
+D: [pulseaudio] module-alsa-card.c: Jack 'HDMI/DP,pcm=3 Jack' is now unplugged
+D: [pulseaudio] device-port.c: Setting port hdmi-output-0 to status no
+D: [pulseaudio] card.c: Setting card alsa_card.pci-0000_01_00.1 profile output:hdmi-stereo to availability status no
+D: [pulseaudio] card.c: Setting card alsa_card.pci-0000_01_00.1 profile output:hdmi-surround to availability status no
+D: [pulseaudio] core-subscribe.c: Dropped redundant event due to change event.
+D: [pulseaudio] card.c: Setting card alsa_card.pci-0000_01_00.1 profile output:hdmi-surround71 to availability status no
+D: [pulseaudio] core-subscribe.c: Dropped redundant event due to change event.
+D: [pulseaudio] module-alsa-card.c: Jack 'HDMI/DP,pcm=7 Jack' is now unplugged
+D: [pulseaudio] device-port.c: Setting port hdmi-output-1 to status no
+D: [pulseaudio] card.c: Setting card alsa_card.pci-0000_01_00.1 profile output:hdmi-stereo-extra1 to availability status no
+D: [pulseaudio] core-subscribe.c: Dropped redundant event due to change event.
+D: [pulseaudio] card.c: Setting card alsa_card.pci-0000_01_00.1 profile output:hdmi-surround-extra1 to availability status no
+D: [pulseaudio] core-subscribe.c: Dropped redundant event due to change event.
+D: [pulseaudio] card.c: Setting card alsa_card.pci-0000_01_00.1 profile output:hdmi-surround71-extra1 to availability status no
+D: [pulseaudio] core-subscribe.c: Dropped redundant event due to change event.
+D: [pulseaudio] module-alsa-card.c: Jack 'HDMI/DP,pcm=8 Jack' is now unplugged
+D: [pulseaudio] device-port.c: Setting port hdmi-output-2 to status no
+D: [pulseaudio] card.c: Setting card alsa_card.pci-0000_01_00.1 profile output:hdmi-stereo-extra2 to availability status no
+D: [pulseaudio] core-subscribe.c: Dropped redundant event due to change event.
+D: [pulseaudio] card.c: Setting card alsa_card.pci-0000_01_00.1 profile output:hdmi-surround-extra2 to availability status no
+D: [pulseaudio] core-subscribe.c: Dropped redundant event due to change event.
+D: [pulseaudio] card.c: Setting card alsa_card.pci-0000_01_00.1 profile output:hdmi-surround71-extra2 to availability status no
+D: [pulseaudio] core-subscribe.c: Dropped redundant event due to change event.
+D: [pulseaudio] module-alsa-card.c: Jack 'HDMI/DP,pcm=9 Jack' is now unplugged
+D: [pulseaudio] device-port.c: Setting port hdmi-output-3 to status no
+D: [pulseaudio] card.c: Setting card alsa_card.pci-0000_01_00.1 profile output:hdmi-stereo-extra3 to availability status no
+D: [pulseaudio] core-subscribe.c: Dropped redundant event due to change event.
+D: [pulseaudio] card.c: Setting card alsa_card.pci-0000_01_00.1 profile output:hdmi-surround-extra3 to availability status no
+D: [pulseaudio] core-subscribe.c: Dropped redundant event due to change event.
+D: [pulseaudio] card.c: Setting card alsa_card.pci-0000_01_00.1 profile output:hdmi-surround71-extra3 to availability status no
+D: [pulseaudio] core-subscribe.c: Dropped redundant event due to change event.
+D: [pulseaudio] card.c: Looking for initial profile for card alsa_card.pci-0000_01_00.1
+D: [pulseaudio] card.c: output:hdmi-stereo availability no
+D: [pulseaudio] card.c: output:hdmi-surround availability no
+D: [pulseaudio] card.c: output:hdmi-surround71 availability no
+D: [pulseaudio] card.c: output:hdmi-stereo-extra1 availability no
+D: [pulseaudio] card.c: output:hdmi-surround-extra1 availability no
+D: [pulseaudio] card.c: output:hdmi-surround71-extra1 availability no
+D: [pulseaudio] card.c: output:hdmi-stereo-extra2 availability no
+D: [pulseaudio] card.c: output:hdmi-surround-extra2 availability no
+D: [pulseaudio] card.c: output:hdmi-surround71-extra2 availability no
+D: [pulseaudio] card.c: output:hdmi-stereo-extra3 availability no
+D: [pulseaudio] card.c: output:hdmi-surround-extra3 availability no
+D: [pulseaudio] card.c: output:hdmi-surround71-extra3 availability no
+D: [pulseaudio] card.c: off availability unknown
+I: [pulseaudio] card.c: alsa_card.pci-0000_01_00.1: active_profile: off
+I: [pulseaudio] module-card-restore.c: Profile '' was previously automatically selected for card alsa_card.pci-0000_01_00.1.
+I: [pulseaudio] card.c: Created 0 "alsa_card.pci-0000_01_00.1"
+D: [pulseaudio] alsa-util.c: ELD info empty (for device=3)
+I: [pulseaudio] module-alsa-card.c: ELD device found for port hdmi-output-0 (3).
+D: [pulseaudio] alsa-util.c: ELD info empty (for device=7)
+I: [pulseaudio] module-alsa-card.c: ELD device found for port hdmi-output-1 (7).
+D: [pulseaudio] alsa-util.c: ELD info empty (for device=8)
+I: [pulseaudio] module-alsa-card.c: ELD device found for port hdmi-output-2 (8).
+D: [pulseaudio] alsa-util.c: ELD info empty (for device=9)
+I: [pulseaudio] module-alsa-card.c: ELD device found for port hdmi-output-3 (9).
+I: [pulseaudio] module.c: Loaded "module-alsa-card" (index: #7; argument: "device_id="0" name="pci-0000_01_00.1" card_name="alsa_card.pci-0000_01_00.1" namereg_fail=false tsched=yes fixed_latency_range=no ignore_dB=no deferred_volume=yes use_ucm=yes avoid_resampling=no card_properties="module-udev-detect.discovered=1"").
+I: [pulseaudio] module-udev-detect.c: Card /devices/pci0000:00/0000:00:01.0/0000:01:00.1/sound/card0 (alsa_card.pci-0000_01_00.1) module loaded.
+D: [pulseaudio] module-udev-detect.c: /dev/snd/controlC1 is accessible: yes
+D: [pulseaudio] module-udev-detect.c: /devices/platform/avs_probe_mb/sound/card1 is busy: no
+D: [pulseaudio] module-udev-detect.c: Loading module-alsa-card with arguments 'device_id="1" name="platform-avs_probe_mb" card_name="alsa_card.platform-avs_probe_mb" namereg_fail=false tsched=yes fixed_latency_range=no ignore_dB=no deferred_volume=yes use_ucm=yes avoid_resampling=no card_properties="module-udev-detect.discovered=1"'
+D: [pulseaudio] dbus-util.c: Successfully connected to D-Bus session bus f8b535be8c84649041a37fb269460c9e as :1.147
+D: [pulseaudio] reserve-wrap.c: Successfully acquired reservation lock on device 'Audio1'
+I: [pulseaudio] (alsa-lib)main.c: error: failed to import hw:1 use case configuration -2
+I: [pulseaudio] (alsa-lib)main.c: error: failed to import avs_probe_mb use case configuration -2
+I: [pulseaudio] alsa-ucm.c: UCM not available for card avs_probe_mb
+D: [pulseaudio] conf-parser.c: Parsing configuration file '/usr/share/pulseaudio/alsa-mixer/profile-sets/default.conf'
+D: [pulseaudio] alsa-mixer.c: Looking at profile input:analog-stereo
+D: [pulseaudio] alsa-mixer.c: Checking for recording on Analog Stereo (analog-stereo)
+D: [pulseaudio] alsa-util.c: Trying front:1 with SND_PCM_NO_AUTO_FORMAT ...
+I: [pulseaudio] (alsa-lib)confmisc.c: Unable to find definition 'cards.1.pcm.front.0:CARD=1'
+I: [pulseaudio] (alsa-lib)conf.c: function snd_func_refer returned error: No such file or directory
+I: [pulseaudio] (alsa-lib)conf.c: Evaluate error: No such file or directory
+I: [pulseaudio] (alsa-lib)pcm.c: Unknown PCM front:1
+I: [pulseaudio] alsa-util.c: Error opening PCM device front:1: No such file or directory
+D: [pulseaudio] alsa-mixer.c: Caching failure to open input:analog-stereo
+D: [pulseaudio] alsa-mixer.c: Looking at profile input:iec958-stereo
+D: [pulseaudio] alsa-mixer.c: Checking for recording on Digital Stereo (IEC958) (iec958-stereo)
+D: [pulseaudio] alsa-util.c: Trying iec958:1 with SND_PCM_NO_AUTO_FORMAT ...
+I: [pulseaudio] (alsa-lib)confmisc.c: Unable to find definition 'cards.1.pcm.iec958.0:CARD=1,AES0=4,AES1=130,AES2=0,AES3=2'
+I: [pulseaudio] (alsa-lib)conf.c: function snd_func_refer returned error: No such file or directory
+I: [pulseaudio] (alsa-lib)conf.c: Evaluate error: No such file or directory
+I: [pulseaudio] (alsa-lib)pcm.c: Unknown PCM iec958:1
+I: [pulseaudio] alsa-util.c: Error opening PCM device iec958:1: No such file or directory
+D: [pulseaudio] alsa-mixer.c: Caching failure to open input:iec958-stereo
+D: [pulseaudio] alsa-mixer.c: Looking at profile output:analog-stereo
+D: [pulseaudio] alsa-mixer.c: Checking for playback on Analog Stereo (analog-stereo)
+D: [pulseaudio] alsa-util.c: Trying front:1 with SND_PCM_NO_AUTO_FORMAT ...
+I: [pulseaudio] (alsa-lib)confmisc.c: Unable to find definition 'cards.1.pcm.front.0:CARD=1'
+I: [pulseaudio] (alsa-lib)conf.c: function snd_func_refer returned error: No such file or directory
+I: [pulseaudio] (alsa-lib)conf.c: Evaluate error: No such file or directory
+I: [pulseaudio] (alsa-lib)pcm.c: Unknown PCM front:1
+I: [pulseaudio] alsa-util.c: Error opening PCM device front:1: No such file or directory
+D: [pulseaudio] alsa-mixer.c: Caching failure to open output:analog-stereo
+D: [pulseaudio] alsa-mixer.c: Skipping profile output:analog-stereo+input:analog-stereo - will not be able to open output:analog-stereo
+D: [pulseaudio] alsa-mixer.c: Skipping profile output:analog-stereo+input:iec958-stereo - will not be able to open output:analog-stereo
+D: [pulseaudio] alsa-mixer.c: Looking at profile output:analog-surround-21
+D: [pulseaudio] alsa-mixer.c: Checking for playback on Analog Surround 2.1 (analog-surround-21)
+D: [pulseaudio] alsa-util.c: Trying surround21:1 with SND_PCM_NO_AUTO_FORMAT ...
+I: [pulseaudio] (alsa-lib)confmisc.c: Unable to find definition 'cards.1.pcm.surround51.0:CARD=1'
+I: [pulseaudio] (alsa-lib)conf.c: function snd_func_refer returned error: No such file or directory
+I: [pulseaudio] (alsa-lib)conf.c: Evaluate error: No such file or directory
+I: [pulseaudio] (alsa-lib)pcm.c: Unknown PCM surround21:1
+I: [pulseaudio] alsa-util.c: Error opening PCM device surround21:1: No such file or directory
+D: [pulseaudio] alsa-mixer.c: Caching failure to open output:analog-surround-21
+D: [pulseaudio] alsa-mixer.c: Skipping profile output:analog-surround-21+input:analog-stereo - will not be able to open output:analog-surround-21
+D: [pulseaudio] alsa-mixer.c: Skipping profile output:analog-surround-21+input:iec958-stereo - will not be able to open output:analog-surround-21
+D: [pulseaudio] alsa-mixer.c: Looking at profile output:analog-surround-40
+D: [pulseaudio] alsa-mixer.c: Checking for playback on Analog Surround 4.0 (analog-surround-40)
+D: [pulseaudio] alsa-util.c: Trying surround40:1 with SND_PCM_NO_AUTO_FORMAT ...
+I: [pulseaudio] (alsa-lib)confmisc.c: Unable to find definition 'cards.1.pcm.surround40.0:CARD=1'
+I: [pulseaudio] (alsa-lib)conf.c: function snd_func_refer returned error: No such file or directory
+I: [pulseaudio] (alsa-lib)conf.c: Evaluate error: No such file or directory
+I: [pulseaudio] (alsa-lib)pcm.c: Unknown PCM surround40:1
+I: [pulseaudio] alsa-util.c: Error opening PCM device surround40:1: No such file or directory
+D: [pulseaudio] alsa-mixer.c: Caching failure to open output:analog-surround-40
+D: [pulseaudio] alsa-mixer.c: Skipping profile output:analog-surround-40+input:analog-stereo - will not be able to open output:analog-surround-40
+D: [pulseaudio] alsa-mixer.c: Skipping profile output:analog-surround-40+input:iec958-stereo - will not be able to open output:analog-surround-40
+D: [pulseaudio] alsa-mixer.c: Looking at profile output:analog-surround-41
+D: [pulseaudio] alsa-mixer.c: Checking for playback on Analog Surround 4.1 (analog-surround-41)
+D: [pulseaudio] alsa-util.c: Trying surround41:1 with SND_PCM_NO_AUTO_FORMAT ...
+I: [pulseaudio] (alsa-lib)confmisc.c: Unable to find definition 'cards.1.pcm.surround51.0:CARD=1'
+I: [pulseaudio] (alsa-lib)conf.c: function snd_func_refer returned error: No such file or directory
+I: [pulseaudio] (alsa-lib)conf.c: Evaluate error: No such file or directory
+I: [pulseaudio] (alsa-lib)pcm.c: Unknown PCM surround41:1
+I: [pulseaudio] alsa-util.c: Error opening PCM device surround41:1: No such file or directory
+D: [pulseaudio] alsa-mixer.c: Caching failure to open output:analog-surround-41
+D: [pulseaudio] alsa-mixer.c: Skipping profile output:analog-surround-41+input:analog-stereo - will not be able to open output:analog-surround-41
+D: [pulseaudio] alsa-mixer.c: Skipping profile output:analog-surround-41+input:iec958-stereo - will not be able to open output:analog-surround-41
+D: [pulseaudio] alsa-mixer.c: Looking at profile output:analog-surround-50
+D: [pulseaudio] alsa-mixer.c: Checking for playback on Analog Surround 5.0 (analog-surround-50)
+D: [pulseaudio] alsa-util.c: Trying surround50:1 with SND_PCM_NO_AUTO_FORMAT ...
+I: [pulseaudio] (alsa-lib)confmisc.c: Unable to find definition 'cards.1.pcm.surround51.0:CARD=1'
+I: [pulseaudio] (alsa-lib)conf.c: function snd_func_refer returned error: No such file or directory
+I: [pulseaudio] (alsa-lib)conf.c: Evaluate error: No such file or directory
+I: [pulseaudio] (alsa-lib)pcm.c: Unknown PCM surround50:1
+I: [pulseaudio] alsa-util.c: Error opening PCM device surround50:1: No such file or directory
+D: [pulseaudio] alsa-mixer.c: Caching failure to open output:analog-surround-50
+D: [pulseaudio] alsa-mixer.c: Skipping profile output:analog-surround-50+input:analog-stereo - will not be able to open output:analog-surround-50
+D: [pulseaudio] alsa-mixer.c: Skipping profile output:analog-surround-50+input:iec958-stereo - will not be able to open output:analog-surround-50
+D: [pulseaudio] alsa-mixer.c: Looking at profile output:analog-surround-51
+D: [pulseaudio] alsa-mixer.c: Checking for playback on Analog Surround 5.1 (analog-surround-51)
+D: [pulseaudio] alsa-util.c: Trying surround51:1 with SND_PCM_NO_AUTO_FORMAT ...
+I: [pulseaudio] (alsa-lib)confmisc.c: Unable to find definition 'cards.1.pcm.surround51.0:CARD=1'
+I: [pulseaudio] (alsa-lib)conf.c: function snd_func_refer returned error: No such file or directory
+I: [pulseaudio] (alsa-lib)conf.c: Evaluate error: No such file or directory
+I: [pulseaudio] (alsa-lib)pcm.c: Unknown PCM surround51:1
+I: [pulseaudio] alsa-util.c: Error opening PCM device surround51:1: No such file or directory
+D: [pulseaudio] alsa-mixer.c: Caching failure to open output:analog-surround-51
+D: [pulseaudio] alsa-mixer.c: Skipping profile output:analog-surround-51+input:analog-stereo - will not be able to open output:analog-surround-51
+D: [pulseaudio] alsa-mixer.c: Skipping profile output:analog-surround-51+input:iec958-stereo - will not be able to open output:analog-surround-51
+D: [pulseaudio] alsa-mixer.c: Looking at profile output:analog-surround-71
+D: [pulseaudio] alsa-mixer.c: Checking for playback on Analog Surround 7.1 (analog-surround-71)
+D: [pulseaudio] alsa-util.c: Trying surround71:1 with SND_PCM_NO_AUTO_FORMAT ...
+I: [pulseaudio] (alsa-lib)confmisc.c: Unable to find definition 'cards.1.pcm.surround71.0:CARD=1'
+I: [pulseaudio] (alsa-lib)conf.c: function snd_func_refer returned error: No such file or directory
+I: [pulseaudio] (alsa-lib)conf.c: Evaluate error: No such file or directory
+I: [pulseaudio] (alsa-lib)pcm.c: Unknown PCM surround71:1
+I: [pulseaudio] alsa-util.c: Error opening PCM device surround71:1: No such file or directory
+D: [pulseaudio] alsa-mixer.c: Caching failure to open output:analog-surround-71
+D: [pulseaudio] alsa-mixer.c: Skipping profile output:analog-surround-71+input:analog-stereo - will not be able to open output:analog-surround-71
+D: [pulseaudio] alsa-mixer.c: Skipping profile output:analog-surround-71+input:iec958-stereo - will not be able to open output:analog-surround-71
+D: [pulseaudio] alsa-mixer.c: Looking at profile output:iec958-stereo
+D: [pulseaudio] alsa-mixer.c: Checking for playback on Digital Stereo (IEC958) (iec958-stereo)
+D: [pulseaudio] alsa-util.c: Trying iec958:1 with SND_PCM_NO_AUTO_FORMAT ...
+I: [pulseaudio] (alsa-lib)confmisc.c: Unable to find definition 'cards.1.pcm.iec958.0:CARD=1,AES0=4,AES1=130,AES2=0,AES3=2'
+I: [pulseaudio] (alsa-lib)conf.c: function snd_func_refer returned error: No such file or directory
+I: [pulseaudio] (alsa-lib)conf.c: Evaluate error: No such file or directory
+I: [pulseaudio] (alsa-lib)pcm.c: Unknown PCM iec958:1
+I: [pulseaudio] alsa-util.c: Error opening PCM device iec958:1: No such file or directory
+D: [pulseaudio] alsa-mixer.c: Caching failure to open output:iec958-stereo
+D: [pulseaudio] alsa-mixer.c: Skipping profile output:iec958-stereo+input:analog-stereo - will not be able to open output:iec958-stereo
+D: [pulseaudio] alsa-mixer.c: Skipping profile output:iec958-stereo+input:iec958-stereo - will not be able to open output:iec958-stereo
+D: [pulseaudio] alsa-mixer.c: Looking at profile output:iec958-ac3-surround-40
+D: [pulseaudio] alsa-mixer.c: Checking for playback on Digital Surround 4.0 (IEC958/AC3) (iec958-ac3-surround-40)
+D: [pulseaudio] alsa-util.c: Trying a52:1 with SND_PCM_NO_AUTO_FORMAT ...
+I: [pulseaudio] (alsa-lib)confmisc.c: Unable to find definition 'cards.1.pcm.iec958.0:CARD=1,AES0=6,AES1=130,AES2=0,AES3=2'
+I: [pulseaudio] (alsa-lib)conf.c: function snd_func_refer returned error: No such file or directory
+I: [pulseaudio] (alsa-lib)conf.c: Evaluate error: No such file or directory
+I: [pulseaudio] (alsa-lib)pcm.c: Unknown PCM iec958:{AES0 0x6 AES1 0x82 AES2 0x0 AES3 0x2 CARD 1}
+I: [pulseaudio] alsa-util.c: Error opening PCM device a52:1: No such file or directory
+D: [pulseaudio] alsa-mixer.c: Caching failure to open output:iec958-ac3-surround-40
+D: [pulseaudio] alsa-mixer.c: Skipping profile output:iec958-ac3-surround-40+input:analog-stereo - will not be able to open output:iec958-ac3-surround-40
+D: [pulseaudio] alsa-mixer.c: Skipping profile output:iec958-ac3-surround-40+input:iec958-stereo - will not be able to open output:iec958-ac3-surround-40
+D: [pulseaudio] alsa-mixer.c: Looking at profile output:iec958-ac3-surround-51
+D: [pulseaudio] alsa-mixer.c: Checking for playback on Digital Surround 5.1 (IEC958/AC3) (iec958-ac3-surround-51)
+D: [pulseaudio] alsa-util.c: Trying a52:1 with SND_PCM_NO_AUTO_FORMAT ...
+I: [pulseaudio] (alsa-lib)confmisc.c: Unable to find definition 'cards.1.pcm.iec958.0:CARD=1,AES0=6,AES1=130,AES2=0,AES3=2'
+I: [pulseaudio] (alsa-lib)conf.c: function snd_func_refer returned error: No such file or directory
+I: [pulseaudio] (alsa-lib)conf.c: Evaluate error: No such file or directory
+I: [pulseaudio] (alsa-lib)pcm.c: Unknown PCM iec958:{AES0 0x6 AES1 0x82 AES2 0x0 AES3 0x2 CARD 1}
+I: [pulseaudio] alsa-util.c: Error opening PCM device a52:1: No such file or directory
+D: [pulseaudio] alsa-mixer.c: Caching failure to open output:iec958-ac3-surround-51
+D: [pulseaudio] alsa-mixer.c: Skipping profile output:iec958-ac3-surround-51+input:analog-stereo - will not be able to open output:iec958-ac3-surround-51
+D: [pulseaudio] alsa-mixer.c: Skipping profile output:iec958-ac3-surround-51+input:iec958-stereo - will not be able to open output:iec958-ac3-surround-51
+D: [pulseaudio] alsa-mixer.c: Looking at profile output:iec958-dts-surround-51
+D: [pulseaudio] alsa-mixer.c: Checking for playback on Digital Surround 5.1 (IEC958/DTS) (iec958-dts-surround-51)
+D: [pulseaudio] alsa-util.c: Trying dca:1 with SND_PCM_NO_AUTO_FORMAT ...
+I: [pulseaudio] (alsa-lib)pcm.c: Unknown PCM dca:1
+I: [pulseaudio] alsa-util.c: Error opening PCM device dca:1: No such file or directory
+D: [pulseaudio] alsa-mixer.c: Caching failure to open output:iec958-dts-surround-51
+D: [pulseaudio] alsa-mixer.c: Skipping profile output:iec958-dts-surround-51+input:analog-stereo - will not be able to open output:iec958-dts-surround-51
+D: [pulseaudio] alsa-mixer.c: Skipping profile output:iec958-dts-surround-51+input:iec958-stereo - will not be able to open output:iec958-dts-surround-51
+D: [pulseaudio] alsa-mixer.c: Looking at profile output:hdmi-stereo
+D: [pulseaudio] alsa-mixer.c: Checking for playback on Digital Stereo (HDMI) (hdmi-stereo)
+D: [pulseaudio] alsa-util.c: Trying hdmi:1 with SND_PCM_NO_AUTO_FORMAT ...
+I: [pulseaudio] (alsa-lib)confmisc.c: Unable to find definition 'cards.1.pcm.hdmi.0:CARD=1,AES0=4,AES1=130,AES2=0,AES3=2'
+I: [pulseaudio] (alsa-lib)conf.c: function snd_func_refer returned error: No such file or directory
+I: [pulseaudio] (alsa-lib)conf.c: Evaluate error: No such file or directory
+I: [pulseaudio] (alsa-lib)pcm.c: Unknown PCM hdmi:1
+I: [pulseaudio] alsa-util.c: Error opening PCM device hdmi:1: No such file or directory
+D: [pulseaudio] alsa-mixer.c: Caching failure to open output:hdmi-stereo
+D: [pulseaudio] alsa-mixer.c: Skipping profile output:hdmi-stereo+input:analog-stereo - will not be able to open output:hdmi-stereo
+D: [pulseaudio] alsa-mixer.c: Skipping profile output:hdmi-stereo+input:iec958-stereo - will not be able to open output:hdmi-stereo
+D: [pulseaudio] alsa-mixer.c: Looking at profile output:hdmi-surround
+D: [pulseaudio] alsa-mixer.c: Checking for playback on Digital Surround 5.1 (HDMI) (hdmi-surround)
+D: [pulseaudio] alsa-util.c: Trying hdmi:1 with SND_PCM_NO_AUTO_FORMAT ...
+I: [pulseaudio] (alsa-lib)confmisc.c: Unable to find definition 'cards.1.pcm.hdmi.0:CARD=1,AES0=4,AES1=130,AES2=0,AES3=2'
+I: [pulseaudio] (alsa-lib)conf.c: function snd_func_refer returned error: No such file or directory
+I: [pulseaudio] (alsa-lib)conf.c: Evaluate error: No such file or directory
+I: [pulseaudio] (alsa-lib)pcm.c: Unknown PCM hdmi:1
+I: [pulseaudio] alsa-util.c: Error opening PCM device hdmi:1: No such file or directory
+D: [pulseaudio] alsa-mixer.c: Caching failure to open output:hdmi-surround
+D: [pulseaudio] alsa-mixer.c: Skipping profile output:hdmi-surround+input:analog-stereo - will not be able to open output:hdmi-surround
+D: [pulseaudio] alsa-mixer.c: Skipping profile output:hdmi-surround+input:iec958-stereo - will not be able to open output:hdmi-surround
+D: [pulseaudio] alsa-mixer.c: Looking at profile output:hdmi-surround71
+D: [pulseaudio] alsa-mixer.c: Checking for playback on Digital Surround 7.1 (HDMI) (hdmi-surround71)
+D: [pulseaudio] alsa-util.c: Trying hdmi:1 with SND_PCM_NO_AUTO_FORMAT ...
+I: [pulseaudio] (alsa-lib)confmisc.c: Unable to find definition 'cards.1.pcm.hdmi.0:CARD=1,AES0=4,AES1=130,AES2=0,AES3=2'
+I: [pulseaudio] (alsa-lib)conf.c: function snd_func_refer returned error: No such file or directory
+I: [pulseaudio] (alsa-lib)conf.c: Evaluate error: No such file or directory
+I: [pulseaudio] (alsa-lib)pcm.c: Unknown PCM hdmi:1
+I: [pulseaudio] alsa-util.c: Error opening PCM device hdmi:1: No such file or directory
+D: [pulseaudio] alsa-mixer.c: Caching failure to open output:hdmi-surround71
+D: [pulseaudio] alsa-mixer.c: Skipping profile output:hdmi-surround71+input:analog-stereo - will not be able to open output:hdmi-surround71
+D: [pulseaudio] alsa-mixer.c: Skipping profile output:hdmi-surround71+input:iec958-stereo - will not be able to open output:hdmi-surround71
+D: [pulseaudio] alsa-mixer.c: Looking at profile output:hdmi-dts-surround
+D: [pulseaudio] alsa-mixer.c: Checking for playback on Digital Surround 5.1 (HDMI/DTS) (hdmi-dts-surround)
+D: [pulseaudio] alsa-util.c: Trying dcahdmi:1 with SND_PCM_NO_AUTO_FORMAT ...
+I: [pulseaudio] (alsa-lib)pcm.c: Unknown PCM dcahdmi:1
+I: [pulseaudio] alsa-util.c: Error opening PCM device dcahdmi:1: No such file or directory
+D: [pulseaudio] alsa-mixer.c: Caching failure to open output:hdmi-dts-surround
+D: [pulseaudio] alsa-mixer.c: Skipping profile output:hdmi-dts-surround+input:analog-stereo - will not be able to open output:hdmi-dts-surround
+D: [pulseaudio] alsa-mixer.c: Skipping profile output:hdmi-dts-surround+input:iec958-stereo - will not be able to open output:hdmi-dts-surround
+D: [pulseaudio] alsa-mixer.c: Looking at profile output:hdmi-stereo-extra1
+D: [pulseaudio] alsa-mixer.c: Checking for playback on Digital Stereo (HDMI 2) (hdmi-stereo-extra1)
+D: [pulseaudio] alsa-util.c: Trying hdmi:1,1 with SND_PCM_NO_AUTO_FORMAT ...
+I: [pulseaudio] (alsa-lib)confmisc.c: Unable to find definition 'cards.1.pcm.hdmi.1:CARD=1,AES0=4,AES1=130,AES2=0,AES3=2'
+I: [pulseaudio] (alsa-lib)conf.c: function snd_func_refer returned error: No such file or directory
+I: [pulseaudio] (alsa-lib)conf.c: Evaluate error: No such file or directory
+I: [pulseaudio] (alsa-lib)pcm.c: Unknown PCM hdmi:1,1
+I: [pulseaudio] alsa-util.c: Error opening PCM device hdmi:1,1: No such file or directory
+D: [pulseaudio] alsa-mixer.c: Caching failure to open output:hdmi-stereo-extra1
+D: [pulseaudio] alsa-mixer.c: Skipping profile output:hdmi-stereo-extra1+input:analog-stereo - will not be able to open output:hdmi-stereo-extra1
+D: [pulseaudio] alsa-mixer.c: Skipping profile output:hdmi-stereo-extra1+input:iec958-stereo - will not be able to open output:hdmi-stereo-extra1
+D: [pulseaudio] alsa-mixer.c: Looking at profile output:hdmi-surround-extra1
+D: [pulseaudio] alsa-mixer.c: Checking for playback on Digital Surround 5.1 (HDMI 2) (hdmi-surround-extra1)
+D: [pulseaudio] alsa-util.c: Trying hdmi:1,1 with SND_PCM_NO_AUTO_FORMAT ...
+I: [pulseaudio] (alsa-lib)confmisc.c: Unable to find definition 'cards.1.pcm.hdmi.1:CARD=1,AES0=4,AES1=130,AES2=0,AES3=2'
+I: [pulseaudio] (alsa-lib)conf.c: function snd_func_refer returned error: No such file or directory
+I: [pulseaudio] (alsa-lib)conf.c: Evaluate error: No such file or directory
+I: [pulseaudio] (alsa-lib)pcm.c: Unknown PCM hdmi:1,1
+I: [pulseaudio] alsa-util.c: Error opening PCM device hdmi:1,1: No such file or directory
+D: [pulseaudio] alsa-mixer.c: Caching failure to open output:hdmi-surround-extra1
+D: [pulseaudio] alsa-mixer.c: Skipping profile output:hdmi-surround-extra1+input:analog-stereo - will not be able to open output:hdmi-surround-extra1
+D: [pulseaudio] alsa-mixer.c: Skipping profile output:hdmi-surround-extra1+input:iec958-stereo - will not be able to open output:hdmi-surround-extra1
+D: [pulseaudio] alsa-mixer.c: Looking at profile output:hdmi-surround71-extra1
+D: [pulseaudio] alsa-mixer.c: Checking for playback on Digital Surround 7.1 (HDMI 2) (hdmi-surround71-extra1)
+D: [pulseaudio] alsa-util.c: Trying hdmi:1,1 with SND_PCM_NO_AUTO_FORMAT ...
+I: [pulseaudio] (alsa-lib)confmisc.c: Unable to find definition 'cards.1.pcm.hdmi.1:CARD=1,AES0=4,AES1=130,AES2=0,AES3=2'
+I: [pulseaudio] (alsa-lib)conf.c: function snd_func_refer returned error: No such file or directory
+I: [pulseaudio] (alsa-lib)conf.c: Evaluate error: No such file or directory
+I: [pulseaudio] (alsa-lib)pcm.c: Unknown PCM hdmi:1,1
+I: [pulseaudio] alsa-util.c: Error opening PCM device hdmi:1,1: No such file or directory
+D: [pulseaudio] alsa-mixer.c: Caching failure to open output:hdmi-surround71-extra1
+D: [pulseaudio] alsa-mixer.c: Skipping profile output:hdmi-surround71-extra1+input:analog-stereo - will not be able to open output:hdmi-surround71-extra1
+D: [pulseaudio] alsa-mixer.c: Skipping profile output:hdmi-surround71-extra1+input:iec958-stereo - will not be able to open output:hdmi-surround71-extra1
+D: [pulseaudio] alsa-mixer.c: Looking at profile output:hdmi-dts-surround-extra1
+D: [pulseaudio] alsa-mixer.c: Checking for playback on Digital Surround 5.1 (HDMI 2/DTS) (hdmi-dts-surround-extra1)
+D: [pulseaudio] alsa-util.c: Trying dcahdmi:1,1 with SND_PCM_NO_AUTO_FORMAT ...
+I: [pulseaudio] (alsa-lib)pcm.c: Unknown PCM dcahdmi:1,1
+I: [pulseaudio] alsa-util.c: Error opening PCM device dcahdmi:1,1: No such file or directory
+D: [pulseaudio] alsa-mixer.c: Caching failure to open output:hdmi-dts-surround-extra1
+D: [pulseaudio] alsa-mixer.c: Skipping profile output:hdmi-dts-surround-extra1+input:analog-stereo - will not be able to open output:hdmi-dts-surround-extra1
+D: [pulseaudio] alsa-mixer.c: Skipping profile output:hdmi-dts-surround-extra1+input:iec958-stereo - will not be able to open output:hdmi-dts-surround-extra1
+D: [pulseaudio] alsa-mixer.c: Looking at profile output:hdmi-stereo-extra2
+D: [pulseaudio] alsa-mixer.c: Checking for playback on Digital Stereo (HDMI 3) (hdmi-stereo-extra2)
+D: [pulseaudio] alsa-util.c: Trying hdmi:1,2 with SND_PCM_NO_AUTO_FORMAT ...
+I: [pulseaudio] (alsa-lib)confmisc.c: Unable to find definition 'cards.1.pcm.hdmi.2:CARD=1,AES0=4,AES1=130,AES2=0,AES3=2'
+I: [pulseaudio] (alsa-lib)conf.c: function snd_func_refer returned error: No such file or directory
+I: [pulseaudio] (alsa-lib)conf.c: Evaluate error: No such file or directory
+I: [pulseaudio] (alsa-lib)pcm.c: Unknown PCM hdmi:1,2
+I: [pulseaudio] alsa-util.c: Error opening PCM device hdmi:1,2: No such file or directory
+D: [pulseaudio] alsa-mixer.c: Caching failure to open output:hdmi-stereo-extra2
+D: [pulseaudio] alsa-mixer.c: Skipping profile output:hdmi-stereo-extra2+input:analog-stereo - will not be able to open output:hdmi-stereo-extra2
+D: [pulseaudio] alsa-mixer.c: Skipping profile output:hdmi-stereo-extra2+input:iec958-stereo - will not be able to open output:hdmi-stereo-extra2
+D: [pulseaudio] alsa-mixer.c: Looking at profile output:hdmi-surround-extra2
+D: [pulseaudio] alsa-mixer.c: Checking for playback on Digital Surround 5.1 (HDMI 3) (hdmi-surround-extra2)
+D: [pulseaudio] alsa-util.c: Trying hdmi:1,2 with SND_PCM_NO_AUTO_FORMAT ...
+I: [pulseaudio] (alsa-lib)confmisc.c: Unable to find definition 'cards.1.pcm.hdmi.2:CARD=1,AES0=4,AES1=130,AES2=0,AES3=2'
+I: [pulseaudio] (alsa-lib)conf.c: function snd_func_refer returned error: No such file or directory
+I: [pulseaudio] (alsa-lib)conf.c: Evaluate error: No such file or directory
+I: [pulseaudio] (alsa-lib)pcm.c: Unknown PCM hdmi:1,2
+I: [pulseaudio] alsa-util.c: Error opening PCM device hdmi:1,2: No such file or directory
+D: [pulseaudio] alsa-mixer.c: Caching failure to open output:hdmi-surround-extra2
+D: [pulseaudio] alsa-mixer.c: Skipping profile output:hdmi-surround-extra2+input:analog-stereo - will not be able to open output:hdmi-surround-extra2
+D: [pulseaudio] alsa-mixer.c: Skipping profile output:hdmi-surround-extra2+input:iec958-stereo - will not be able to open output:hdmi-surround-extra2
+D: [pulseaudio] alsa-mixer.c: Looking at profile output:hdmi-surround71-extra2
+D: [pulseaudio] alsa-mixer.c: Checking for playback on Digital Surround 7.1 (HDMI 3) (hdmi-surround71-extra2)
+D: [pulseaudio] alsa-util.c: Trying hdmi:1,2 with SND_PCM_NO_AUTO_FORMAT ...
+I: [pulseaudio] (alsa-lib)confmisc.c: Unable to find definition 'cards.1.pcm.hdmi.2:CARD=1,AES0=4,AES1=130,AES2=0,AES3=2'
+I: [pulseaudio] (alsa-lib)conf.c: function snd_func_refer returned error: No such file or directory
+I: [pulseaudio] (alsa-lib)conf.c: Evaluate error: No such file or directory
+I: [pulseaudio] (alsa-lib)pcm.c: Unknown PCM hdmi:1,2
+I: [pulseaudio] alsa-util.c: Error opening PCM device hdmi:1,2: No such file or directory
+D: [pulseaudio] alsa-mixer.c: Caching failure to open output:hdmi-surround71-extra2
+D: [pulseaudio] alsa-mixer.c: Skipping profile output:hdmi-surround71-extra2+input:analog-stereo - will not be able to open output:hdmi-surround71-extra2
+D: [pulseaudio] alsa-mixer.c: Skipping profile output:hdmi-surround71-extra2+input:iec958-stereo - will not be able to open output:hdmi-surround71-extra2
+D: [pulseaudio] alsa-mixer.c: Looking at profile output:hdmi-dts-surround-extra2
+D: [pulseaudio] alsa-mixer.c: Checking for playback on Digital Surround 5.1 (HDMI 3/DTS) (hdmi-dts-surround-extra2)
+D: [pulseaudio] alsa-util.c: Trying dcahdmi:1,2 with SND_PCM_NO_AUTO_FORMAT ...
+I: [pulseaudio] (alsa-lib)pcm.c: Unknown PCM dcahdmi:1,2
+I: [pulseaudio] alsa-util.c: Error opening PCM device dcahdmi:1,2: No such file or directory
+D: [pulseaudio] alsa-mixer.c: Caching failure to open output:hdmi-dts-surround-extra2
+D: [pulseaudio] alsa-mixer.c: Skipping profile output:hdmi-dts-surround-extra2+input:analog-stereo - will not be able to open output:hdmi-dts-surround-extra2
+D: [pulseaudio] alsa-mixer.c: Skipping profile output:hdmi-dts-surround-extra2+input:iec958-stereo - will not be able to open output:hdmi-dts-surround-extra2
+D: [pulseaudio] alsa-mixer.c: Looking at profile output:hdmi-stereo-extra3
+D: [pulseaudio] alsa-mixer.c: Checking for playback on Digital Stereo (HDMI 4) (hdmi-stereo-extra3)
+D: [pulseaudio] alsa-util.c: Trying hdmi:1,3 with SND_PCM_NO_AUTO_FORMAT ...
+I: [pulseaudio] (alsa-lib)confmisc.c: Unable to find definition 'cards.1.pcm.hdmi.3:CARD=1,AES0=4,AES1=130,AES2=0,AES3=2'
+I: [pulseaudio] (alsa-lib)conf.c: function snd_func_refer returned error: No such file or directory
+I: [pulseaudio] (alsa-lib)conf.c: Evaluate error: No such file or directory
+I: [pulseaudio] (alsa-lib)pcm.c: Unknown PCM hdmi:1,3
+I: [pulseaudio] alsa-util.c: Error opening PCM device hdmi:1,3: No such file or directory
+D: [pulseaudio] alsa-mixer.c: Caching failure to open output:hdmi-stereo-extra3
+D: [pulseaudio] alsa-mixer.c: Skipping profile output:hdmi-stereo-extra3+input:analog-stereo - will not be able to open output:hdmi-stereo-extra3
+D: [pulseaudio] alsa-mixer.c: Skipping profile output:hdmi-stereo-extra3+input:iec958-stereo - will not be able to open output:hdmi-stereo-extra3
+D: [pulseaudio] alsa-mixer.c: Looking at profile output:hdmi-surround-extra3
+D: [pulseaudio] alsa-mixer.c: Checking for playback on Digital Surround 5.1 (HDMI 4) (hdmi-surround-extra3)
+D: [pulseaudio] alsa-util.c: Trying hdmi:1,3 with SND_PCM_NO_AUTO_FORMAT ...
+I: [pulseaudio] (alsa-lib)confmisc.c: Unable to find definition 'cards.1.pcm.hdmi.3:CARD=1,AES0=4,AES1=130,AES2=0,AES3=2'
+I: [pulseaudio] (alsa-lib)conf.c: function snd_func_refer returned error: No such file or directory
+I: [pulseaudio] (alsa-lib)conf.c: Evaluate error: No such file or directory
+I: [pulseaudio] (alsa-lib)pcm.c: Unknown PCM hdmi:1,3
+I: [pulseaudio] alsa-util.c: Error opening PCM device hdmi:1,3: No such file or directory
+D: [pulseaudio] alsa-mixer.c: Caching failure to open output:hdmi-surround-extra3
+D: [pulseaudio] alsa-mixer.c: Skipping profile output:hdmi-surround-extra3+input:analog-stereo - will not be able to open output:hdmi-surround-extra3
+D: [pulseaudio] alsa-mixer.c: Skipping profile output:hdmi-surround-extra3+input:iec958-stereo - will not be able to open output:hdmi-surround-extra3
+D: [pulseaudio] alsa-mixer.c: Looking at profile output:hdmi-surround71-extra3
+D: [pulseaudio] alsa-mixer.c: Checking for playback on Digital Surround 7.1 (HDMI 4) (hdmi-surround71-extra3)
+D: [pulseaudio] alsa-util.c: Trying hdmi:1,3 with SND_PCM_NO_AUTO_FORMAT ...
+I: [pulseaudio] (alsa-lib)confmisc.c: Unable to find definition 'cards.1.pcm.hdmi.3:CARD=1,AES0=4,AES1=130,AES2=0,AES3=2'
+I: [pulseaudio] (alsa-lib)conf.c: function snd_func_refer returned error: No such file or directory
+I: [pulseaudio] (alsa-lib)conf.c: Evaluate error: No such file or directory
+I: [pulseaudio] (alsa-lib)pcm.c: Unknown PCM hdmi:1,3
+I: [pulseaudio] alsa-util.c: Error opening PCM device hdmi:1,3: No such file or directory
+D: [pulseaudio] alsa-mixer.c: Caching failure to open output:hdmi-surround71-extra3
+D: [pulseaudio] alsa-mixer.c: Skipping profile output:hdmi-surround71-extra3+input:analog-stereo - will not be able to open output:hdmi-surround71-extra3
+D: [pulseaudio] alsa-mixer.c: Skipping profile output:hdmi-surround71-extra3+input:iec958-stereo - will not be able to open output:hdmi-surround71-extra3
+D: [pulseaudio] alsa-mixer.c: Looking at profile output:hdmi-dts-surround-extra3
+D: [pulseaudio] alsa-mixer.c: Checking for playback on Digital Surround 5.1 (HDMI 4/DTS) (hdmi-dts-surround-extra3)
+D: [pulseaudio] alsa-util.c: Trying dcahdmi:1,3 with SND_PCM_NO_AUTO_FORMAT ...
+I: [pulseaudio] (alsa-lib)pcm.c: Unknown PCM dcahdmi:1,3
+I: [pulseaudio] alsa-util.c: Error opening PCM device dcahdmi:1,3: No such file or directory
+D: [pulseaudio] alsa-mixer.c: Caching failure to open output:hdmi-dts-surround-extra3
+D: [pulseaudio] alsa-mixer.c: Skipping profile output:hdmi-dts-surround-extra3+input:analog-stereo - will not be able to open output:hdmi-dts-surround-extra3
+D: [pulseaudio] alsa-mixer.c: Skipping profile output:hdmi-dts-surround-extra3+input:iec958-stereo - will not be able to open output:hdmi-dts-surround-extra3
+D: [pulseaudio] alsa-mixer.c: Looking at profile output:hdmi-stereo-extra4
+D: [pulseaudio] alsa-mixer.c: Checking for playback on Digital Stereo (HDMI 5) (hdmi-stereo-extra4)
+D: [pulseaudio] alsa-util.c: Trying hdmi:1,4 with SND_PCM_NO_AUTO_FORMAT ...
+I: [pulseaudio] (alsa-lib)confmisc.c: Unable to find definition 'cards.1.pcm.hdmi.4:CARD=1,AES0=4,AES1=130,AES2=0,AES3=2'
+I: [pulseaudio] (alsa-lib)conf.c: function snd_func_refer returned error: No such file or directory
+I: [pulseaudio] (alsa-lib)conf.c: Evaluate error: No such file or directory
+I: [pulseaudio] (alsa-lib)pcm.c: Unknown PCM hdmi:1,4
+I: [pulseaudio] alsa-util.c: Error opening PCM device hdmi:1,4: No such file or directory
+D: [pulseaudio] alsa-mixer.c: Caching failure to open output:hdmi-stereo-extra4
+D: [pulseaudio] alsa-mixer.c: Skipping profile output:hdmi-stereo-extra4+input:analog-stereo - will not be able to open output:hdmi-stereo-extra4
+D: [pulseaudio] alsa-mixer.c: Skipping profile output:hdmi-stereo-extra4+input:iec958-stereo - will not be able to open output:hdmi-stereo-extra4
+D: [pulseaudio] alsa-mixer.c: Looking at profile output:hdmi-surround-extra4
+D: [pulseaudio] alsa-mixer.c: Checking for playback on Digital Surround 5.1 (HDMI 5) (hdmi-surround-extra4)
+D: [pulseaudio] alsa-util.c: Trying hdmi:1,4 with SND_PCM_NO_AUTO_FORMAT ...
+I: [pulseaudio] (alsa-lib)confmisc.c: Unable to find definition 'cards.1.pcm.hdmi.4:CARD=1,AES0=4,AES1=130,AES2=0,AES3=2'
+I: [pulseaudio] (alsa-lib)conf.c: function snd_func_refer returned error: No such file or directory
+I: [pulseaudio] (alsa-lib)conf.c: Evaluate error: No such file or directory
+I: [pulseaudio] (alsa-lib)pcm.c: Unknown PCM hdmi:1,4
+I: [pulseaudio] alsa-util.c: Error opening PCM device hdmi:1,4: No such file or directory
+D: [pulseaudio] alsa-mixer.c: Caching failure to open output:hdmi-surround-extra4
+D: [pulseaudio] alsa-mixer.c: Skipping profile output:hdmi-surround-extra4+input:analog-stereo - will not be able to open output:hdmi-surround-extra4
+D: [pulseaudio] alsa-mixer.c: Skipping profile output:hdmi-surround-extra4+input:iec958-stereo - will not be able to open output:hdmi-surround-extra4
+D: [pulseaudio] alsa-mixer.c: Looking at profile output:hdmi-surround71-extra4
+D: [pulseaudio] alsa-mixer.c: Checking for playback on Digital Surround 7.1 (HDMI 5) (hdmi-surround71-extra4)
+D: [pulseaudio] alsa-util.c: Trying hdmi:1,4 with SND_PCM_NO_AUTO_FORMAT ...
+I: [pulseaudio] (alsa-lib)confmisc.c: Unable to find definition 'cards.1.pcm.hdmi.4:CARD=1,AES0=4,AES1=130,AES2=0,AES3=2'
+I: [pulseaudio] (alsa-lib)conf.c: function snd_func_refer returned error: No such file or directory
+I: [pulseaudio] (alsa-lib)conf.c: Evaluate error: No such file or directory
+I: [pulseaudio] (alsa-lib)pcm.c: Unknown PCM hdmi:1,4
+I: [pulseaudio] alsa-util.c: Error opening PCM device hdmi:1,4: No such file or directory
+D: [pulseaudio] alsa-mixer.c: Caching failure to open output:hdmi-surround71-extra4
+D: [pulseaudio] alsa-mixer.c: Skipping profile output:hdmi-surround71-extra4+input:analog-stereo - will not be able to open output:hdmi-surround71-extra4
+D: [pulseaudio] alsa-mixer.c: Skipping profile output:hdmi-surround71-extra4+input:iec958-stereo - will not be able to open output:hdmi-surround71-extra4
+D: [pulseaudio] alsa-mixer.c: Looking at profile output:hdmi-dts-surround-extra4
+D: [pulseaudio] alsa-mixer.c: Checking for playback on Digital Surround 5.1 (HDMI 5/DTS) (hdmi-dts-surround-extra4)
+D: [pulseaudio] alsa-util.c: Trying dcahdmi:1,4 with SND_PCM_NO_AUTO_FORMAT ...
+I: [pulseaudio] (alsa-lib)pcm.c: Unknown PCM dcahdmi:1,4
+I: [pulseaudio] alsa-util.c: Error opening PCM device dcahdmi:1,4: No such file or directory
+D: [pulseaudio] alsa-mixer.c: Caching failure to open output:hdmi-dts-surround-extra4
+D: [pulseaudio] alsa-mixer.c: Skipping profile output:hdmi-dts-surround-extra4+input:analog-stereo - will not be able to open output:hdmi-dts-surround-extra4
+D: [pulseaudio] alsa-mixer.c: Skipping profile output:hdmi-dts-surround-extra4+input:iec958-stereo - will not be able to open output:hdmi-dts-surround-extra4
+D: [pulseaudio] alsa-mixer.c: Looking at profile output:hdmi-stereo-extra5
+D: [pulseaudio] alsa-mixer.c: Checking for playback on Digital Stereo (HDMI 6) (hdmi-stereo-extra5)
+D: [pulseaudio] alsa-util.c: Trying hdmi:1,5 with SND_PCM_NO_AUTO_FORMAT ...
+I: [pulseaudio] (alsa-lib)confmisc.c: Unable to find definition 'cards.1.pcm.hdmi.5:CARD=1,AES0=4,AES1=130,AES2=0,AES3=2'
+I: [pulseaudio] (alsa-lib)conf.c: function snd_func_refer returned error: No such file or directory
+I: [pulseaudio] (alsa-lib)conf.c: Evaluate error: No such file or directory
+I: [pulseaudio] (alsa-lib)pcm.c: Unknown PCM hdmi:1,5
+I: [pulseaudio] alsa-util.c: Error opening PCM device hdmi:1,5: No such file or directory
+D: [pulseaudio] alsa-mixer.c: Caching failure to open output:hdmi-stereo-extra5
+D: [pulseaudio] alsa-mixer.c: Skipping profile output:hdmi-stereo-extra5+input:analog-stereo - will not be able to open output:hdmi-stereo-extra5
+D: [pulseaudio] alsa-mixer.c: Skipping profile output:hdmi-stereo-extra5+input:iec958-stereo - will not be able to open output:hdmi-stereo-extra5
+D: [pulseaudio] alsa-mixer.c: Looking at profile output:hdmi-surround-extra5
+D: [pulseaudio] alsa-mixer.c: Checking for playback on Digital Surround 5.1 (HDMI 6) (hdmi-surround-extra5)
+D: [pulseaudio] alsa-util.c: Trying hdmi:1,5 with SND_PCM_NO_AUTO_FORMAT ...
+I: [pulseaudio] (alsa-lib)confmisc.c: Unable to find definition 'cards.1.pcm.hdmi.5:CARD=1,AES0=4,AES1=130,AES2=0,AES3=2'
+I: [pulseaudio] (alsa-lib)conf.c: function snd_func_refer returned error: No such file or directory
+I: [pulseaudio] (alsa-lib)conf.c: Evaluate error: No such file or directory
+I: [pulseaudio] (alsa-lib)pcm.c: Unknown PCM hdmi:1,5
+I: [pulseaudio] alsa-util.c: Error opening PCM device hdmi:1,5: No such file or directory
+D: [pulseaudio] alsa-mixer.c: Caching failure to open output:hdmi-surround-extra5
+D: [pulseaudio] alsa-mixer.c: Skipping profile output:hdmi-surround-extra5+input:analog-stereo - will not be able to open output:hdmi-surround-extra5
+D: [pulseaudio] alsa-mixer.c: Skipping profile output:hdmi-surround-extra5+input:iec958-stereo - will not be able to open output:hdmi-surround-extra5
+D: [pulseaudio] alsa-mixer.c: Looking at profile output:hdmi-surround71-extra5
+D: [pulseaudio] alsa-mixer.c: Checking for playback on Digital Surround 7.1 (HDMI 6) (hdmi-surround71-extra5)
+D: [pulseaudio] alsa-util.c: Trying hdmi:1,5 with SND_PCM_NO_AUTO_FORMAT ...
+I: [pulseaudio] (alsa-lib)confmisc.c: Unable to find definition 'cards.1.pcm.hdmi.5:CARD=1,AES0=4,AES1=130,AES2=0,AES3=2'
+I: [pulseaudio] (alsa-lib)conf.c: function snd_func_refer returned error: No such file or directory
+I: [pulseaudio] (alsa-lib)conf.c: Evaluate error: No such file or directory
+I: [pulseaudio] (alsa-lib)pcm.c: Unknown PCM hdmi:1,5
+I: [pulseaudio] alsa-util.c: Error opening PCM device hdmi:1,5: No such file or directory
+D: [pulseaudio] alsa-mixer.c: Caching failure to open output:hdmi-surround71-extra5
+D: [pulseaudio] alsa-mixer.c: Skipping profile output:hdmi-surround71-extra5+input:analog-stereo - will not be able to open output:hdmi-surround71-extra5
+D: [pulseaudio] alsa-mixer.c: Skipping profile output:hdmi-surround71-extra5+input:iec958-stereo - will not be able to open output:hdmi-surround71-extra5
+D: [pulseaudio] alsa-mixer.c: Looking at profile output:hdmi-dts-surround-extra5
+D: [pulseaudio] alsa-mixer.c: Checking for playback on Digital Surround 5.1 (HDMI 6/DTS) (hdmi-dts-surround-extra5)
+D: [pulseaudio] alsa-util.c: Trying dcahdmi:1,5 with SND_PCM_NO_AUTO_FORMAT ...
+I: [pulseaudio] (alsa-lib)pcm.c: Unknown PCM dcahdmi:1,5
+I: [pulseaudio] alsa-util.c: Error opening PCM device dcahdmi:1,5: No such file or directory
+D: [pulseaudio] alsa-mixer.c: Caching failure to open output:hdmi-dts-surround-extra5
+D: [pulseaudio] alsa-mixer.c: Skipping profile output:hdmi-dts-surround-extra5+input:analog-stereo - will not be able to open output:hdmi-dts-surround-extra5
+D: [pulseaudio] alsa-mixer.c: Skipping profile output:hdmi-dts-surround-extra5+input:iec958-stereo - will not be able to open output:hdmi-dts-surround-extra5
+D: [pulseaudio] alsa-mixer.c: Looking at profile output:hdmi-stereo-extra6
+D: [pulseaudio] alsa-mixer.c: Checking for playback on Digital Stereo (HDMI 7) (hdmi-stereo-extra6)
+D: [pulseaudio] alsa-util.c: Trying hdmi:1,6 with SND_PCM_NO_AUTO_FORMAT ...
+I: [pulseaudio] (alsa-lib)confmisc.c: Unable to find definition 'cards.1.pcm.hdmi.6:CARD=1,AES0=4,AES1=130,AES2=0,AES3=2'
+I: [pulseaudio] (alsa-lib)conf.c: function snd_func_refer returned error: No such file or directory
+I: [pulseaudio] (alsa-lib)conf.c: Evaluate error: No such file or directory
+I: [pulseaudio] (alsa-lib)pcm.c: Unknown PCM hdmi:1,6
+I: [pulseaudio] alsa-util.c: Error opening PCM device hdmi:1,6: No such file or directory
+D: [pulseaudio] alsa-mixer.c: Caching failure to open output:hdmi-stereo-extra6
+D: [pulseaudio] alsa-mixer.c: Skipping profile output:hdmi-stereo-extra6+input:analog-stereo - will not be able to open output:hdmi-stereo-extra6
+D: [pulseaudio] alsa-mixer.c: Skipping profile output:hdmi-stereo-extra6+input:iec958-stereo - will not be able to open output:hdmi-stereo-extra6
+D: [pulseaudio] alsa-mixer.c: Looking at profile output:hdmi-surround-extra6
+D: [pulseaudio] alsa-mixer.c: Checking for playback on Digital Surround 5.1 (HDMI 7) (hdmi-surround-extra6)
+D: [pulseaudio] alsa-util.c: Trying hdmi:1,6 with SND_PCM_NO_AUTO_FORMAT ...
+I: [pulseaudio] (alsa-lib)confmisc.c: Unable to find definition 'cards.1.pcm.hdmi.6:CARD=1,AES0=4,AES1=130,AES2=0,AES3=2'
+I: [pulseaudio] (alsa-lib)conf.c: function snd_func_refer returned error: No such file or directory
+I: [pulseaudio] (alsa-lib)conf.c: Evaluate error: No such file or directory
+I: [pulseaudio] (alsa-lib)pcm.c: Unknown PCM hdmi:1,6
+I: [pulseaudio] alsa-util.c: Error opening PCM device hdmi:1,6: No such file or directory
+D: [pulseaudio] alsa-mixer.c: Caching failure to open output:hdmi-surround-extra6
+D: [pulseaudio] alsa-mixer.c: Skipping profile output:hdmi-surround-extra6+input:analog-stereo - will not be able to open output:hdmi-surround-extra6
+D: [pulseaudio] alsa-mixer.c: Skipping profile output:hdmi-surround-extra6+input:iec958-stereo - will not be able to open output:hdmi-surround-extra6
+D: [pulseaudio] alsa-mixer.c: Looking at profile output:hdmi-surround71-extra6
+D: [pulseaudio] alsa-mixer.c: Checking for playback on Digital Surround 7.1 (HDMI 7) (hdmi-surround71-extra6)
+D: [pulseaudio] alsa-util.c: Trying hdmi:1,6 with SND_PCM_NO_AUTO_FORMAT ...
+I: [pulseaudio] (alsa-lib)confmisc.c: Unable to find definition 'cards.1.pcm.hdmi.6:CARD=1,AES0=4,AES1=130,AES2=0,AES3=2'
+I: [pulseaudio] (alsa-lib)conf.c: function snd_func_refer returned error: No such file or directory
+I: [pulseaudio] (alsa-lib)conf.c: Evaluate error: No such file or directory
+I: [pulseaudio] (alsa-lib)pcm.c: Unknown PCM hdmi:1,6
+I: [pulseaudio] alsa-util.c: Error opening PCM device hdmi:1,6: No such file or directory
+D: [pulseaudio] alsa-mixer.c: Caching failure to open output:hdmi-surround71-extra6
+D: [pulseaudio] alsa-mixer.c: Skipping profile output:hdmi-surround71-extra6+input:analog-stereo - will not be able to open output:hdmi-surround71-extra6
+D: [pulseaudio] alsa-mixer.c: Skipping profile output:hdmi-surround71-extra6+input:iec958-stereo - will not be able to open output:hdmi-surround71-extra6
+D: [pulseaudio] alsa-mixer.c: Looking at profile output:hdmi-dts-surround-extra6
+D: [pulseaudio] alsa-mixer.c: Checking for playback on Digital Surround 5.1 (HDMI 7/DTS) (hdmi-dts-surround-extra6)
+D: [pulseaudio] alsa-util.c: Trying dcahdmi:1,6 with SND_PCM_NO_AUTO_FORMAT ...
+I: [pulseaudio] (alsa-lib)pcm.c: Unknown PCM dcahdmi:1,6
+I: [pulseaudio] alsa-util.c: Error opening PCM device dcahdmi:1,6: No such file or directory
+D: [pulseaudio] alsa-mixer.c: Caching failure to open output:hdmi-dts-surround-extra6
+D: [pulseaudio] alsa-mixer.c: Skipping profile output:hdmi-dts-surround-extra6+input:analog-stereo - will not be able to open output:hdmi-dts-surround-extra6
+D: [pulseaudio] alsa-mixer.c: Skipping profile output:hdmi-dts-surround-extra6+input:iec958-stereo - will not be able to open output:hdmi-dts-surround-extra6
+D: [pulseaudio] alsa-mixer.c: Looking at profile output:hdmi-stereo-extra7
+D: [pulseaudio] alsa-mixer.c: Checking for playback on Digital Stereo (HDMI 8) (hdmi-stereo-extra7)
+D: [pulseaudio] alsa-util.c: Trying hdmi:1,7 with SND_PCM_NO_AUTO_FORMAT ...
+I: [pulseaudio] (alsa-lib)confmisc.c: Unable to find definition 'cards.1.pcm.hdmi.7:CARD=1,AES0=4,AES1=130,AES2=0,AES3=2'
+I: [pulseaudio] (alsa-lib)conf.c: function snd_func_refer returned error: No such file or directory
+I: [pulseaudio] (alsa-lib)conf.c: Evaluate error: No such file or directory
+I: [pulseaudio] (alsa-lib)pcm.c: Unknown PCM hdmi:1,7
+I: [pulseaudio] alsa-util.c: Error opening PCM device hdmi:1,7: No such file or directory
+D: [pulseaudio] alsa-mixer.c: Caching failure to open output:hdmi-stereo-extra7
+D: [pulseaudio] alsa-mixer.c: Skipping profile output:hdmi-stereo-extra7+input:analog-stereo - will not be able to open output:hdmi-stereo-extra7
+D: [pulseaudio] alsa-mixer.c: Skipping profile output:hdmi-stereo-extra7+input:iec958-stereo - will not be able to open output:hdmi-stereo-extra7
+D: [pulseaudio] alsa-mixer.c: Looking at profile output:hdmi-surround-extra7
+D: [pulseaudio] alsa-mixer.c: Checking for playback on Digital Surround 5.1 (HDMI 8) (hdmi-surround-extra7)
+D: [pulseaudio] alsa-util.c: Trying hdmi:1,7 with SND_PCM_NO_AUTO_FORMAT ...
+I: [pulseaudio] (alsa-lib)confmisc.c: Unable to find definition 'cards.1.pcm.hdmi.7:CARD=1,AES0=4,AES1=130,AES2=0,AES3=2'
+I: [pulseaudio] (alsa-lib)conf.c: function snd_func_refer returned error: No such file or directory
+I: [pulseaudio] (alsa-lib)conf.c: Evaluate error: No such file or directory
+I: [pulseaudio] (alsa-lib)pcm.c: Unknown PCM hdmi:1,7
+I: [pulseaudio] alsa-util.c: Error opening PCM device hdmi:1,7: No such file or directory
+D: [pulseaudio] alsa-mixer.c: Caching failure to open output:hdmi-surround-extra7
+D: [pulseaudio] alsa-mixer.c: Skipping profile output:hdmi-surround-extra7+input:analog-stereo - will not be able to open output:hdmi-surround-extra7
+D: [pulseaudio] alsa-mixer.c: Skipping profile output:hdmi-surround-extra7+input:iec958-stereo - will not be able to open output:hdmi-surround-extra7
+D: [pulseaudio] alsa-mixer.c: Looking at profile output:hdmi-surround71-extra7
+D: [pulseaudio] alsa-mixer.c: Checking for playback on Digital Surround 7.1 (HDMI 8) (hdmi-surround71-extra7)
+D: [pulseaudio] alsa-util.c: Trying hdmi:1,7 with SND_PCM_NO_AUTO_FORMAT ...
+I: [pulseaudio] (alsa-lib)confmisc.c: Unable to find definition 'cards.1.pcm.hdmi.7:CARD=1,AES0=4,AES1=130,AES2=0,AES3=2'
+I: [pulseaudio] (alsa-lib)conf.c: function snd_func_refer returned error: No such file or directory
+I: [pulseaudio] (alsa-lib)conf.c: Evaluate error: No such file or directory
+I: [pulseaudio] (alsa-lib)pcm.c: Unknown PCM hdmi:1,7
+I: [pulseaudio] alsa-util.c: Error opening PCM device hdmi:1,7: No such file or directory
+D: [pulseaudio] alsa-mixer.c: Caching failure to open output:hdmi-surround71-extra7
+D: [pulseaudio] alsa-mixer.c: Skipping profile output:hdmi-surround71-extra7+input:analog-stereo - will not be able to open output:hdmi-surround71-extra7
+D: [pulseaudio] alsa-mixer.c: Skipping profile output:hdmi-surround71-extra7+input:iec958-stereo - will not be able to open output:hdmi-surround71-extra7
+D: [pulseaudio] alsa-mixer.c: Looking at profile output:hdmi-dts-surround-extra7
+D: [pulseaudio] alsa-mixer.c: Checking for playback on Digital Surround 5.1 (HDMI 8/DTS) (hdmi-dts-surround-extra7)
+D: [pulseaudio] alsa-util.c: Trying dcahdmi:1,7 with SND_PCM_NO_AUTO_FORMAT ...
+I: [pulseaudio] (alsa-lib)pcm.c: Unknown PCM dcahdmi:1,7
+I: [pulseaudio] alsa-util.c: Error opening PCM device dcahdmi:1,7: No such file or directory
+D: [pulseaudio] alsa-mixer.c: Caching failure to open output:hdmi-dts-surround-extra7
+D: [pulseaudio] alsa-mixer.c: Skipping profile output:hdmi-dts-surround-extra7+input:analog-stereo - will not be able to open output:hdmi-dts-surround-extra7
+D: [pulseaudio] alsa-mixer.c: Skipping profile output:hdmi-dts-surround-extra7+input:iec958-stereo - will not be able to open output:hdmi-dts-surround-extra7
+D: [pulseaudio] alsa-mixer.c: Looking at profile output:hdmi-stereo-extra8
+D: [pulseaudio] alsa-mixer.c: Checking for playback on Digital Stereo (HDMI 9) (hdmi-stereo-extra8)
+D: [pulseaudio] alsa-util.c: Trying hdmi:1,8 with SND_PCM_NO_AUTO_FORMAT ...
+I: [pulseaudio] (alsa-lib)confmisc.c: Unable to find definition 'cards.1.pcm.hdmi.8:CARD=1,AES0=4,AES1=130,AES2=0,AES3=2'
+I: [pulseaudio] (alsa-lib)conf.c: function snd_func_refer returned error: No such file or directory
+I: [pulseaudio] (alsa-lib)conf.c: Evaluate error: No such file or directory
+I: [pulseaudio] (alsa-lib)pcm.c: Unknown PCM hdmi:1,8
+I: [pulseaudio] alsa-util.c: Error opening PCM device hdmi:1,8: No such file or directory
+D: [pulseaudio] alsa-mixer.c: Caching failure to open output:hdmi-stereo-extra8
+D: [pulseaudio] alsa-mixer.c: Skipping profile output:hdmi-stereo-extra8+input:analog-stereo - will not be able to open output:hdmi-stereo-extra8
+D: [pulseaudio] alsa-mixer.c: Skipping profile output:hdmi-stereo-extra8+input:iec958-stereo - will not be able to open output:hdmi-stereo-extra8
+D: [pulseaudio] alsa-mixer.c: Looking at profile output:hdmi-surround-extra8
+D: [pulseaudio] alsa-mixer.c: Checking for playback on Digital Surround 5.1 (HDMI 9) (hdmi-surround-extra8)
+D: [pulseaudio] alsa-util.c: Trying hdmi:1,8 with SND_PCM_NO_AUTO_FORMAT ...
+I: [pulseaudio] (alsa-lib)confmisc.c: Unable to find definition 'cards.1.pcm.hdmi.8:CARD=1,AES0=4,AES1=130,AES2=0,AES3=2'
+I: [pulseaudio] (alsa-lib)conf.c: function snd_func_refer returned error: No such file or directory
+I: [pulseaudio] (alsa-lib)conf.c: Evaluate error: No such file or directory
+I: [pulseaudio] (alsa-lib)pcm.c: Unknown PCM hdmi:1,8
+I: [pulseaudio] alsa-util.c: Error opening PCM device hdmi:1,8: No such file or directory
+D: [pulseaudio] alsa-mixer.c: Caching failure to open output:hdmi-surround-extra8
+D: [pulseaudio] alsa-mixer.c: Skipping profile output:hdmi-surround-extra8+input:analog-stereo - will not be able to open output:hdmi-surround-extra8
+D: [pulseaudio] alsa-mixer.c: Skipping profile output:hdmi-surround-extra8+input:iec958-stereo - will not be able to open output:hdmi-surround-extra8
+D: [pulseaudio] alsa-mixer.c: Looking at profile output:hdmi-surround71-extra8
+D: [pulseaudio] alsa-mixer.c: Checking for playback on Digital Surround 7.1 (HDMI 9) (hdmi-surround71-extra8)
+D: [pulseaudio] alsa-util.c: Trying hdmi:1,8 with SND_PCM_NO_AUTO_FORMAT ...
+I: [pulseaudio] (alsa-lib)confmisc.c: Unable to find definition 'cards.1.pcm.hdmi.8:CARD=1,AES0=4,AES1=130,AES2=0,AES3=2'
+I: [pulseaudio] (alsa-lib)conf.c: function snd_func_refer returned error: No such file or directory
+I: [pulseaudio] (alsa-lib)conf.c: Evaluate error: No such file or directory
+I: [pulseaudio] (alsa-lib)pcm.c: Unknown PCM hdmi:1,8
+I: [pulseaudio] alsa-util.c: Error opening PCM device hdmi:1,8: No such file or directory
+D: [pulseaudio] alsa-mixer.c: Caching failure to open output:hdmi-surround71-extra8
+D: [pulseaudio] alsa-mixer.c: Skipping profile output:hdmi-surround71-extra8+input:analog-stereo - will not be able to open output:hdmi-surround71-extra8
+D: [pulseaudio] alsa-mixer.c: Skipping profile output:hdmi-surround71-extra8+input:iec958-stereo - will not be able to open output:hdmi-surround71-extra8
+D: [pulseaudio] alsa-mixer.c: Looking at profile output:hdmi-dts-surround-extra8
+D: [pulseaudio] alsa-mixer.c: Checking for playback on Digital Surround 5.1 (HDMI 9/DTS) (hdmi-dts-surround-extra8)
+D: [pulseaudio] alsa-util.c: Trying dcahdmi:1,8 with SND_PCM_NO_AUTO_FORMAT ...
+I: [pulseaudio] (alsa-lib)pcm.c: Unknown PCM dcahdmi:1,8
+I: [pulseaudio] alsa-util.c: Error opening PCM device dcahdmi:1,8: No such file or directory
+D: [pulseaudio] alsa-mixer.c: Caching failure to open output:hdmi-dts-surround-extra8
+D: [pulseaudio] alsa-mixer.c: Skipping profile output:hdmi-dts-surround-extra8+input:analog-stereo - will not be able to open output:hdmi-dts-surround-extra8
+D: [pulseaudio] alsa-mixer.c: Skipping profile output:hdmi-dts-surround-extra8+input:iec958-stereo - will not be able to open output:hdmi-dts-surround-extra8
+D: [pulseaudio] alsa-mixer.c: Looking at profile output:hdmi-stereo-extra9
+D: [pulseaudio] alsa-mixer.c: Checking for playback on Digital Stereo (HDMI 10) (hdmi-stereo-extra9)
+D: [pulseaudio] alsa-util.c: Trying hdmi:1,9 with SND_PCM_NO_AUTO_FORMAT ...
+I: [pulseaudio] (alsa-lib)confmisc.c: Unable to find definition 'cards.1.pcm.hdmi.9:CARD=1,AES0=4,AES1=130,AES2=0,AES3=2'
+I: [pulseaudio] (alsa-lib)conf.c: function snd_func_refer returned error: No such file or directory
+I: [pulseaudio] (alsa-lib)conf.c: Evaluate error: No such file or directory
+I: [pulseaudio] (alsa-lib)pcm.c: Unknown PCM hdmi:1,9
+I: [pulseaudio] alsa-util.c: Error opening PCM device hdmi:1,9: No such file or directory
+D: [pulseaudio] alsa-mixer.c: Caching failure to open output:hdmi-stereo-extra9
+D: [pulseaudio] alsa-mixer.c: Skipping profile output:hdmi-stereo-extra9+input:analog-stereo - will not be able to open output:hdmi-stereo-extra9
+D: [pulseaudio] alsa-mixer.c: Skipping profile output:hdmi-stereo-extra9+input:iec958-stereo - will not be able to open output:hdmi-stereo-extra9
+D: [pulseaudio] alsa-mixer.c: Looking at profile output:hdmi-surround-extra9
+D: [pulseaudio] alsa-mixer.c: Checking for playback on Digital Surround 5.1 (HDMI 10) (hdmi-surround-extra9)
+D: [pulseaudio] alsa-util.c: Trying hdmi:1,9 with SND_PCM_NO_AUTO_FORMAT ...
+I: [pulseaudio] (alsa-lib)confmisc.c: Unable to find definition 'cards.1.pcm.hdmi.9:CARD=1,AES0=4,AES1=130,AES2=0,AES3=2'
+I: [pulseaudio] (alsa-lib)conf.c: function snd_func_refer returned error: No such file or directory
+I: [pulseaudio] (alsa-lib)conf.c: Evaluate error: No such file or directory
+I: [pulseaudio] (alsa-lib)pcm.c: Unknown PCM hdmi:1,9
+I: [pulseaudio] alsa-util.c: Error opening PCM device hdmi:1,9: No such file or directory
+D: [pulseaudio] alsa-mixer.c: Caching failure to open output:hdmi-surround-extra9
+D: [pulseaudio] alsa-mixer.c: Skipping profile output:hdmi-surround-extra9+input:analog-stereo - will not be able to open output:hdmi-surround-extra9
+D: [pulseaudio] alsa-mixer.c: Skipping profile output:hdmi-surround-extra9+input:iec958-stereo - will not be able to open output:hdmi-surround-extra9
+D: [pulseaudio] alsa-mixer.c: Looking at profile output:hdmi-surround71-extra9
+D: [pulseaudio] alsa-mixer.c: Checking for playback on Digital Surround 7.1 (HDMI 10) (hdmi-surround71-extra9)
+D: [pulseaudio] alsa-util.c: Trying hdmi:1,9 with SND_PCM_NO_AUTO_FORMAT ...
+I: [pulseaudio] (alsa-lib)confmisc.c: Unable to find definition 'cards.1.pcm.hdmi.9:CARD=1,AES0=4,AES1=130,AES2=0,AES3=2'
+I: [pulseaudio] (alsa-lib)conf.c: function snd_func_refer returned error: No such file or directory
+I: [pulseaudio] (alsa-lib)conf.c: Evaluate error: No such file or directory
+I: [pulseaudio] (alsa-lib)pcm.c: Unknown PCM hdmi:1,9
+I: [pulseaudio] alsa-util.c: Error opening PCM device hdmi:1,9: No such file or directory
+D: [pulseaudio] alsa-mixer.c: Caching failure to open output:hdmi-surround71-extra9
+D: [pulseaudio] alsa-mixer.c: Skipping profile output:hdmi-surround71-extra9+input:analog-stereo - will not be able to open output:hdmi-surround71-extra9
+D: [pulseaudio] alsa-mixer.c: Skipping profile output:hdmi-surround71-extra9+input:iec958-stereo - will not be able to open output:hdmi-surround71-extra9
+D: [pulseaudio] alsa-mixer.c: Looking at profile output:hdmi-dts-surround-extra9
+D: [pulseaudio] alsa-mixer.c: Checking for playback on Digital Surround 5.1 (HDMI 10/DTS) (hdmi-dts-surround-extra9)
+D: [pulseaudio] alsa-util.c: Trying dcahdmi:1,9 with SND_PCM_NO_AUTO_FORMAT ...
+I: [pulseaudio] (alsa-lib)pcm.c: Unknown PCM dcahdmi:1,9
+I: [pulseaudio] alsa-util.c: Error opening PCM device dcahdmi:1,9: No such file or directory
+D: [pulseaudio] alsa-mixer.c: Caching failure to open output:hdmi-dts-surround-extra9
+D: [pulseaudio] alsa-mixer.c: Skipping profile output:hdmi-dts-surround-extra9+input:analog-stereo - will not be able to open output:hdmi-dts-surround-extra9
+D: [pulseaudio] alsa-mixer.c: Skipping profile output:hdmi-dts-surround-extra9+input:iec958-stereo - will not be able to open output:hdmi-dts-surround-extra9
+D: [pulseaudio] alsa-mixer.c: Looking at profile output:hdmi-stereo-extra10
+D: [pulseaudio] alsa-mixer.c: Checking for playback on Digital Stereo (HDMI 11) (hdmi-stereo-extra10)
+D: [pulseaudio] alsa-util.c: Trying hdmi:1,10 with SND_PCM_NO_AUTO_FORMAT ...
+I: [pulseaudio] (alsa-lib)confmisc.c: Unable to find definition 'cards.1.pcm.hdmi.10:CARD=1,AES0=4,AES1=130,AES2=0,AES3=2'
+I: [pulseaudio] (alsa-lib)conf.c: function snd_func_refer returned error: No such file or directory
+I: [pulseaudio] (alsa-lib)conf.c: Evaluate error: No such file or directory
+I: [pulseaudio] (alsa-lib)pcm.c: Unknown PCM hdmi:1,10
+I: [pulseaudio] alsa-util.c: Error opening PCM device hdmi:1,10: No such file or directory
+D: [pulseaudio] alsa-mixer.c: Caching failure to open output:hdmi-stereo-extra10
+D: [pulseaudio] alsa-mixer.c: Skipping profile output:hdmi-stereo-extra10+input:analog-stereo - will not be able to open output:hdmi-stereo-extra10
+D: [pulseaudio] alsa-mixer.c: Skipping profile output:hdmi-stereo-extra10+input:iec958-stereo - will not be able to open output:hdmi-stereo-extra10
+D: [pulseaudio] alsa-mixer.c: Looking at profile output:hdmi-surround-extra10
+D: [pulseaudio] alsa-mixer.c: Checking for playback on Digital Surround 5.1 (HDMI 11) (hdmi-surround-extra10)
+D: [pulseaudio] alsa-util.c: Trying hdmi:1,10 with SND_PCM_NO_AUTO_FORMAT ...
+I: [pulseaudio] (alsa-lib)confmisc.c: Unable to find definition 'cards.1.pcm.hdmi.10:CARD=1,AES0=4,AES1=130,AES2=0,AES3=2'
+I: [pulseaudio] (alsa-lib)conf.c: function snd_func_refer returned error: No such file or directory
+I: [pulseaudio] (alsa-lib)conf.c: Evaluate error: No such file or directory
+I: [pulseaudio] (alsa-lib)pcm.c: Unknown PCM hdmi:1,10
+I: [pulseaudio] alsa-util.c: Error opening PCM device hdmi:1,10: No such file or directory
+D: [pulseaudio] alsa-mixer.c: Caching failure to open output:hdmi-surround-extra10
+D: [pulseaudio] alsa-mixer.c: Skipping profile output:hdmi-surround-extra10+input:analog-stereo - will not be able to open output:hdmi-surround-extra10
+D: [pulseaudio] alsa-mixer.c: Skipping profile output:hdmi-surround-extra10+input:iec958-stereo - will not be able to open output:hdmi-surround-extra10
+D: [pulseaudio] alsa-mixer.c: Looking at profile output:hdmi-surround71-extra10
+D: [pulseaudio] alsa-mixer.c: Checking for playback on Digital Surround 7.1 (HDMI 11) (hdmi-surround71-extra10)
+D: [pulseaudio] alsa-util.c: Trying hdmi:1,10 with SND_PCM_NO_AUTO_FORMAT ...
+I: [pulseaudio] (alsa-lib)confmisc.c: Unable to find definition 'cards.1.pcm.hdmi.10:CARD=1,AES0=4,AES1=130,AES2=0,AES3=2'
+I: [pulseaudio] (alsa-lib)conf.c: function snd_func_refer returned error: No such file or directory
+I: [pulseaudio] (alsa-lib)conf.c: Evaluate error: No such file or directory
+I: [pulseaudio] (alsa-lib)pcm.c: Unknown PCM hdmi:1,10
+I: [pulseaudio] alsa-util.c: Error opening PCM device hdmi:1,10: No such file or directory
+D: [pulseaudio] alsa-mixer.c: Caching failure to open output:hdmi-surround71-extra10
+D: [pulseaudio] alsa-mixer.c: Skipping profile output:hdmi-surround71-extra10+input:analog-stereo - will not be able to open output:hdmi-surround71-extra10
+D: [pulseaudio] alsa-mixer.c: Skipping profile output:hdmi-surround71-extra10+input:iec958-stereo - will not be able to open output:hdmi-surround71-extra10
+D: [pulseaudio] alsa-mixer.c: Looking at profile output:hdmi-dts-surround-extra10
+D: [pulseaudio] alsa-mixer.c: Checking for playback on Digital Surround 5.1 (HDMI 11/DTS) (hdmi-dts-surround-extra10)
+D: [pulseaudio] alsa-util.c: Trying dcahdmi:1,10 with SND_PCM_NO_AUTO_FORMAT ...
+I: [pulseaudio] (alsa-lib)pcm.c: Unknown PCM dcahdmi:1,10
+I: [pulseaudio] alsa-util.c: Error opening PCM device dcahdmi:1,10: No such file or directory
+D: [pulseaudio] alsa-mixer.c: Caching failure to open output:hdmi-dts-surround-extra10
+D: [pulseaudio] alsa-mixer.c: Skipping profile output:hdmi-dts-surround-extra10+input:analog-stereo - will not be able to open output:hdmi-dts-surround-extra10
+D: [pulseaudio] alsa-mixer.c: Skipping profile output:hdmi-dts-surround-extra10+input:iec958-stereo - will not be able to open output:hdmi-dts-surround-extra10
+D: [pulseaudio] alsa-mixer.c: Looking at profile input:stereo-fallback
+D: [pulseaudio] alsa-mixer.c: Checking for recording on Stereo (stereo-fallback)
+D: [pulseaudio] alsa-util.c: Trying hw:1 with SND_PCM_NO_AUTO_FORMAT ...
+I: [pulseaudio] (alsa-lib)pcm_hw.c: open '/dev/snd/pcmC1D0c' failed (-2)
+I: [pulseaudio] alsa-util.c: Error opening PCM device hw:1: No such file or directory
+D: [pulseaudio] alsa-mixer.c: Caching failure to open input:stereo-fallback
+D: [pulseaudio] alsa-mixer.c: Looking at profile input:mono-fallback
+D: [pulseaudio] alsa-mixer.c: Checking for recording on Mono (mono-fallback)
+D: [pulseaudio] alsa-util.c: Trying hw:1 with SND_PCM_NO_AUTO_FORMAT ...
+I: [pulseaudio] (alsa-lib)pcm_hw.c: open '/dev/snd/pcmC1D0c' failed (-2)
+I: [pulseaudio] alsa-util.c: Error opening PCM device hw:1: No such file or directory
+D: [pulseaudio] alsa-mixer.c: Caching failure to open input:mono-fallback
+D: [pulseaudio] alsa-mixer.c: Looking at profile input:multichannel-input
+D: [pulseaudio] alsa-mixer.c: Checking for recording on Multichannel (multichannel-input)
+D: [pulseaudio] alsa-util.c: Trying hw:1 with SND_PCM_NO_AUTO_FORMAT ...
+I: [pulseaudio] (alsa-lib)pcm_hw.c: open '/dev/snd/pcmC1D0c' failed (-2)
+I: [pulseaudio] alsa-util.c: Error opening PCM device hw:1: No such file or directory
+D: [pulseaudio] alsa-mixer.c: Caching failure to open input:multichannel-input
+D: [pulseaudio] alsa-mixer.c: Skipping profile output:analog-stereo+input:stereo-fallback - will not be able to open output:analog-stereo
+D: [pulseaudio] alsa-mixer.c: Skipping profile output:analog-stereo+input:mono-fallback - will not be able to open output:analog-stereo
+D: [pulseaudio] alsa-mixer.c: Skipping profile output:analog-stereo+input:multichannel-input - will not be able to open output:analog-stereo
+D: [pulseaudio] alsa-mixer.c: Skipping profile output:analog-surround-21+input:stereo-fallback - will not be able to open output:analog-surround-21
+D: [pulseaudio] alsa-mixer.c: Skipping profile output:analog-surround-21+input:mono-fallback - will not be able to open output:analog-surround-21
+D: [pulseaudio] alsa-mixer.c: Skipping profile output:analog-surround-21+input:multichannel-input - will not be able to open output:analog-surround-21
+D: [pulseaudio] alsa-mixer.c: Skipping profile output:analog-surround-40+input:stereo-fallback - will not be able to open output:analog-surround-40
+D: [pulseaudio] alsa-mixer.c: Skipping profile output:analog-surround-40+input:mono-fallback - will not be able to open output:analog-surround-40
+D: [pulseaudio] alsa-mixer.c: Skipping profile output:analog-surround-40+input:multichannel-input - will not be able to open output:analog-surround-40
+D: [pulseaudio] alsa-mixer.c: Skipping profile output:analog-surround-41+input:stereo-fallback - will not be able to open output:analog-surround-41
+D: [pulseaudio] alsa-mixer.c: Skipping profile output:analog-surround-41+input:mono-fallback - will not be able to open output:analog-surround-41
+D: [pulseaudio] alsa-mixer.c: Skipping profile output:analog-surround-41+input:multichannel-input - will not be able to open output:analog-surround-41
+D: [pulseaudio] alsa-mixer.c: Skipping profile output:analog-surround-50+input:stereo-fallback - will not be able to open output:analog-surround-50
+D: [pulseaudio] alsa-mixer.c: Skipping profile output:analog-surround-50+input:mono-fallback - will not be able to open output:analog-surround-50
+D: [pulseaudio] alsa-mixer.c: Skipping profile output:analog-surround-50+input:multichannel-input - will not be able to open output:analog-surround-50
+D: [pulseaudio] alsa-mixer.c: Skipping profile output:analog-surround-51+input:stereo-fallback - will not be able to open output:analog-surround-51
+D: [pulseaudio] alsa-mixer.c: Skipping profile output:analog-surround-51+input:mono-fallback - will not be able to open output:analog-surround-51
+D: [pulseaudio] alsa-mixer.c: Skipping profile output:analog-surround-51+input:multichannel-input - will not be able to open output:analog-surround-51
+D: [pulseaudio] alsa-mixer.c: Skipping profile output:analog-surround-71+input:stereo-fallback - will not be able to open output:analog-surround-71
+D: [pulseaudio] alsa-mixer.c: Skipping profile output:analog-surround-71+input:mono-fallback - will not be able to open output:analog-surround-71
+D: [pulseaudio] alsa-mixer.c: Skipping profile output:analog-surround-71+input:multichannel-input - will not be able to open output:analog-surround-71
+D: [pulseaudio] alsa-mixer.c: Skipping profile output:iec958-stereo+input:stereo-fallback - will not be able to open output:iec958-stereo
+D: [pulseaudio] alsa-mixer.c: Skipping profile output:iec958-stereo+input:mono-fallback - will not be able to open output:iec958-stereo
+D: [pulseaudio] alsa-mixer.c: Skipping profile output:iec958-stereo+input:multichannel-input - will not be able to open output:iec958-stereo
+D: [pulseaudio] alsa-mixer.c: Skipping profile output:iec958-ac3-surround-40+input:stereo-fallback - will not be able to open output:iec958-ac3-surround-40
+D: [pulseaudio] alsa-mixer.c: Skipping profile output:iec958-ac3-surround-40+input:mono-fallback - will not be able to open output:iec958-ac3-surround-40
+D: [pulseaudio] alsa-mixer.c: Skipping profile output:iec958-ac3-surround-40+input:multichannel-input - will not be able to open output:iec958-ac3-surround-40
+D: [pulseaudio] alsa-mixer.c: Skipping profile output:iec958-ac3-surround-51+input:stereo-fallback - will not be able to open output:iec958-ac3-surround-51
+D: [pulseaudio] alsa-mixer.c: Skipping profile output:iec958-ac3-surround-51+input:mono-fallback - will not be able to open output:iec958-ac3-surround-51
+D: [pulseaudio] alsa-mixer.c: Skipping profile output:iec958-ac3-surround-51+input:multichannel-input - will not be able to open output:iec958-ac3-surround-51
+D: [pulseaudio] alsa-mixer.c: Skipping profile output:iec958-dts-surround-51+input:stereo-fallback - will not be able to open output:iec958-dts-surround-51
+D: [pulseaudio] alsa-mixer.c: Skipping profile output:iec958-dts-surround-51+input:mono-fallback - will not be able to open output:iec958-dts-surround-51
+D: [pulseaudio] alsa-mixer.c: Skipping profile output:iec958-dts-surround-51+input:multichannel-input - will not be able to open output:iec958-dts-surround-51
+D: [pulseaudio] alsa-mixer.c: Skipping profile output:hdmi-stereo+input:stereo-fallback - will not be able to open output:hdmi-stereo
+D: [pulseaudio] alsa-mixer.c: Skipping profile output:hdmi-stereo+input:mono-fallback - will not be able to open output:hdmi-stereo
+D: [pulseaudio] alsa-mixer.c: Skipping profile output:hdmi-stereo+input:multichannel-input - will not be able to open output:hdmi-stereo
+D: [pulseaudio] alsa-mixer.c: Skipping profile output:hdmi-surround+input:stereo-fallback - will not be able to open output:hdmi-surround
+D: [pulseaudio] alsa-mixer.c: Skipping profile output:hdmi-surround+input:mono-fallback - will not be able to open output:hdmi-surround
+D: [pulseaudio] alsa-mixer.c: Skipping profile output:hdmi-surround+input:multichannel-input - will not be able to open output:hdmi-surround
+D: [pulseaudio] alsa-mixer.c: Skipping profile output:hdmi-surround71+input:stereo-fallback - will not be able to open output:hdmi-surround71
+D: [pulseaudio] alsa-mixer.c: Skipping profile output:hdmi-surround71+input:mono-fallback - will not be able to open output:hdmi-surround71
+D: [pulseaudio] alsa-mixer.c: Skipping profile output:hdmi-surround71+input:multichannel-input - will not be able to open output:hdmi-surround71
+D: [pulseaudio] alsa-mixer.c: Skipping profile output:hdmi-dts-surround+input:stereo-fallback - will not be able to open output:hdmi-dts-surround
+D: [pulseaudio] alsa-mixer.c: Skipping profile output:hdmi-dts-surround+input:mono-fallback - will not be able to open output:hdmi-dts-surround
+D: [pulseaudio] alsa-mixer.c: Skipping profile output:hdmi-dts-surround+input:multichannel-input - will not be able to open output:hdmi-dts-surround
+D: [pulseaudio] alsa-mixer.c: Skipping profile output:hdmi-stereo-extra1+input:stereo-fallback - will not be able to open output:hdmi-stereo-extra1
+D: [pulseaudio] alsa-mixer.c: Skipping profile output:hdmi-stereo-extra1+input:mono-fallback - will not be able to open output:hdmi-stereo-extra1
+D: [pulseaudio] alsa-mixer.c: Skipping profile output:hdmi-stereo-extra1+input:multichannel-input - will not be able to open output:hdmi-stereo-extra1
+D: [pulseaudio] alsa-mixer.c: Skipping profile output:hdmi-surround-extra1+input:stereo-fallback - will not be able to open output:hdmi-surround-extra1
+D: [pulseaudio] alsa-mixer.c: Skipping profile output:hdmi-surround-extra1+input:mono-fallback - will not be able to open output:hdmi-surround-extra1
+D: [pulseaudio] alsa-mixer.c: Skipping profile output:hdmi-surround-extra1+input:multichannel-input - will not be able to open output:hdmi-surround-extra1
+D: [pulseaudio] alsa-mixer.c: Skipping profile output:hdmi-surround71-extra1+input:stereo-fallback - will not be able to open output:hdmi-surround71-extra1
+D: [pulseaudio] alsa-mixer.c: Skipping profile output:hdmi-surround71-extra1+input:mono-fallback - will not be able to open output:hdmi-surround71-extra1
+D: [pulseaudio] alsa-mixer.c: Skipping profile output:hdmi-surround71-extra1+input:multichannel-input - will not be able to open output:hdmi-surround71-extra1
+D: [pulseaudio] alsa-mixer.c: Skipping profile output:hdmi-dts-surround-extra1+input:stereo-fallback - will not be able to open output:hdmi-dts-surround-extra1
+D: [pulseaudio] alsa-mixer.c: Skipping profile output:hdmi-dts-surround-extra1+input:mono-fallback - will not be able to open output:hdmi-dts-surround-extra1
+D: [pulseaudio] alsa-mixer.c: Skipping profile output:hdmi-dts-surround-extra1+input:multichannel-input - will not be able to open output:hdmi-dts-surround-extra1
+D: [pulseaudio] alsa-mixer.c: Skipping profile output:hdmi-stereo-extra2+input:stereo-fallback - will not be able to open output:hdmi-stereo-extra2
+D: [pulseaudio] alsa-mixer.c: Skipping profile output:hdmi-stereo-extra2+input:mono-fallback - will not be able to open output:hdmi-stereo-extra2
+D: [pulseaudio] alsa-mixer.c: Skipping profile output:hdmi-stereo-extra2+input:multichannel-input - will not be able to open output:hdmi-stereo-extra2
+D: [pulseaudio] alsa-mixer.c: Skipping profile output:hdmi-surround-extra2+input:stereo-fallback - will not be able to open output:hdmi-surround-extra2
+D: [pulseaudio] alsa-mixer.c: Skipping profile output:hdmi-surround-extra2+input:mono-fallback - will not be able to open output:hdmi-surround-extra2
+D: [pulseaudio] alsa-mixer.c: Skipping profile output:hdmi-surround-extra2+input:multichannel-input - will not be able to open output:hdmi-surround-extra2
+D: [pulseaudio] alsa-mixer.c: Skipping profile output:hdmi-surround71-extra2+input:stereo-fallback - will not be able to open output:hdmi-surround71-extra2
+D: [pulseaudio] alsa-mixer.c: Skipping profile output:hdmi-surround71-extra2+input:mono-fallback - will not be able to open output:hdmi-surround71-extra2
+D: [pulseaudio] alsa-mixer.c: Skipping profile output:hdmi-surround71-extra2+input:multichannel-input - will not be able to open output:hdmi-surround71-extra2
+D: [pulseaudio] alsa-mixer.c: Skipping profile output:hdmi-dts-surround-extra2+input:stereo-fallback - will not be able to open output:hdmi-dts-surround-extra2
+D: [pulseaudio] alsa-mixer.c: Skipping profile output:hdmi-dts-surround-extra2+input:mono-fallback - will not be able to open output:hdmi-dts-surround-extra2
+D: [pulseaudio] alsa-mixer.c: Skipping profile output:hdmi-dts-surround-extra2+input:multichannel-input - will not be able to open output:hdmi-dts-surround-extra2
+D: [pulseaudio] alsa-mixer.c: Skipping profile output:hdmi-stereo-extra3+input:stereo-fallback - will not be able to open output:hdmi-stereo-extra3
+D: [pulseaudio] alsa-mixer.c: Skipping profile output:hdmi-stereo-extra3+input:mono-fallback - will not be able to open output:hdmi-stereo-extra3
+D: [pulseaudio] alsa-mixer.c: Skipping profile output:hdmi-stereo-extra3+input:multichannel-input - will not be able to open output:hdmi-stereo-extra3
+D: [pulseaudio] alsa-mixer.c: Skipping profile output:hdmi-surround-extra3+input:stereo-fallback - will not be able to open output:hdmi-surround-extra3
+D: [pulseaudio] alsa-mixer.c: Skipping profile output:hdmi-surround-extra3+input:mono-fallback - will not be able to open output:hdmi-surround-extra3
+D: [pulseaudio] alsa-mixer.c: Skipping profile output:hdmi-surround-extra3+input:multichannel-input - will not be able to open output:hdmi-surround-extra3
+D: [pulseaudio] alsa-mixer.c: Skipping profile output:hdmi-surround71-extra3+input:stereo-fallback - will not be able to open output:hdmi-surround71-extra3
+D: [pulseaudio] alsa-mixer.c: Skipping profile output:hdmi-surround71-extra3+input:mono-fallback - will not be able to open output:hdmi-surround71-extra3
+D: [pulseaudio] alsa-mixer.c: Skipping profile output:hdmi-surround71-extra3+input:multichannel-input - will not be able to open output:hdmi-surround71-extra3
+D: [pulseaudio] alsa-mixer.c: Skipping profile output:hdmi-dts-surround-extra3+input:stereo-fallback - will not be able to open output:hdmi-dts-surround-extra3
+D: [pulseaudio] alsa-mixer.c: Skipping profile output:hdmi-dts-surround-extra3+input:mono-fallback - will not be able to open output:hdmi-dts-surround-extra3
+D: [pulseaudio] alsa-mixer.c: Skipping profile output:hdmi-dts-surround-extra3+input:multichannel-input - will not be able to open output:hdmi-dts-surround-extra3
+D: [pulseaudio] alsa-mixer.c: Skipping profile output:hdmi-stereo-extra4+input:stereo-fallback - will not be able to open output:hdmi-stereo-extra4
+D: [pulseaudio] alsa-mixer.c: Skipping profile output:hdmi-stereo-extra4+input:mono-fallback - will not be able to open output:hdmi-stereo-extra4
+D: [pulseaudio] alsa-mixer.c: Skipping profile output:hdmi-stereo-extra4+input:multichannel-input - will not be able to open output:hdmi-stereo-extra4
+D: [pulseaudio] alsa-mixer.c: Skipping profile output:hdmi-surround-extra4+input:stereo-fallback - will not be able to open output:hdmi-surround-extra4
+D: [pulseaudio] alsa-mixer.c: Skipping profile output:hdmi-surround-extra4+input:mono-fallback - will not be able to open output:hdmi-surround-extra4
+D: [pulseaudio] alsa-mixer.c: Skipping profile output:hdmi-surround-extra4+input:multichannel-input - will not be able to open output:hdmi-surround-extra4
+D: [pulseaudio] alsa-mixer.c: Skipping profile output:hdmi-surround71-extra4+input:stereo-fallback - will not be able to open output:hdmi-surround71-extra4
+D: [pulseaudio] alsa-mixer.c: Skipping profile output:hdmi-surround71-extra4+input:mono-fallback - will not be able to open output:hdmi-surround71-extra4
+D: [pulseaudio] alsa-mixer.c: Skipping profile output:hdmi-surround71-extra4+input:multichannel-input - will not be able to open output:hdmi-surround71-extra4
+D: [pulseaudio] alsa-mixer.c: Skipping profile output:hdmi-dts-surround-extra4+input:stereo-fallback - will not be able to open output:hdmi-dts-surround-extra4
+D: [pulseaudio] alsa-mixer.c: Skipping profile output:hdmi-dts-surround-extra4+input:mono-fallback - will not be able to open output:hdmi-dts-surround-extra4
+D: [pulseaudio] alsa-mixer.c: Skipping profile output:hdmi-dts-surround-extra4+input:multichannel-input - will not be able to open output:hdmi-dts-surround-extra4
+D: [pulseaudio] alsa-mixer.c: Skipping profile output:hdmi-stereo-extra5+input:stereo-fallback - will not be able to open output:hdmi-stereo-extra5
+D: [pulseaudio] alsa-mixer.c: Skipping profile output:hdmi-stereo-extra5+input:mono-fallback - will not be able to open output:hdmi-stereo-extra5
+D: [pulseaudio] alsa-mixer.c: Skipping profile output:hdmi-stereo-extra5+input:multichannel-input - will not be able to open output:hdmi-stereo-extra5
+D: [pulseaudio] alsa-mixer.c: Skipping profile output:hdmi-surround-extra5+input:stereo-fallback - will not be able to open output:hdmi-surround-extra5
+D: [pulseaudio] alsa-mixer.c: Skipping profile output:hdmi-surround-extra5+input:mono-fallback - will not be able to open output:hdmi-surround-extra5
+D: [pulseaudio] alsa-mixer.c: Skipping profile output:hdmi-surround-extra5+input:multichannel-input - will not be able to open output:hdmi-surround-extra5
+D: [pulseaudio] alsa-mixer.c: Skipping profile output:hdmi-surround71-extra5+input:stereo-fallback - will not be able to open output:hdmi-surround71-extra5
+D: [pulseaudio] alsa-mixer.c: Skipping profile output:hdmi-surround71-extra5+input:mono-fallback - will not be able to open output:hdmi-surround71-extra5
+D: [pulseaudio] alsa-mixer.c: Skipping profile output:hdmi-surround71-extra5+input:multichannel-input - will not be able to open output:hdmi-surround71-extra5
+D: [pulseaudio] alsa-mixer.c: Skipping profile output:hdmi-dts-surround-extra5+input:stereo-fallback - will not be able to open output:hdmi-dts-surround-extra5
+D: [pulseaudio] alsa-mixer.c: Skipping profile output:hdmi-dts-surround-extra5+input:mono-fallback - will not be able to open output:hdmi-dts-surround-extra5
+D: [pulseaudio] alsa-mixer.c: Skipping profile output:hdmi-dts-surround-extra5+input:multichannel-input - will not be able to open output:hdmi-dts-surround-extra5
+D: [pulseaudio] alsa-mixer.c: Skipping profile output:hdmi-stereo-extra6+input:stereo-fallback - will not be able to open output:hdmi-stereo-extra6
+D: [pulseaudio] alsa-mixer.c: Skipping profile output:hdmi-stereo-extra6+input:mono-fallback - will not be able to open output:hdmi-stereo-extra6
+D: [pulseaudio] alsa-mixer.c: Skipping profile output:hdmi-stereo-extra6+input:multichannel-input - will not be able to open output:hdmi-stereo-extra6
+D: [pulseaudio] alsa-mixer.c: Skipping profile output:hdmi-surround-extra6+input:stereo-fallback - will not be able to open output:hdmi-surround-extra6
+D: [pulseaudio] alsa-mixer.c: Skipping profile output:hdmi-surround-extra6+input:mono-fallback - will not be able to open output:hdmi-surround-extra6
+D: [pulseaudio] alsa-mixer.c: Skipping profile output:hdmi-surround-extra6+input:multichannel-input - will not be able to open output:hdmi-surround-extra6
+D: [pulseaudio] alsa-mixer.c: Skipping profile output:hdmi-surround71-extra6+input:stereo-fallback - will not be able to open output:hdmi-surround71-extra6
+D: [pulseaudio] alsa-mixer.c: Skipping profile output:hdmi-surround71-extra6+input:mono-fallback - will not be able to open output:hdmi-surround71-extra6
+D: [pulseaudio] alsa-mixer.c: Skipping profile output:hdmi-surround71-extra6+input:multichannel-input - will not be able to open output:hdmi-surround71-extra6
+D: [pulseaudio] alsa-mixer.c: Skipping profile output:hdmi-dts-surround-extra6+input:stereo-fallback - will not be able to open output:hdmi-dts-surround-extra6
+D: [pulseaudio] alsa-mixer.c: Skipping profile output:hdmi-dts-surround-extra6+input:mono-fallback - will not be able to open output:hdmi-dts-surround-extra6
+D: [pulseaudio] alsa-mixer.c: Skipping profile output:hdmi-dts-surround-extra6+input:multichannel-input - will not be able to open output:hdmi-dts-surround-extra6
+D: [pulseaudio] alsa-mixer.c: Skipping profile output:hdmi-stereo-extra7+input:stereo-fallback - will not be able to open output:hdmi-stereo-extra7
+D: [pulseaudio] alsa-mixer.c: Skipping profile output:hdmi-stereo-extra7+input:mono-fallback - will not be able to open output:hdmi-stereo-extra7
+D: [pulseaudio] alsa-mixer.c: Skipping profile output:hdmi-stereo-extra7+input:multichannel-input - will not be able to open output:hdmi-stereo-extra7
+D: [pulseaudio] alsa-mixer.c: Skipping profile output:hdmi-surround-extra7+input:stereo-fallback - will not be able to open output:hdmi-surround-extra7
+D: [pulseaudio] alsa-mixer.c: Skipping profile output:hdmi-surround-extra7+input:mono-fallback - will not be able to open output:hdmi-surround-extra7
+D: [pulseaudio] alsa-mixer.c: Skipping profile output:hdmi-surround-extra7+input:multichannel-input - will not be able to open output:hdmi-surround-extra7
+D: [pulseaudio] alsa-mixer.c: Skipping profile output:hdmi-surround71-extra7+input:stereo-fallback - will not be able to open output:hdmi-surround71-extra7
+D: [pulseaudio] alsa-mixer.c: Skipping profile output:hdmi-surround71-extra7+input:mono-fallback - will not be able to open output:hdmi-surround71-extra7
+D: [pulseaudio] alsa-mixer.c: Skipping profile output:hdmi-surround71-extra7+input:multichannel-input - will not be able to open output:hdmi-surround71-extra7
+D: [pulseaudio] alsa-mixer.c: Skipping profile output:hdmi-dts-surround-extra7+input:stereo-fallback - will not be able to open output:hdmi-dts-surround-extra7
+D: [pulseaudio] alsa-mixer.c: Skipping profile output:hdmi-dts-surround-extra7+input:mono-fallback - will not be able to open output:hdmi-dts-surround-extra7
+D: [pulseaudio] alsa-mixer.c: Skipping profile output:hdmi-dts-surround-extra7+input:multichannel-input - will not be able to open output:hdmi-dts-surround-extra7
+D: [pulseaudio] alsa-mixer.c: Skipping profile output:hdmi-stereo-extra8+input:stereo-fallback - will not be able to open output:hdmi-stereo-extra8
+D: [pulseaudio] alsa-mixer.c: Skipping profile output:hdmi-stereo-extra8+input:mono-fallback - will not be able to open output:hdmi-stereo-extra8
+D: [pulseaudio] alsa-mixer.c: Skipping profile output:hdmi-stereo-extra8+input:multichannel-input - will not be able to open output:hdmi-stereo-extra8
+D: [pulseaudio] alsa-mixer.c: Skipping profile output:hdmi-surround-extra8+input:stereo-fallback - will not be able to open output:hdmi-surround-extra8
+D: [pulseaudio] alsa-mixer.c: Skipping profile output:hdmi-surround-extra8+input:mono-fallback - will not be able to open output:hdmi-surround-extra8
+D: [pulseaudio] alsa-mixer.c: Skipping profile output:hdmi-surround-extra8+input:multichannel-input - will not be able to open output:hdmi-surround-extra8
+D: [pulseaudio] alsa-mixer.c: Skipping profile output:hdmi-surround71-extra8+input:stereo-fallback - will not be able to open output:hdmi-surround71-extra8
+D: [pulseaudio] alsa-mixer.c: Skipping profile output:hdmi-surround71-extra8+input:mono-fallback - will not be able to open output:hdmi-surround71-extra8
+D: [pulseaudio] alsa-mixer.c: Skipping profile output:hdmi-surround71-extra8+input:multichannel-input - will not be able to open output:hdmi-surround71-extra8
+D: [pulseaudio] alsa-mixer.c: Skipping profile output:hdmi-dts-surround-extra8+input:stereo-fallback - will not be able to open output:hdmi-dts-surround-extra8
+D: [pulseaudio] alsa-mixer.c: Skipping profile output:hdmi-dts-surround-extra8+input:mono-fallback - will not be able to open output:hdmi-dts-surround-extra8
+D: [pulseaudio] alsa-mixer.c: Skipping profile output:hdmi-dts-surround-extra8+input:multichannel-input - will not be able to open output:hdmi-dts-surround-extra8
+D: [pulseaudio] alsa-mixer.c: Skipping profile output:hdmi-stereo-extra9+input:stereo-fallback - will not be able to open output:hdmi-stereo-extra9
+D: [pulseaudio] alsa-mixer.c: Skipping profile output:hdmi-stereo-extra9+input:mono-fallback - will not be able to open output:hdmi-stereo-extra9
+D: [pulseaudio] alsa-mixer.c: Skipping profile output:hdmi-stereo-extra9+input:multichannel-input - will not be able to open output:hdmi-stereo-extra9
+D: [pulseaudio] alsa-mixer.c: Skipping profile output:hdmi-surround-extra9+input:stereo-fallback - will not be able to open output:hdmi-surround-extra9
+D: [pulseaudio] alsa-mixer.c: Skipping profile output:hdmi-surround-extra9+input:mono-fallback - will not be able to open output:hdmi-surround-extra9
+D: [pulseaudio] alsa-mixer.c: Skipping profile output:hdmi-surround-extra9+input:multichannel-input - will not be able to open output:hdmi-surround-extra9
+D: [pulseaudio] alsa-mixer.c: Skipping profile output:hdmi-surround71-extra9+input:stereo-fallback - will not be able to open output:hdmi-surround71-extra9
+D: [pulseaudio] alsa-mixer.c: Skipping profile output:hdmi-surround71-extra9+input:mono-fallback - will not be able to open output:hdmi-surround71-extra9
+D: [pulseaudio] alsa-mixer.c: Skipping profile output:hdmi-surround71-extra9+input:multichannel-input - will not be able to open output:hdmi-surround71-extra9
+D: [pulseaudio] alsa-mixer.c: Skipping profile output:hdmi-dts-surround-extra9+input:stereo-fallback - will not be able to open output:hdmi-dts-surround-extra9
+D: [pulseaudio] alsa-mixer.c: Skipping profile output:hdmi-dts-surround-extra9+input:mono-fallback - will not be able to open output:hdmi-dts-surround-extra9
+D: [pulseaudio] alsa-mixer.c: Skipping profile output:hdmi-dts-surround-extra9+input:multichannel-input - will not be able to open output:hdmi-dts-surround-extra9
+D: [pulseaudio] alsa-mixer.c: Skipping profile output:hdmi-stereo-extra10+input:stereo-fallback - will not be able to open output:hdmi-stereo-extra10
+D: [pulseaudio] alsa-mixer.c: Skipping profile output:hdmi-stereo-extra10+input:mono-fallback - will not be able to open output:hdmi-stereo-extra10
+D: [pulseaudio] alsa-mixer.c: Skipping profile output:hdmi-stereo-extra10+input:multichannel-input - will not be able to open output:hdmi-stereo-extra10
+D: [pulseaudio] alsa-mixer.c: Skipping profile output:hdmi-surround-extra10+input:stereo-fallback - will not be able to open output:hdmi-surround-extra10
+D: [pulseaudio] alsa-mixer.c: Skipping profile output:hdmi-surround-extra10+input:mono-fallback - will not be able to open output:hdmi-surround-extra10
+D: [pulseaudio] alsa-mixer.c: Skipping profile output:hdmi-surround-extra10+input:multichannel-input - will not be able to open output:hdmi-surround-extra10
+D: [pulseaudio] alsa-mixer.c: Skipping profile output:hdmi-surround71-extra10+input:stereo-fallback - will not be able to open output:hdmi-surround71-extra10
+D: [pulseaudio] alsa-mixer.c: Skipping profile output:hdmi-surround71-extra10+input:mono-fallback - will not be able to open output:hdmi-surround71-extra10
+D: [pulseaudio] alsa-mixer.c: Skipping profile output:hdmi-surround71-extra10+input:multichannel-input - will not be able to open output:hdmi-surround71-extra10
+D: [pulseaudio] alsa-mixer.c: Skipping profile output:hdmi-dts-surround-extra10+input:stereo-fallback - will not be able to open output:hdmi-dts-surround-extra10
+D: [pulseaudio] alsa-mixer.c: Skipping profile output:hdmi-dts-surround-extra10+input:mono-fallback - will not be able to open output:hdmi-dts-surround-extra10
+D: [pulseaudio] alsa-mixer.c: Skipping profile output:hdmi-dts-surround-extra10+input:multichannel-input - will not be able to open output:hdmi-dts-surround-extra10
+D: [pulseaudio] alsa-mixer.c: Looking at profile output:stereo-fallback
+D: [pulseaudio] alsa-mixer.c: Checking for playback on Stereo (stereo-fallback)
+D: [pulseaudio] alsa-util.c: Trying hw:1 with SND_PCM_NO_AUTO_FORMAT ...
+I: [pulseaudio] (alsa-lib)pcm_hw.c: open '/dev/snd/pcmC1D0p' failed (-2)
+I: [pulseaudio] alsa-util.c: Error opening PCM device hw:1: No such file or directory
+D: [pulseaudio] alsa-mixer.c: Caching failure to open output:stereo-fallback
+D: [pulseaudio] alsa-mixer.c: Skipping profile output:stereo-fallback+input:analog-stereo - will not be able to open output:stereo-fallback
+D: [pulseaudio] alsa-mixer.c: Skipping profile output:stereo-fallback+input:iec958-stereo - will not be able to open output:stereo-fallback
+D: [pulseaudio] alsa-mixer.c: Looking at profile output:mono-fallback
+D: [pulseaudio] alsa-mixer.c: Checking for playback on Mono (mono-fallback)
+D: [pulseaudio] alsa-util.c: Trying hw:1 with SND_PCM_NO_AUTO_FORMAT ...
+I: [pulseaudio] (alsa-lib)pcm_hw.c: open '/dev/snd/pcmC1D0p' failed (-2)
+I: [pulseaudio] alsa-util.c: Error opening PCM device hw:1: No such file or directory
+D: [pulseaudio] alsa-mixer.c: Caching failure to open output:mono-fallback
+D: [pulseaudio] alsa-mixer.c: Skipping profile output:mono-fallback+input:analog-stereo - will not be able to open output:mono-fallback
+D: [pulseaudio] alsa-mixer.c: Skipping profile output:mono-fallback+input:iec958-stereo - will not be able to open output:mono-fallback
+D: [pulseaudio] alsa-mixer.c: Looking at profile output:multichannel-output
+D: [pulseaudio] alsa-mixer.c: Checking for playback on Multichannel (multichannel-output)
+D: [pulseaudio] alsa-util.c: Trying hw:1 with SND_PCM_NO_AUTO_FORMAT ...
+I: [pulseaudio] (alsa-lib)pcm_hw.c: open '/dev/snd/pcmC1D0p' failed (-2)
+I: [pulseaudio] alsa-util.c: Error opening PCM device hw:1: No such file or directory
+D: [pulseaudio] alsa-mixer.c: Caching failure to open output:multichannel-output
+D: [pulseaudio] alsa-mixer.c: Skipping profile output:multichannel-output+input:analog-stereo - will not be able to open output:multichannel-output
+D: [pulseaudio] alsa-mixer.c: Skipping profile output:multichannel-output+input:iec958-stereo - will not be able to open output:multichannel-output
+D: [pulseaudio] alsa-mixer.c: Skipping profile output:stereo-fallback+input:stereo-fallback - will not be able to open output:stereo-fallback
+D: [pulseaudio] alsa-mixer.c: Skipping profile output:stereo-fallback+input:mono-fallback - will not be able to open output:stereo-fallback
+D: [pulseaudio] alsa-mixer.c: Skipping profile output:stereo-fallback+input:multichannel-input - will not be able to open output:stereo-fallback
+D: [pulseaudio] alsa-mixer.c: Skipping profile output:mono-fallback+input:stereo-fallback - will not be able to open output:mono-fallback
+D: [pulseaudio] alsa-mixer.c: Skipping profile output:mono-fallback+input:mono-fallback - will not be able to open output:mono-fallback
+D: [pulseaudio] alsa-mixer.c: Skipping profile output:mono-fallback+input:multichannel-input - will not be able to open output:mono-fallback
+D: [pulseaudio] alsa-mixer.c: Skipping profile output:multichannel-output+input:stereo-fallback - will not be able to open output:multichannel-output
+D: [pulseaudio] alsa-mixer.c: Skipping profile output:multichannel-output+input:mono-fallback - will not be able to open output:multichannel-output
+D: [pulseaudio] alsa-mixer.c: Skipping profile output:multichannel-output+input:multichannel-input - will not be able to open output:multichannel-output
+D: [pulseaudio] alsa-mixer.c: Profile set 0x557bd96c8ed0, auto_profiles=yes, probed=yes, n_mappings=0, n_profiles=0, n_decibel_fixes=0
+E: [pulseaudio] module-alsa-card.c: Failed to find a working profile.
+E: [pulseaudio] module.c: Failed to load module "module-alsa-card" (argument: "device_id="1" name="platform-avs_probe_mb" card_name="alsa_card.platform-avs_probe_mb" namereg_fail=false tsched=yes fixed_latency_range=no ignore_dB=no deferred_volume=yes use_ucm=yes avoid_resampling=no card_properties="module-udev-detect.discovered=1""): initialization failed.
+I: [pulseaudio] module-udev-detect.c: Card /devices/platform/avs_probe_mb/sound/card1 (alsa_card.platform-avs_probe_mb) failed to load module.
+I: [pulseaudio] module-udev-detect.c: Found 2 cards.
+I: [pulseaudio] module.c: Loaded "module-udev-detect" (index: #6; argument: "").
+D: [pulseaudio] module.c: Checking for existence of '/usr/lib/pulse-16.1+dfsg1/modules/module-jackdbus-detect.so': failure
+D: [pulseaudio] module.c: Checking for existence of '/usr/lib/pulse-16.1+dfsg1/modules/module-bluetooth-policy.so': failure
+D: [pulseaudio] module.c: Checking for existence of '/usr/lib/pulse-16.1+dfsg1/modules/module-bluetooth-discover.so': failure
+D: [pulseaudio] module.c: Checking for existence of '/usr/lib/pulse-16.1+dfsg1/modules/module-esound-protocol-unix.so': failure
+E: [pulseaudio] socket-server.c: bind(): Address already in use
+E: [pulseaudio] module.c: Failed to load module "module-native-protocol-unix" (argument: ""): initialization failed.
+D: [pulseaudio] module.c: Checking for existence of '/usr/lib/pulse-16.1+dfsg1/modules/module-gsettings.so': failure
+I: [pulseaudio] module-default-device-restore.c: No previous default sink setting, ignoring.
+I: [pulseaudio] module-default-device-restore.c: No previous default source setting, ignoring.
+I: [pulseaudio] module.c: Loaded "module-default-device-restore" (index: #10; argument: "").
+D: [pulseaudio] module-always-sink.c: Autoloading null-sink as no other sinks detected.
+I: [pulseaudio] module-device-restore.c: Restoring volume for sink auto_null: front-left: 64231 /  98%,   front-right: 64231 /  98%
+I: [pulseaudio] sink.c: Created sink 0 "auto_null" with sample spec s16le 2ch 44100Hz and channel map front-left,front-right
+I: [pulseaudio] sink.c:     device.description = "Dummy Output"
+I: [pulseaudio] sink.c:     device.class = "abstract"
+I: [pulseaudio] sink.c:     device.icon_name = "audio-card"
+I: [pulseaudio] source.c: Created source 0 "auto_null.monitor" with sample spec s16le 2ch 44100Hz and channel map front-left,front-right
+I: [pulseaudio] source.c:     device.description = "Monitor of Dummy Output"
+I: [pulseaudio] source.c:     device.class = "monitor"
+I: [pulseaudio] source.c:     device.icon_name = "audio-input-microphone"
+D: [null-sink] module-null-sink.c: Thread starting up
+D: [null-sink] util.c: RealtimeKit worked.
+I: [null-sink] util.c: Successfully enabled SCHED_RR scheduling for thread, with priority 5.
+D: [pulseaudio] sink.c: auto_null: state: INIT -> IDLE
+D: [pulseaudio] source.c: auto_null.monitor: state: INIT -> IDLE
+I: [pulseaudio] core.c: default_source: (unset) -> auto_null.monitor
+D: [pulseaudio] module-switch-on-connect.c: Trying to switch to new sink auto_null
+D: [pulseaudio] module-switch-on-connect.c: Refusing to switch to virtual sink
+I: [pulseaudio] core.c: default_sink: (unset) -> auto_null
+D: [pulseaudio] core-subscribe.c: Dropped redundant event due to change event.
+I: [pulseaudio] module.c: Loaded "module-null-sink" (index: #12; argument: "sink_name=auto_null sink_properties='device.description="Dummy Output"'").
+I: [pulseaudio] module.c: Loaded "module-always-sink" (index: #11; argument: "").
+I: [pulseaudio] module.c: Loaded "module-intended-roles" (index: #13; argument: "").
+D: [pulseaudio] module-suspend-on-idle.c: Sink auto_null becomes idle, timeout in 5 seconds.
+I: [pulseaudio] module.c: Loaded "module-suspend-on-idle" (index: #14; argument: "").
+D: [pulseaudio] module.c: Checking for existence of '/usr/lib/pulse-16.1+dfsg1/modules/module-console-kit.so': failure
+D: [pulseaudio] module.c: Checking for existence of '/usr/lib/pulse-16.1+dfsg1/modules/module-systemd-login.so': success
+I: [pulseaudio] client.c: Created 0 "Login Session 2"
+D: [pulseaudio] module-systemd-login.c: Added new session 2
+I: [pulseaudio] core.c: exit_idle_time: 20 -> 0
+I: [pulseaudio] module.c: Loaded "module-systemd-login" (index: #15; argument: "").
+I: [pulseaudio] module.c: Loaded "module-position-event-sounds" (index: #16; argument: "").
+D: [pulseaudio] stream-interaction.c: Using role 'phone' as trigger role.
+D: [pulseaudio] stream-interaction.c: Using roles 'music' and 'video' as cork roles.
+I: [pulseaudio] module.c: Loaded "module-role-cork" (index: #17; argument: "").
+D: [pulseaudio] module.c: Checking for existence of '/usr/lib/pulse-16.1+dfsg1/modules/module-snap-policy.so': success
+I: [snapd-glib] module-snap-policy.c: Starting GLib main loop
+I: [pulseaudio] module.c: Loaded "module-snap-policy" (index: #18; argument: "").
+I: [pulseaudio] module.c: Loaded "module-filter-heuristics" (index: #19; argument: "").
+I: [pulseaudio] module.c: Loaded "module-filter-apply" (index: #20; argument: "").
+D: [pulseaudio] dbus-util.c: Successfully connected to D-Bus session bus f8b535be8c84649041a37fb269460c9e as :1.148
+E: [pulseaudio] main.c: D-Bus name org.PulseAudio1 already taken.
+I: [pulseaudio] module.c: Unloading "module-filter-apply" (index: #20).
+I: [pulseaudio] module.c: Unloaded "module-filter-apply" (index: #20).
+D: [pulseaudio] core-subscribe.c: Dropped redundant event due to remove event.
+I: [pulseaudio] module.c: Unloading "module-filter-heuristics" (index: #19).
+I: [pulseaudio] module.c: Unloaded "module-filter-heuristics" (index: #19).
+D: [pulseaudio] core-subscribe.c: Dropped redundant event due to remove event.
+I: [pulseaudio] module.c: Unloading "module-snap-policy" (index: #18).
+I: [snapd-glib] module-snap-policy.c: GLib main loop exited
+I: [pulseaudio] module.c: Unloaded "module-snap-policy" (index: #18).
+D: [pulseaudio] core-subscribe.c: Dropped redundant event due to remove event.
+I: [pulseaudio] module.c: Unloading "module-role-cork" (index: #17).
+I: [pulseaudio] module.c: Unloaded "module-role-cork" (index: #17).
+D: [pulseaudio] core-subscribe.c: Dropped redundant event due to remove event.
+I: [pulseaudio] module.c: Unloading "module-position-event-sounds" (index: #16).
+I: [pulseaudio] module.c: Unloaded "module-position-event-sounds" (index: #16).
+D: [pulseaudio] core-subscribe.c: Dropped redundant event due to remove event.
+I: [pulseaudio] module.c: Unloading "module-systemd-login" (index: #15).
+D: [pulseaudio] module-systemd-login.c: Removing session 2
+I: [pulseaudio] client.c: Freed 0 "Login Session 2"
+D: [pulseaudio] core-subscribe.c: Dropped redundant event due to remove event.
+I: [pulseaudio] module.c: Unloaded "module-systemd-login" (index: #15).
+D: [pulseaudio] core-subscribe.c: Dropped redundant event due to remove event.
+I: [pulseaudio] module.c: Unloading "module-suspend-on-idle" (index: #14).
+I: [pulseaudio] module.c: Unloaded "module-suspend-on-idle" (index: #14).
+D: [pulseaudio] core-subscribe.c: Dropped redundant event due to remove event.
+I: [pulseaudio] module.c: Unloading "module-intended-roles" (index: #13).
+I: [pulseaudio] module.c: Unloaded "module-intended-roles" (index: #13).
+D: [pulseaudio] core-subscribe.c: Dropped redundant event due to remove event.
+I: [pulseaudio] module.c: Unloading "module-null-sink" (index: #12).
+D: [pulseaudio] module-always-sink.c: Autoloaded null-sink removed
+I: [pulseaudio] core.c: default_sink: auto_null -> (unset)
+D: [pulseaudio] core-subscribe.c: Dropped redundant event due to change event.
+I: [pulseaudio] core.c: default_source: auto_null.monitor -> (unset)
+D: [pulseaudio] core-subscribe.c: Dropped redundant event due to change event.
+D: [pulseaudio] source.c: auto_null.monitor: state: IDLE -> UNLINKED
+D: [pulseaudio] core-subscribe.c: Dropped redundant event due to remove event.
+D: [pulseaudio] core-subscribe.c: Dropped redundant event due to remove event.
+D: [pulseaudio] sink.c: auto_null: state: IDLE -> UNLINKED
+D: [pulseaudio] core-subscribe.c: Dropped redundant event due to remove event.
+D: [pulseaudio] core-subscribe.c: Dropped redundant event due to remove event.
+D: [null-sink] module-null-sink.c: Thread shutting down
+I: [pulseaudio] sink.c: Freeing sink 0 "auto_null"
+I: [pulseaudio] source.c: Freeing source 0 "auto_null.monitor"
+I: [pulseaudio] module.c: Unloaded "module-null-sink" (index: #12).
+D: [pulseaudio] core-subscribe.c: Dropped redundant event due to remove event.
+I: [pulseaudio] module.c: Unloading "module-always-sink" (index: #11).
+I: [pulseaudio] module.c: Unloaded "module-always-sink" (index: #11).
+D: [pulseaudio] core-subscribe.c: Dropped redundant event due to remove event.
+I: [pulseaudio] module.c: Unloading "module-default-device-restore" (index: #10).
+I: [pulseaudio] module.c: Unloaded "module-default-device-restore" (index: #10).
+D: [pulseaudio] core-subscribe.c: Dropped redundant event due to remove event.
+I: [pulseaudio] module.c: Unloading "module-alsa-card" (index: #7).
+I: [pulseaudio] card.c: Freed 0 "alsa_card.pci-0000_01_00.1"
+D: [pulseaudio] core-subscribe.c: Dropped redundant event due to remove event.
+D: [pulseaudio] core-subscribe.c: Dropped redundant event due to remove event.
+I: [pulseaudio] module.c: Unloaded "module-alsa-card" (index: #7).
+D: [pulseaudio] core-subscribe.c: Dropped redundant event due to remove event.
+I: [pulseaudio] module.c: Unloading "module-udev-detect" (index: #6).
+I: [pulseaudio] module.c: Unloaded "module-udev-detect" (index: #6).
+D: [pulseaudio] core-subscribe.c: Dropped redundant event due to remove event.
+I: [pulseaudio] module.c: Unloading "module-switch-on-connect" (index: #5).
+I: [pulseaudio] module.c: Unloaded "module-switch-on-connect" (index: #5).
+D: [pulseaudio] core-subscribe.c: Dropped redundant event due to remove event.
+I: [pulseaudio] module.c: Unloading "module-switch-on-port-available" (index: #4).
+I: [pulseaudio] module.c: Unloaded "module-switch-on-port-available" (index: #4).
+D: [pulseaudio] core-subscribe.c: Dropped redundant event due to remove event.
+I: [pulseaudio] module.c: Unloading "module-augment-properties" (index: #3).
+I: [pulseaudio] module.c: Unloaded "module-augment-properties" (index: #3).
+D: [pulseaudio] core-subscribe.c: Dropped redundant event due to remove event.
+I: [pulseaudio] module.c: Unloading "module-card-restore" (index: #2).
+I: [pulseaudio] module.c: Unloaded "module-card-restore" (index: #2).
+D: [pulseaudio] core-subscribe.c: Dropped redundant event due to remove event.
+I: [pulseaudio] module.c: Unloading "module-stream-restore" (index: #1).
+D: [pulseaudio] protocol-dbus.c: Interface org.PulseAudio.Ext.StreamRestore1 removed from object /org/pulseaudio/stream_restore1
+D: [pulseaudio] protocol-dbus.c: Interface org.PulseAudio.Ext.StreamRestore1.RestoreEntry removed from object /org/pulseaudio/stream_restore1/entry0
+D: [pulseaudio] protocol-dbus.c: Interface org.PulseAudio.Ext.StreamRestore1.RestoreEntry removed from object /org/pulseaudio/stream_restore1/entry1
+D: [pulseaudio] protocol-dbus.c: Interface org.PulseAudio.Ext.StreamRestore1.RestoreEntry removed from object /org/pulseaudio/stream_restore1/entry2
+I: [pulseaudio] module.c: Unloaded "module-stream-restore" (index: #1).
+D: [pulseaudio] core-subscribe.c: Dropped redundant event due to remove event.
+I: [pulseaudio] module.c: Unloading "module-device-restore" (index: #0).
+I: [pulseaudio] module.c: Unloaded "module-device-restore" (index: #0).
+D: [pulseaudio] core-subscribe.c: Dropped redundant event due to remove event.
+I: [pulseaudio] main.c: Daemon terminated.
