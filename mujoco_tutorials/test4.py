@@ -1,0 +1,85 @@
+'''
+Example: Simulate free-bodies with the self inverting tippe-top
+
+Notables:
+
+1. A 6-DoF free joint is added with the <freejoint/> clause.
+
+2. We use the <option/> clause to set the integrator to the 4th order Runge Kutta. 
+   Runge-Kutta has a higher rate of convergence than the default Euler integrator, 
+   which in many cases increases the accuracy at a given timestep size.
+
+3. We define the floor's grid material inside the <asset/> clause and reference it 
+   in the "floor" geom. (Introduce <texture> and <material> under <asset>) 
+
+4. We use an invisible and non-colliding box geom called ballast to move the top's 
+   center-of-mass lower. Having a low center of mass is (counter-intuitively) required 
+   for the flipping behavior to occur.
+
+5. We save our initial spinning state as a keyframe. It has a high rotational velocity 
+   around the Z-axis, but is not perfectly oriented with the world, which introduces 
+   the symmetry-breaking required for the flipping.
+
+6. We define a <camera> in our model, and then render from it using the camera argument 
+   to update_scene().
+'''
+
+import mujoco
+import time
+import itertools
+import numpy as np
+
+# graphics and plotting
+import mediapy as media
+import matplotlib.pyplot as plt
+import imageio.v2 as imageio
+
+
+tippe_top = """
+<mujoco model="tippe top">
+    <option integrator="RK4"/>
+
+    <asset>
+        <texture name="grid" type="2d" builtin="checker" rgb1=".1 .2 .3"
+         rgb2=".2 .3 .4" width="300" height="300"/> 
+        <material name="grid" texture="grid" texrepeat="8 8" reflectance=".2"/>
+    </asset>
+
+    <worldbody>
+        <geom size=".2 .2 .01" type="plane" material="grid"/>
+        <light pos="0 0 .6"/>
+        <camera name="closeup" pos="0 -.1 .07" xyaxes="1 0 0 0 1 2"/>
+        <body name="top" pos="0 0 .02">
+          <freejoint/>
+          <geom name="ball" type="sphere" size=".02" />
+          <geom name="stem" type="cylinder" pos="0 0 .02" size="0.004 .008"/>
+          <geom name="ballast" type="box" size=".023 .023 0.005"  pos="0 0 -.015"
+           contype="0" conaffinity="0" group="3"/>
+        </body>
+    </worldbody>
+
+  <keyframe>
+    <key name="spinning" qpos="0 0 0.02 1 0 0 0" qvel="0 0 0 0 1 200" />
+  </keyframe>
+</mujoco>
+"""
+# render this:
+from PIL import Image
+
+model = mujoco.MjModel.from_xml_string(tippe_top)
+data = mujoco.MjData(model)
+
+mujoco.mj_forward(model, data)
+with mujoco.Renderer(model) as renderer:
+    renderer.update_scene(data, camera="closeup")
+
+    media.show_image(renderer.render())
+
+    # dump pixels to image file
+    pixels = renderer.render()
+    image = Image.fromarray(np.flipud(pixels))
+
+    output_path = "test4.png"
+    image.save(output_path)
+
+    print(f"Rendered image saved to {output_path}")
