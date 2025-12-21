@@ -83,3 +83,26 @@ with mujoco.Renderer(model) as renderer:
     image.save(output_path)
 
     print(f"Rendered image saved to {output_path}")
+
+# let's simulate (create a video)
+
+duration = 7    # (seconds)
+framerate = 60  # (Hz)
+
+# Simulate and display video.
+frames = []
+mujoco.mj_resetDataKeyframe(model, data, 0)  # Reset the state to keyframe 0
+with mujoco.Renderer(model) as renderer:
+  while data.time < duration:
+    mujoco.mj_step(model, data)
+    if len(frames) < data.time * framerate:
+      renderer.update_scene(data, "closeup")
+      pixels = renderer.render()
+      frames.append(pixels)
+
+# Save frames to a file using imageio
+output_video_path = 'test4_output.mp4'
+# Note: imageio might require ffmpeg as a backend (pip install imageio[ffmpeg]) 
+imageio.mimsave(output_video_path, frames, fps=framerate) 
+
+print(f"Simulation finished. Video saved to {output_video_path}")
