@@ -12,12 +12,26 @@ import mediapy as media
 import matplotlib.pyplot as plt
 import imageio.v2 as imageio  
 
+'''
+cause motion by adding DOFs. The things that move (and have intertia) are
+called bodies. We add DOF by adding joints to bodies, specifying how they
+can move with respect to their parents. Will make a new body that contains
+our geoms, add a hinge joint and re-render, while visualizing the joint axis
+using the visualization option object MjvOption
+
+basically encapsulate the previous xml inside a body and add a hinge joint for
+motion
+'''
+
 xml = """
 <mujoco>
     <worldbody>
         <light name="top" pos="0 0 1"/>
-        <geom name="red box" type="box" size=".2 .2 .2" rgba="1 0 0 1"/>
-        <geom name="green sphere" pos=".2 .2 .2" size=".1" rgba="0 1 0 1"/>
+        <body name="box_and_sphere" euler="0 0 -30">
+            <joint name="swing" type="hinge" axis="1 -1 0" pos="-.2 -.2 -.2"/>
+            <geom name="red box" type="box" size=".2 .2 .2" rgba="1 0 0 1"/>
+            <geom name="green sphere" pos=".2 .2 .2" size=".1" rgba="0 1 0 1"/>
+        </body>
     </worldbody>
 </mujoco>
 """
