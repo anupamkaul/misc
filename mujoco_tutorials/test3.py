@@ -25,6 +25,7 @@ motion
 
 xml = """
 <mujoco>
+    <option gravity="0 0 10"/>
     <worldbody>
         <light name="top" pos="0 0 1"/>
         <body name="box_and_sphere" euler="0 0 -30">
@@ -64,4 +65,27 @@ output_video_path = 'test3_output.mp4'
 imageio.mimsave(output_video_path, frames, fps=framerate) 
 
 print(f"Simulation finished. Video saved to {output_video_path}")
+
+'''
+Note that we rotated the box_and_sphere body by 30° around the Z (vertical) axis, 
+with the directive euler="0 0 -30". This was made to emphasize that the poses of
+elements in the kinematic tree are always with respect to their parent body, so 
+our two geoms were also rotated by this transformation.
+'''
+
+print("Total number of DOFs in the model:", model.nv)
+print("Generalized positions:", data.qpos)
+print("Generalized velocities:", data.qvel)
+
+'''
+In the real world, all rigid objects have 6 degrees-of-freedom: 3 translations and 3 rotations.
+Real-world joints act as constraints, removing relative degrees-of-freedom from bodies connected 
+by joints. Some physics simulation software use this representation which is known as the "Cartesian" 
+or "subtractive" representation, but it is inefficient. MuJoCo uses a representation known as the 
+"Lagrangian", "generalized" or "additive" representation, whereby objects have no degrees of freedom 
+unless explicitly added using joints.
+
+Our model, which has a single hinge joint, has one degree of freedom, and the entire state is defined 
+by this joint's angle and angular velocity. These are the system's generalized position and velocity.
+'''
 
