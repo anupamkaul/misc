@@ -142,6 +142,9 @@ print('name of geom 0: ', model.geom(0).name)
 print('name of geom 1: ', model.geom(1).name)
 print('name of body 0: ', model.body(0).name)
 
+# here is how to use id and name in comprehensions:
+print("\n", [model.geom(i).name for i in range(model.ngeom)])
+
 # the next big struct is mjdata : this holds states, forces, motion, time etc (almost all of the dynamics)
 # https://github.com/google-deepmind/mujoco/blob/main/include/mujoco/mjdata.h
 
@@ -150,7 +153,7 @@ print('name of body 0: ', model.body(0).name)
 # a new mjData, all we need is our mjModel
 
 data = mujoco.MjData(model)
-print(data)
+print("\n", data, "\n")
 
 print("number of connected contacts: ", data.ncon)
 print("simulation time: ", data.time)
