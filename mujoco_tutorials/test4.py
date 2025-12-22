@@ -36,7 +36,7 @@ import imageio.v2 as imageio
 
 
 tippe_top = """
-<mujoco model="tippe top">
+<mujoco model="my tippe top">
     <option integrator="RK4"/>
 
     <asset>
@@ -106,3 +106,48 @@ output_video_path = 'test4_output.mp4'
 imageio.mimsave(output_video_path, frames, fps=framerate) 
 
 print(f"Simulation finished. Video saved to {output_video_path}")
+
+# let's get some data..
+print('positions: ', data.qpos)
+print('velocities:', data.qvel)
+
+'''
+positions:  [ 0.02332768 -0.02439969  0.02792166  0.07778017  0.86488317 -0.4959039
+ -0.00258259]
+velocities: [ 6.83240423e-02 -8.69515134e-03 -2.56495395e-04  3.65873967e+00
+  9.43958903e+00 -8.12162364e+01]
+
+Post execution analysis
+-----------------------
+
+Notes: 
+
+A free body is a body with a free joint having 6 DOFs: 3 translations and 3 rotations.
+(<freejoint/>) 
+
+The 6 values of velocity is easy to explain : it is one for each DOF.
+There are 7 values for position: the first 3 are the .02. .02, .02 as defined for the body (assuming
+it didn't move much. The last 4 are the unit quaternion for the 3D orientation. 3D orientations are
+represented by 4 numbers while angular velocities are 3 numbers. 
+
+See https://en.wikipedia.org/wiki/Quaternions_and_spatial_rotation
+(or refreshers/Quaternion*.pdf) 
+
+(Compared to rotation matrices, quaternions are more compact, efficient, and numerically stable. 
+Compared to Euler angles, they are simpler to compose. However, they are not as intuitive and easy 
+to understand and, due to the periodic nature of sine and cosine, rotation angles differing precisely 
+by the natural period will be encoded into identical quaternions and recovered angles in radians will 
+be limited to [0, 2pi] 
+
+Notes (of test3.py):
+
+In the real world, all rigid objects have 6 degrees-of-freedom: 3 translations and 3 rotations. 
+Real-world joints act as constraints, removing relative degrees-of-freedom from bodies connected 
+by joints. Some physics simulation software use this representation which is known as the 
+"Cartesian" or "subtractive" representation, but it is inefficient. 
+
+MuJoCo uses a representation known as the "Lagrangian", "generalized" or "additive" representation, 
+whereby objects have no degrees of freedom unless explicitly added using joints.
+
+'''
+
