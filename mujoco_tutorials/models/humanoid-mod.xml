@@ -35,7 +35,7 @@
       <camera name="back" pos="-3 0 1" xyaxes="0 -1 0 1 0 2" mode="trackcom"/>
       <camera name="side" pos="0 -3 1" xyaxes="1 0 0 0 1 2" mode="trackcom"/>
 
-      <!-- Remove the 6DOF freejoint
+      <!-- Remove the 6DOF freejoint (this prevents it from falling to the ground) 
 	      <freejoint name="root"/>
       -->
 
@@ -43,11 +43,16 @@
       <geom name="torso" fromto="0 -.07 0 0 .07 0" size=".07"/>
       <geom name="upper_waist" fromto="-.01 -.06 -.12 -.01 .06 -.12" size=".06"/>
       <site name="torso" class="touch" type="box" pos="0 0 -.05" size=".075 .14 .13"/>
+
+      <!-- Headless humanoid..
+
       <body name="head" pos="0 0 .19">
         <geom name="head" type="sphere" size=".09"/>
         <site name="head" class="touch" type="sphere" size=".091"/>
         <camera name="egocentric" pos=".09 0 0" xyaxes="0 -1 0 .1 0 1" fovy="80"/>
       </body>
+      -->
+
       <body name="lower_waist" pos="-.01 0 -.260" quat="1.000 0 -.002 0">
         <geom name="lower_waist" fromto="0 -.06 0 0 .06 0" size=".06"/>
         <site name="lower_waist" class="touch" size=".061 .06" zaxis="0 1 0"/>
@@ -183,7 +188,11 @@
     <torque name="right_hip_torque"      site="right_hip"/>
 
     <touch name="torso_touch"            site="torso"/>
+
+    <!--
     <touch name="head_touch"             site="head"/>
+    -->
+
     <touch name="lower_waist_touch"      site="lower_waist"/>
     <touch name="butt_touch"             site="butt"/>
     <touch name="right_thigh_touch"      site="right_thigh"/>
