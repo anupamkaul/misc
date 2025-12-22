@@ -151,3 +151,43 @@ whereby objects have no degrees of freedom unless explicitly added using joints.
 
 '''
 
+'''
+Now, lets measure values held in mjData:
+
+The mjData struct contains the dynamic variables and intermediate results produced by the simulation
+(such as the one above) which are _expected to change_ on each timestep. Below, we simulate for 2000
+timesteps and plot the angular velocity of the top and height of the stem as a function of time.
+'''
+
+print("re-run simulation to plot saved intermediate data from mj_data..")
+
+timevals = []
+angular_velocity = []
+stem_height = []
+
+# simulate (again) and save data
+mujoco.mj_resetDataKeyframe(model, data, 0)
+while data.time < duration:
+
+    mujoco.mj_step(model, data)
+
+    timevals.append(data.time)
+    angular_velocity.append(data.qvel[3:6].copy())
+    stem_height.append(data.geom_xpos[2,2]);
+
+dpi = 120
+width = 600
+height = 800
+figsize = (width / dpi, height / dpi)
+_, ax = plt.subplots(2, 1, figsize=figsize, dpi=dpi, sharex=True)
+
+ax[0].plot(timevals, angular_velocity)
+ax[0].set_title('angular velocity')
+ax[0].set_ylabel('radians / second')
+
+ax[1].plot(timevals, stem_height)
+ax[1].set_xlabel('time (seconds)')
+ax[1].set_ylabel('meters')
+_ = ax[1].set_title('stem height')
+
+plt.show()
