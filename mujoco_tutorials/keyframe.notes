@@ -1,0 +1,90 @@
+what does this do to a worldbody defined in mujoco MJCF: 
+
+<key name="spinning" qpos="0 0 0 0 0 0 0" qvel="0 0 0 7 1 50" />
+
+The <key> element defines a keyframe, which is a named snapshot of the entire simulation state at a specific moment. 
+This particular keyframe, named "spinning", is not applied automatically to a worldbody; it is stored in the model's 
+library and can be used to reset the simulation state to that specific configuration at runtime.
+ 
+The attributes of the <key> tag specify the values for the model's degrees of freedom (DoFs) at that keyframe:
+
+qpos="0 0 0 0 0 0 0": This attribute sets the joint positions (configuration) of all DoFs in the model. 
+Since there are 7 values, it corresponds to a single free joint (often used for a worldbody or a floating body). 
+The values represent the global 3D position (0 0 0) and the orientation as a quaternion (0 0 0 0). 
+Note that the orientation quaternion 0 0 0 0 is not a valid unit quaternion (the identity quaternion is 1 0 0 0 
+or 0 0 0 1 depending on convention, which is then normalized).
+
+qvel="0 0 0 7 1 50": This attribute sets the joint velocities for all DoFs. The 6 values correspond to the linear
+ and angular velocities (or similar generalized velocities) of the free joint. The non-zero values (7 1 50) will set 
+the initial angular velocity components to cause a spinning motion when this keyframe is loaded.
+ 
+In summary, this keyframe is a reference point that, when explicitly loaded, would place the worldbody 
+(or a free-floating body) at the origin with zero linear velocity, but with a significant initial angular 
+velocity causing it to spin around a complex axis.
+
+----
+
+using keyframes in mujoco:
+
+In MuJoCo, keyframes are snapshots of the entire simulation state, useful for resetting the system to specific,a
+predefined poses or for serving as targets for controllers. They are defined in the MJCF model file and can be 
+managed via the interactive viewer or the Python API. 
+
+Keyframes are not used for continuous animation (which typically requires external trajectory data and actuators), 
+but rather for instantaneous state changes. 
+
+Defining Keyframes in MJCF
+Keyframes are added to your model using the <keyframe> element in the XML file, containing one or more <key> child elements. 
+
+<mujoco model="my_model">
+    ...
+    <keyframe>
+        <!-- A keyframe named 'home' at the default pose (qpos="0 0 ...") -->
+        <key name="home"/>
+
+        <!-- A keyframe named 'raised_arm' with specific joint positions -->
+        <!-- qpos values correspond to the order of joints defined in the model -->
+        <key name="raised_arm" qpos="0 0 1.5 0 0 ..."/>
+
+        <!-- A keyframe that also saves actuator activations (if any) and time -->
+        <key name="active_pose" qpos="..." act="..." time="..."/>
+    </keyframe>
+    ...
+</mujoco>
+
+name: Assigning a name (e.g., "home") makes the keyframe easily accessible in code.
+
+qpos: Specifies the generalized positions (joint angles, body positions/orientations) for that state.
+
+act: Optionally stores actuator activations.
+
+time: Stores the simulation time at which the snapshot was taken. 
+
+Using Keyframes in the Interactive Viewer
+
+When running a simulation with the built-in interactive viewer, you can:
+Load a keyframe: In the "Simulation" sidebar, select or drag the Key value to the index/name of the 
+desired keyframe and click Load Key.
+
+Capture a pose: Position the model as desired and click Copy pose in the viewer to get the qpos string output, 
+which you can paste back into your MJCF file as a new <key> element.
+ 
+Using Keyframes Programmatically (Python)
+In Python, keyframes are part of the compiled mjModel object and can be used to set the state of the mjData object.
+
+import mujoco
+
+# Load the model (m) and create data (d)
+m = mujoco.MjModel.from_xml_path("my_model.xml")
+d = mujoco.MjData(m)
+
+# Find the index/ID of a named keyframe
+home_id = m.keyframe("home").id
+
+# Reset the simulation state to the specified keyframe
+# This copies the qpos, qvel, act, and time from the keyframe to mjData
+mujoco.mj_resetDataKeyframe(m, d, home_id)
+
+# Now, running the simulation will start from this state
+# print(d.qpos) 
+ 

@@ -9,10 +9,11 @@ import os
 os.environ['MUJOCO_GL'] = 'egl' 
 
 # Define the path to your MuJoCo XML model file
-MODEL_PATH = './models/humanoid-spin.xml' 
+#MODEL_PATH = './models/humanoid-spin.xml' 
+MODEL_PATH = './models/humanoid-push.xml' 
 
 # Simulation parameters
-DURATION = 3          # seconds
+DURATION = 10          # seconds
 FRAMERATE = 60        # frames per second
 TIMESTEP = 0.002      # MuJoCo timestep
 #WIDTH, HEIGHT = 640, 480
@@ -60,8 +61,13 @@ print(f"Simulation finished. Video saved to {output_video_path}")
 # read some data
 print("positions: (len): ", len(data.qpos), "\n", data.qpos)
 print("velocities:(len): ", len(data.qvel), "\n", data.qvel) 
+print("actuators:(len): ", len(data.act), "\n", data.act) 
 
 '''
+
+28,27 are for freebody (freejoint)
+else it is 21,21
+
 positions: (len):  28 
  [ 7.97647593e-01 -2.47586575e-13  2.78628690e-01  4.15656584e-02
  -6.93402184e-14  9.99135775e-01  4.56234143e-13 -3.50380234e-13
