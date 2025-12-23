@@ -65,12 +65,33 @@ def check_fall_condition(data):
     height = data.qpos[2]
     print("height: ", height)
 
-    if (height < 0.6):
+    if (height < 1.0):
+    #if (height < 0.6):
         return True
 
     return False
 
+# PD control gains (proportional and derivative)
+# These are crucial for stability and need tuning
 
+Kp = 50.0 # Proportional gain
+Kd = 5.0  # Derivative gain
+
+def apply_balance_control(model, data, target_qpos, Kp, Kd):
+    """
+    Applies PD control to joints to maintain a target posture and prevent falling.
+    """
+    # Get current joint positions and velocities
+    current_qpos = data.qpos[7:] # Exclude the first 7 DOFs (free joint: pos + quat)
+    current_qvel = data.qvel[6:] # Exclude the first 6 DOFs (free joint: vel + ang_vel)
+
+    # Calculate position error
+    error = target_qpos[7:] - current_qpos
+
+    # Calculate desired control torques
+    # tau = Kp * error - Kd * current_qvel (simple PD controller)
+    # The control input is applied to the actuators (data.ctrl)
+    data.ctrl[:] = Kp * error - Kd * current_qvel
 
 reset_count=0
 while data.time < DURATION:
@@ -86,7 +107,8 @@ while data.time < DURATION:
         current_time = data.time
         
         # 2. rudimentary: reset target pose
-        data.qpos = target_qpos.copy()
+        #data.qpos = target_qpos.copy()
+        apply_balance_control(model, data, target_qpos, Kp, Kd)
 
         # 3. restore current time
         data.time = current_time
@@ -94,43 +116,6 @@ while data.time < DURATION:
         # 4. resync
         mujoco.mj_forward(model, data)
 
-    # in this loop I know data.time advances to 2000 steps
-    # just (grep|wc) a print(data.time), so let me introduce
-    # actuator perturbations roughly 8 times in the simulation: 
-
-    if (reset_count % 25) == 0:
-
-        # 1. store current time
-        current_time = data.time
- 
-        # 2. provide inputs to some actuators of the humanoid
-
-        '''
-        print("actuator val for right knee: ", data.ctrl[right_knee_id])
-        print("actuator val for left knee: ", data.ctrl[left_knee_id])
-        print("actuator val for right ankle x: ", data.ctrl[right_ankle_x_id])
-        print("actuator val for right ankle y: ", data.ctrl[right_ankle_y_id])
-        print("actuator val for right elbow: ", data.ctrl[right_elbow_id])
-        print("actuator val for left elbow: ",  data.ctrl[left_elbow_id])
-
-        data.ctrl[right_knee_id] = sign*actuator_input_val
-        data.ctrl[left_knee_id] =  actuator_input_val
-        data.ctrl[right_ankle_x_id] = actuator_input_val
-        data.ctrl[right_ankle_y_id] = actuator_input_val
-        data.ctrl[right_elbow_id] = actuator_input_val
-        data.ctrl[left_elbow_id] = actuator_input_val
-
-        if (abs(actuator_input_val) > abs(actuator_max_val)) :
-            actuator_input_step *= sign  
-
-        actuator_input_val += actuator_input_step
-        '''
-
-        # 3. restore current time
-        data.time = current_time
-
-        # 4. ensure synchronicity (update all dependent data fields)
-        mujoco.mj_forward(model, data)
 
     # Render the current frame
     #renderer.update_scene(data, camera=camera_name)
