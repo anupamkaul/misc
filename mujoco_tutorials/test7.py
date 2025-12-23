@@ -120,7 +120,7 @@ while data.time < DURATION:
         print("actuator val for right elbow: ", data.ctrl[right_elbow_id])
         print("actuator val for left elbow: ",  data.ctrl[left_elbow_id])
 
-        data.ctrl[right_knee_id] = actuator_input_val
+        data.ctrl[right_knee_id] = sign*actuator_input_val
         data.ctrl[right_ankle_x_id] = actuator_input_val
         data.ctrl[right_ankle_y_id] = actuator_input_val
         data.ctrl[right_elbow_id] = actuator_input_val
