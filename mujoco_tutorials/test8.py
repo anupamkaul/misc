@@ -51,12 +51,48 @@ data.qpos = target_qpos.copy()
 # update physics with initial state
 mujoco.mj_forward(model, data)
 
+# find id of the pelvis joint, this is what I will
+# use to figure out the humanoid falling state
+# TODO
+
+def check_fall_condition(data):
+
+    '''
+    Checks if the humanoid has fallen over (if height is below a threshold)
+
+    '''
+
+    height = data.qpos[2]
+    print("height: ", height)
+
+    if (height < 0.6):
+        return True
+
+    return False
+
+
+
 reset_count=0
 while data.time < DURATION:
 
     # mj_step advances the physics simulation
     mujoco.mj_step(model, data) 
     reset_count += 1
+
+    if check_fall_condition(data):
+        print("Humanoid is falling !!")
+
+        # 1. store current time
+        current_time = data.time
+        
+        # 2. rudimentary: reset target pose
+        data.qpos = target_qpos.copy()
+
+        # 3. restore current time
+        data.time = current_time
+
+        # 4. resync
+        mujoco.mj_forward(model, data)
 
     # in this loop I know data.time advances to 2000 steps
     # just (grep|wc) a print(data.time), so let me introduce
