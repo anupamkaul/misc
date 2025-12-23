@@ -1,0 +1,40 @@
+To reset the state (positions, velocities, etc.) to a keyframe's values while preserving data.time, you should manually copy the relevant state components from the keyframe to your mjData object instead of using mujoco.mj_resetDataKeyframe. 
+The mujoco.mj_resetDataKeyframe function resets all fields of mjData, including data.time, data.qpos, data.qvel, etc., 
+based on the specified keyframe. The simulation state in MuJoCo is primarily composed of data.time, data.qpos, and data.qvel. 
+
+Here is how you can achieve the desired behavior in Python:
+
+Retrieve the keyframe's position and velocity data from model.key_qpos and model.key_qvel. Keyframes are stored in the mjModel.
+Manually copy these values into data.qpos and data.qvel.
+Call mujoco.mj_forward() to update all dependent quantities in mjData consistently with the new state, without advancing time. 
+
+python
+
+import mujoco
+import numpy as np
+
+# Assume 'model' and 'data' are already defined and loaded
+# Assume keyframe index 0 is valid
+
+# 1. Store the current time
+current_time = data.time
+
+# 2. Manually copy keyframe state components (qpos and qvel)
+# Ensure the keyframe exists and the dimensions match
+key_index = 0
+if key_index < model.nkey:
+    # Use numpy slicing to copy the relevant parts of the keyframe arrays
+    start_qpos = model.key_qposadr[key_index]
+    data.qpos[:] = model.key_qpos[start_qpos : start_qpos + model.nq]
+
+    start_qvel = model.key_qveladr[key_index]
+    data.qvel[:] = model.key_qvel[start_qvel : start_qvel + model.nv]
+else:
+    print(f"Error: Keyframe index {key_index} out of range.")
+
+# 3. Restore the original time
+data.time = current_time
+
+# 4. Call mj_forward to update all dependent data fields
+mujoco.mj_forward(model, data)
+This approach allows you to control exactly which parts of the state are updated, specifically excluding data.time from the reset operation.`

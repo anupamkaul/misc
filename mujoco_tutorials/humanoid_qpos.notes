@@ -1,0 +1,61 @@
+In MuJoCo, mjData.qpos stores the configuration in generalized coordinates (positions), while mjData.qvel 
+stores the generalized velocities. For the standard Humanoid model, these vectors follow a specific, fixed 
+order based on the kinematic tree defined in the model's XML file.
+ 
+Interpreting mjData.qpos
+
+The qpos vector for the default Humanoid has 22 elements. The elements are ordered as follows: 
+
+qpos[0:3] (Root Position): The (x, y, z) global Cartesian coordinates of the humanoid's main torso (root body). 
+By default in some environments, the first two (x, y) coordinates might be excluded from the observation space, 
+but they exist in mjData.qpos.
+
+qpos[3:7] (Root Orientation): A unit quaternion (w, x, y, z) representing the global orientation of the torso.
+
+qpos[7:...] (Joint Positions): The scalar position values (angles in radians for hinge joints) for all other joints 
+in the kinematic tree, in the order they appear in the XML model. This typically includes:
+
+qpos[7:10]: Hinge joint angles for the abdomen (e.g., in x, y, z axes).
+
+qpos[10:13]: Hinge joint angles for the right hip (e.g., angle for the hip's x, y, z axes).
+
+qpos[13]: Hinge joint angle for the right knee.
+
+qpos[14:16]: Hinge joint angles for the right ankle.
+
+qpos[16:19]: Hinge joint angles for the left hip.
+
+qpos[19]: Hinge joint angle for the left knee.
+
+qpos[20:22]: Hinge joint angles for the left ankle.
+ 
+Interpreting mjData.qvel
+
+The qvel vector has 23 elements. The dimensionality of qpos and qvel can differ because quaternions (4 values in qpos) 
+represent 3 degrees of freedom (3 values in qvel). The elements are ordered analogously to qpos:
+ 
+qvel[0:3] (Root Linear Velocity): The (x, y, z) global linear velocity of the torso.
+
+qvel[3:6] (Root Angular Velocity): The (x, y, z) global angular velocity of the torso in its tangent space 
+(not quaternion derivatives).
+
+qvel[6:...] (Joint Velocities): The scalar velocities (derivatives of the angles) for all other joints, matching the 
+order in qpos:
+
+qvel[6:9]: Velocities for the abdomen hinge joints.
+qvel[9:12]: Velocities for the right hip hinge joints.
+qvel[12]: Velocity for the right knee hinge joint.
+qvel[13:15]: Velocities for the right ankle hinge joints.
+qvel[15:18]: Velocities for the left hip hinge joints.
+qvel[18]: Velocity for the left knee hinge joint.
+qvel[19:21]: Velocities for the left ankle hinge joints.
+Note: There are an additional two dimensions in qvel for the arms, which are often not actuated in the default 
+environment configuration but are part of the model's degrees of freedom, leading to a total of 23 elements. 
+
+Key Points
+
+The exact structure and number of elements can vary if the underlying MJCF XML model file is modified.
+The best way to be certain of the order for a specific model is to inspect the model's XML file or use the MuJoCo API 
+to retrieve joint names and their corresponding indices.
+
+qpos stores positions, and qvel stores their time derivatives (velocities). `

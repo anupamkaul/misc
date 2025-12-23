@@ -33,14 +33,43 @@ camera_name = None # Use default camera or specify a name from your XML
 
 frames = []
 
-# Run the simulation
+# Run the simulation and introduce perturbations
+# to the humanoid at fixed time intervals
+
+reset_count=0
 mujoco.mj_resetDataKeyframe(model, data, 0)  # Reset the state to keyframe 0
 while data.time < DURATION:
+
     # mj_step advances the physics simulation
     mujoco.mj_step(model, data) 
+    reset_count += 1
+
+    # in this loop I know data.time advances to 2000 steps
+    # just (grep|wc) a print(data.time), so let me introduce
+    # perturbations roughly 8 times in the simulation: 
+
+    if (reset_count % 250) == 0:
+
+        # can't use resetDataKeyframe as it resets time
+        # and so the loop is infinite (resetDataKeyframe
+        # resets every variable in data, including data.time)
+
+        #mujoco.mj_resetDataKeyframe(model, data, 0)
+
+        # 1. store current time
+        current_time = data.time
+ 
+        # 2. manually copy qpos and qvel from model to data
+        data.qpos[:] = model.key_qpos[:]
+        data.qvel[:] = model.key_qvel[:]
+
+        # 3. restore current time
+        data.time = current_time
+
+        # 4. ensure synchronicity (update all dependent data fields)
+        mujoco.mj_forward(model, data)
 
     # Render the current frame
-
     #renderer.update_scene(data, camera=camera_name)
 
     #renderer.update_scene(data)

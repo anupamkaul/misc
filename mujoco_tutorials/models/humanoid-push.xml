@@ -35,7 +35,9 @@
       <camera name="back" pos="-3 0 1" xyaxes="0 -1 0 1 0 2" mode="trackcom"/>
       <camera name="side" pos="0 -3 1" xyaxes="1 0 0 0 1 2" mode="trackcom"/>
 
+      <!--
       <freejoint name="root"/>
+      --> 
 
       <site name="root" class="force-torque"/>
       <geom name="torso" fromto="0 -.07 0 0 .07 0" size=".07"/>
@@ -137,11 +139,12 @@
   </worldbody>
 
   <keyframe>
-    <key name="pushing" qpos="0 0 0.02 1 0 0 0" qvel="10 5 0 0 0 0" /> 
 
-    <!-- All 21 values of qpos and qvel for humanoid:
-    <key name="pushing" qpos="0 0 0.02 1 0 0 0 2 0 1 1 0 0 0 5 0 0 1 0 0 0" qvel="5 5 0 0 0 50 1 20 1 30 40 4 0 3 4 5 6 10 0 20 10" /> 
+    <!--
+    <key name="pushing" qpos="0 0 0.02 1 0 0 0" qvel="10 5 0 0 0 0" /> 
     -->
+
+    <key name="pushing" qpos="0 0 0.02 1 0 0 0 2 0 1 1 0 0 0 5 0 0 1 0 0 0" qvel="5 5 0 0 0 50 1 20 1 30 40 4 0 3 4 5 6 10 0 20 10" /> 
 
   </keyframe>
 
