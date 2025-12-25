@@ -43,7 +43,7 @@ frames = []
 # set a target pose (target joint positions)
 # this should be the standing or the half-sitting pose
 
-target_qpos = np.array([0, 0, 1.2, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0])
+target_qpos = np.array([0, 0, 1.4, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0])
 
 # set initial position
 data.qpos = target_qpos.copy()
@@ -65,7 +65,7 @@ def check_fall_condition(data):
     height = data.qpos[2]
     print("height: ", height)
 
-    if (height < 1.0):
+    if (height < 1.5):
     #if (height < 0.6):
         return True
 
@@ -75,7 +75,9 @@ def check_fall_condition(data):
 # These are crucial for stability and need tuning
 
 Kp = 50.0 # Proportional gain
+#Kp = 10.0 # Proportional gain
 Kd = 5.0  # Derivative gain
+#Kd = 5.0  # Derivative gain
 
 def apply_balance_control(model, data, target_qpos, Kp, Kd):
     """
@@ -100,7 +102,7 @@ while data.time < DURATION:
     mujoco.mj_step(model, data) 
     reset_count += 1
 
-    if check_fall_condition(data):
+    if  check_fall_condition(data):
         print("Humanoid is falling !!")
 
         # 1. store current time
