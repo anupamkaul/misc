@@ -97,6 +97,15 @@ print("right elbow actuator id: ", right_elbow_id)
 left_elbow_id = mujoco.mj_name2id(model, mujoco.mjtObj.mjOBJ_ACTUATOR, "left_elbow")
 print("left elbow actuator id: ", left_elbow_id)
 
+right_hip_x_id = mujoco.mj_name2id(model, mujoco.mjtObj.mjOBJ_ACTUATOR, "right_hip_x")
+print("right hip x actuator id: ", right_hip_x_id)
+
+right_hip_y_id = mujoco.mj_name2id(model, mujoco.mjtObj.mjOBJ_ACTUATOR, "right_hip_y")
+print("right hip y actuator id: ", right_hip_y_id)
+
+right_hip_z_id = mujoco.mj_name2id(model, mujoco.mjtObj.mjOBJ_ACTUATOR, "right_hip_z")
+print("right hip z actuator id: ", right_hip_z_id)
+
 # by default if freebody is disabled in humanoid-push.xml, the humanoid will stand on the floor,
 # gently swinging its arms.. (thus non-langragian and a subtractive approach applies constraints)
 
@@ -132,7 +141,12 @@ while data.time < DURATION:
         print("actuator val for left elbow: ",  data.ctrl[left_elbow_id])
         '''
 
-        data.ctrl[right_knee_id] = sign*actuator_input_val
+        #data.ctrl[right_knee_id] = sign*actuator_input_val
+        #data.ctrl[right_hip_x_id] = actuator_input_val
+
+        data.ctrl[right_hip_y_id] = sign*actuator_input_val
+
+
         #data.ctrl[left_knee_id] =  actuator_input_val
 
         #data.ctrl[right_ankle_x_id] = actuator_input_val
